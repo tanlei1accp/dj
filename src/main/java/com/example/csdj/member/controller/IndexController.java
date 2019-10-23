@@ -22,4 +22,10 @@ public class IndexController extends BaseController {
     public String myIndex() {
         return "index";
     }
+
+    @RequestMapping("/userlogin")
+    public String userLogin() {
+
+        return "member/login";
+    }
 }
