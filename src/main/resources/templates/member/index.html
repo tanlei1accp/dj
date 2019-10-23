@@ -1,10 +1,1000 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0029)http://www.harbinjgdj.gov.cn/ -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>哈尔滨机关党建网</title>
+    <style type="text/css"></style>
+
+    <script type="text/javascript" src="partyMember/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="partyMember/js/jquery.form.2.36.js"></script>
+    <link href="partyMember/css/style.css" rel="stylesheet" type="text/css">
+    <link href="partyMember/css/main.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+        .t3{
+            width:128px;
+            height:25px;
+            float:left;
+            /*font-size:16px;*/
+            margin-right: 5px;
+            margin-left: 5px;
+        }
+
+        .t3 a{
+            /*font-weight:bold;*/
+
+            font-size:16px;
+            color:#FFF;
+            text-align:center;
+            display:block;
+            line-height:25px;
+
+            background-color:#a30100;}
+        .t3 a:hover{
+            background-color:#d0020e;
+            font-size:16px;}
+
+    </style>
+
+    <script src="partyMember/js/tab.js" type="text/javascript"></script>
+
+    <script type="text/javascript" src="partyMember/js/effect_commonv1.1.js"></script>
+    <script type="text/javascript" src="partyMember/js/slide.js"></script>
+
+
+    <script type="text/javascript">
+        function login(){
+            if($("#yhdlm_id").val()==""||$("#yhmm_id").val()==""){
+                $("#msg_id").hide().html("用户名或密码不能为空!").fadeIn();
+                $("#yhdlm_id").focus();
+                return;
+            }
+            if($("#code_id").val()==""){
+                $("#msg_id").hide().html("验证码不能为空!").fadeIn();
+                $("#msg_id").focus();
+                return;
+            }
+            document.loginForm.action="/index/login";
+            $("#loginForm").ajaxSubmit(function(result){
+                if(result!="1"){
+                    $("#msg_id").html(result);
+                    changeCode();
+                }else{
+                    document.loginForm.action="/login";
+                    document.loginForm.submit();
+                }
+            });
+        }
+
+
+        function changeCode() {
+            $("#code_id").val("");
+            $('#imgObj').hide().attr('src', '/index/code?' + Math.floor(Math.random()*100) ).fadeIn();
+        }
+
+        function jr(){
+            document.loginForm.action="/login";
+            document.loginForm.submit();
+        }
+        function logout(){
+            location.href="/index/logout";
+        }
+
+        function searchs(){
+            if($("#bt_id").val()==""){
+                alert("搜索内容不能为空!");
+                $("#bt_id").focus();
+                return false;
+            }
+            document.ff.action="/index/search";
+            document.ff.submit();
+        }
+
+    </script>
+    <script type='text/javascript'>
+
+        $(document).ready(function (){
+            //alert("提示！");
+            $("#userLoginNew").hide();//隐藏登录后的div
+
+            //$("#userLoginOld").hide();//隐藏登录前的div
+            //$("#userLoginNew").show();//显示div
+            //$("#demo").attr("style","display:block;");//显示div
+        });
+
+    </script>
 </head>
+
 <body>
-首页
-</body>
-</html>
+
+
+<script type="text/javascript">
+    function searchLb(lbbh){
+        $("#lbbh_id").val(lbbh);
+        document.searchForm.action="/index/news";
+        document.searchForm.submit();
+    }
+
+    function newDet(xwbh){
+        $("#xwbh_id").val(xwbh);
+        document.searchForm.action="/index/newDet";
+        document.searchForm.submit();
+    }
+</script>
+
+<form id="searchForm" name="searchForm" method="post">
+    <input type="hidden" id="lbbh_id" name="LBBH" value="">
+    <input type="hidden" id="xwbh_id" name="XWBH">
+</form>
+<div class="top chexfix">
+    <div class="logo"></div>
+</div>
+
+
+
+
+
+
+
+
+
+<!--头目录：start-->
+<div class="top_menu">
+    <ul id="nav">
+        <li class="mainlevel" id="mainlevel_01">
+            <a href="/">首页</a>
+        </li>
+
+
+        <li class="mainlevel" id="mainlevel_01"><a onclick="">学习教育</a>
+            <ul id="sub_01" style="display: none;">
+
+                <li><a href="javascrip:void(0);" onclick="searchLb('6');return false;">文件学习</a></li>
+
+                <li><a href="javascrip:void(0);" onclick="searchLb('7');return false;">先进事迹</a></li>
+
+                <li><a href="javascrip:void(0);" onclick="searchLb('8');return false;">先锋专栏</a></li>
+
+
+            </ul>
+        </li>
+
+
+        <li class="mainlevel" id="mainlevel_01"><a onclick="">组织生活</a>
+            <!--<ul id="sub_01" style="display: none;">
+
+                <li><a href="javascrip:void(0);" onclick="searchLb('12');return false;">三基工程</a></li>
+
+                <li><a href="javascrip:void(0);" onclick="searchLb('14');return false;">共产党员先锋岗</a></li>
+
+                <li><a href="javascrip:void(0);" onclick="searchLb('13');return false;">支部写真</a></li>
+
+                <li><a href="javascrip:void(0);" onclick="searchLb('15');return false;">公仆风采</a></li>
+
+            </ul>-->
+        </li>
+
+
+        <li class="mainlevel" id="mainlevel_01"><a onclick="">通知公告</a>
+            <!-- <ul id="sub_01" style="display: none;">
+
+                 <li><a href="javascrip:void(0);" onclick="searchLb('17');return false;">修身学堂</a></li>
+
+                 <li><a href="javascrip:void(0);" onclick="searchLb('18');return false;">党课撷英</a></li>
+
+                 <li><a href="javascrip:void(0);" onclick="searchLb('20');return false;">经典博览</a></li>
+
+                 <li><a href="javascrip:void(0);" onclick="searchLb('19');return false;">先锋论坛</a></li>
+
+             </ul>-->
+        </li>
+
+
+        <li class="mainlevel" id="mainlevel_01"><a href="#">党务公开</a>
+            <ul id="sub_01" style="display: none;">
+
+                <li><a href="/dngsList">党内公示</a></li>
+
+                <li><a href="/dflzList" >党风廉政</a></li>
+
+                <li><a href="/ffclList" >反腐倡廉</a></li>
+
+
+            </ul>
+        </li>
+
+
+
+
+
+        <li class="mainlevel" id="mainlevel_01"><a onclick="">互动交流</a>
+            <ul id="sub_01" style="display: none;">
+
+                <li><a href="chat.html" >讨论交流</a></li>
+
+                <li><a href="javascrip:void(0);" onclick="searchLb('29');return false;">问卷调查</a></li>
+
+            </ul>
+        </li>
+
+        <li class="mainlevel" id="mainlevel_01"><a href="/personCenter">个人中心</a>
+            <!-- <ul id="sub_01" style="display: none;">
+
+                 <li><a href="javascrip:void(0);" onclick="searchLb('25');return false;">环境建设</a></li>
+
+                 <li><a href="javascrip:void(0);" onclick="searchLb('26');return false;">警钟声声</a></li>
+
+             </ul>-->
+        </li>
+
+    </ul>
+</div>
+<!--头目录：end-->
+
+<div id="marquee2">
+    <ul>
+        <li><span style="color: #ec0327;font-weight: bold;">通知:</span><a href="#">新闻公告一</a></li>
+        <li><span style="color: #ec0327;font-weight: bold;">通知:</span><a href="#">新闻公告二新闻公告二新闻公告二新闻公告二</a></li>
+        <li><span style="color: #ec0327;font-weight: bold;">通知:</span><a href="/userlogin">新闻公告三新闻公告三</a></li>
+        <li><span style="color: #ec0327;font-weight: bold;">通知:</span><a href="#">新闻公告四新闻公告四新闻公告四</a></li>
+        <li><span style="color: #ec0327;font-weight: bold;">通知:</span><a href="#">新闻公告五新闻公告五新闻公告五新闻公告五新闻公告五新闻公告五新闻公告五新闻公告五新闻公告五新闻公告五</a></li>
+    </ul>
+</div>
+
+
+
+
+
+
+
+
+
+<div class="main chexfix">
+    <div class="left">
+
+
+
+
+
+
+
+
+
+        <!-- 滚动图片：start-->
+        <div class="picshow">
+            <ul id="pub_slideplay3" style="position: relative; z-index: 0; margin: 0px; padding: 0px; width: 635px; height: 371px; overflow: hidden;">
+                <p style="position: absolute; margin: 0px; padding: 0px; z-index: 2; bottom: 0px; left: 0px; width: 100%; height: 40px; line-height: 40px; text-indent: 5px; text-decoration: none; font-size: 18px; color: rgb(255, 255, 255); background: none; opacity: 1; overflow: hidden; display: block;">国庆70周年将举行盛大阅兵式和群众游行</p>
+                <p style="position: absolute; margin: 0px; padding: 0px; z-index: 2; bottom: 0px; left: 0px; width: 100%; height: 40px; line-height: 40px; text-indent: 5px; text-decoration: none; font-size: 18px; color: rgb(255, 255, 255); background: none; opacity: 1; overflow: hidden; display: none;">热烈庆祝中国共产党建党九十八周年</p>
+                <p style="position: absolute; margin: 0px; padding: 0px; z-index: 2; bottom: 0px; left: 0px; width: 100%; height: 40px; line-height: 40px; text-indent: 5px; text-decoration: none; font-size: 18px; color: rgb(255, 255, 255); background: none; opacity: 1; overflow: hidden; display: none;">习近平出席“不忘初心 牢记使命”主题教育工作会议并发表重要讲话</p>
+                <p style="position: absolute; margin: 0px; padding: 0px; z-index: 2; bottom: 0px; left: 0px; width: 100%; height: 40px; line-height: 40px; text-indent: 5px; text-decoration: none; font-size: 18px; color: rgb(255, 255, 255); background: none; opacity: 1; overflow: hidden; display: none;">中共哈尔滨市委十四届六次全会举行 王兆力讲话</p>
+                <p style="position: absolute; margin: 0px; padding: 0px; z-index: 2; bottom: 0px; left: 0px; width: 100%; height: 40px; line-height: 40px; text-indent: 5px; text-decoration: none; font-size: 18px; color: rgb(255, 255, 255); background: none; opacity: 1; overflow: hidden; display: none;">全市"不忘初心 牢记使命"主题教育工作会议召开 王兆力佟朋讲话</p>
+                <li style="position: relative; top: 0px; left: 0px; width: 100%; height: 100%; overflow: hidden; display: list-item;">
+                    <a href="javascript:void(0);" onclick="newDet('878EA73FFBA57107E050007F0100478A');return false;">
+                        <img src="partyMember/images/1559614466613.jpg" width="635" height="371" style="border: none; width: 100%; height: 100%;">
+                    </a>
+                </li>
+
+                <li style="position: relative; top: 0px; left: 0px; width: 100%; height: 100%; overflow: hidden; display: none;">
+                    <a href="javascript:void(0);" onclick="newDet('8B95AA98777CCA64E050007F010060A9');return false;">
+                        <img src="partyMember/images/1561949916097.jpg" width="635" height="371" style="border: none; width: 100%; height: 100%;">
+                    </a>
+                </li>
+
+                <li style="position: relative; top: 0px; left: 0px; width: 100%; height: 100%; overflow: hidden; display: none;">
+                    <a href="javascript:void(0);" onclick="newDet('87A8086849260C35E050007F010047A8');return false;">
+                        <img src="partyMember/images/1559720056561.jpg" width="635" height="371" style="border: none; width: 100%; height: 100%;">
+                    </a>
+                </li>
+
+                <li style="position: relative; top: 0px; left: 0px; width: 100%; height: 100%; overflow: hidden; display: none;">
+                    <a href="javascript:void(0);" onclick="newDet('8B95AA9877A7CA64E050007F010060A9');return false;">
+                        <img src="partyMember/images/1562909416237.jpg" width="635" height="371" style="border: none; width: 100%; height: 100%;">
+                    </a>
+                </li>
+
+                <li style="position: relative; top: 0px; left: 0px; width: 100%; height: 100%; overflow: hidden; display: none;">
+                    <a href="javascript:void(0);" onclick="newDet('837CF667ABCA64C7E050007F01006C29');return false;">
+                        <img src="partyMember/images/1561370299270.jpg" width="635" height="371" style="border: none; width: 100%; height: 100%;">
+                    </a>
+                </li>
+
+            </ul>
+            <script type="text/javascript">
+                new dk_slideplayer("#pub_slideplay3",{width:"635px",height:"371px",fontsize:"16px",time:"3000"});
+            </script>
+
+        </div>
+        <!--滚动图片：end-->
+
+
+
+
+
+
+
+
+
+
+
+        <div class="zxfb yelllow_bg mt20">
+            <div class="zxfb_title">党务公开</div>
+        </div>
+
+        <div class="second_menu  gray_bg mt15">
+            <div class="second_menu_title">党内公示</div>
+            <a class="Floatright more" href="javascript:void(0);" onclick="searchLb('6');return false;">更多</a>
+        </div>
+        <div class="mt10 mb10 chexfix zxfb_new">
+
+
+            <div class="Floatleft">
+                <img src="partyMember/images/1571280014861.jpg" onerror="javascript:this.src='/images/1.jpg'" width="164" height="110">
+            </div>
+            <div class="Floatright zxfb_right">
+                <h3 class="red FONT20 text_hid"><a class="red" href="javascript:void(0);" onclick="newDet('949E5667C15FE789E050007F01005A3D');return false;">中华人民共和国成立70周年庆祝活动总结会议在京举行</a></h3>
+                <div class=" LH30">中华人民共和国成立70周年庆祝活动总结会议16日上午在京举行。习近平亲切会见庆祝活动筹办工作有关方面代表<a href="javascript:void(0);" onclick="newDet('949E5667C15FE789E050007F01005A3D');return false;" class="red">【详细】</a></div>
+            </div>
+
+
+        </div>
+
+        <div class="second_menu  gray_bg mt15">
+            <div class="second_menu_title">党风廉政</div>
+            <a class="Floatright more" href="javascript:void(0);" onclick="searchLb('7');return false;">更多</a>
+        </div>
+        <div class="mt10 mb10 chexfix zxfb_new">
+
+
+            <div class="Floatleft">
+                <img src="partyMember/images/1571106443145.jpg" onerror="javascript:this.src='/resource/images/news/2.jpg';" width="164" height="110">
+            </div>
+            <div class="Floatright zxfb_right">
+                <h3 class="red FONT20 text_hid"><a class="red" href="javascript:void(0);" onclick="newDet('949ED17C8D9101ADE050007F01005A85');return false;">王兆力：着力解决“两不愁三保障”突出问题 切实为人民群众办实事解难题</a></h3>
+                <div class=" LH30">14日，王兆力到巴彦县、木兰县的多个贫困乡镇，调研农村薄弱学校和卫生院建设、危房改造、安全饮水等扶贫工作情况。<a href="javascript:void(0);" onclick="newDet('949ED17C8D9101ADE050007F01005A85');return false;" class="red">【详细】</a></div>
+            </div>
+
+
+        </div>
+
+        <div class="second_menu  gray_bg mt15">
+            <div class="second_menu_title">反腐倡廉</div>
+            <a class="Floatright more" href="javascript:void(0);" onclick="searchLb('8');return false;">更多</a>
+        </div>
+        <div class="mt10 mb10 chexfix zxfb_new">
+
+
+            <div class="Floatleft">
+                <img src="partyMember/images/1567390736888.jpg" onerror="javascript:this.src='/resource/images/news/3.jpg';" width="164" height="110">
+            </div>
+            <div class="Floatright zxfb_right">
+                <h3 class="red FONT20 text_hid"><a class="red" href="javascript:void(0);" onclick="newDet('8BE67969789292AEE050007F010060A3');return false;">市直机关工委召开专题民主生活会</a></h3>
+                <div class=" LH30">8月29日，市直机关工委领导班子召开“不忘初心、牢记使命”专题民主生活会。吴维东主持会议并作总结讲话。<a href="javascript:void(0);" onclick="newDet('8BE67969789292AEE050007F010060A3');return false;" class="red">【详细】</a></div>
+            </div>
+
+
+        </div>
+
+        <div class="second_menu  gray_bg mt15">
+            <div class="second_menu_title">市直动态</div>
+            <a class="Floatright more" href="javascript:void(0);" onclick="searchLb('9');return false;">更多</a>
+        </div>
+        <div class="mt10 mb10 chexfix zxfb_new">
+
+
+            <div class="Floatleft">
+                <img src="partyMember/images/1561861665804.jpg" onerror="javascript:this.src='/resource/images/news/4.jpg';" width="164" height="110">
+            </div>
+            <div class="Floatright zxfb_right">
+                <h3 class="red FONT20 text_hid"><a class="red" href="javascript:void(0);" onclick="newDet('8BFB6CA113567FCCE050007F010060A5');return false;">创建全国文明城市从我做起</a></h3>
+                <div class=" LH30">值此建党98周年之际，市委组织部、市委宣传部向全市广大共产党员发出倡议：创建全国文明城市从我做起。<a href="javascript:void(0);" onclick="newDet('8BFB6CA113567FCCE050007F010060A5');return false;" class="red">【详细】</a></div>
+            </div>
+
+
+        </div>
+
+        <div class="second_menu  gray_bg mt15">
+            <div class="second_menu_title">区县传真</div>
+            <a class="Floatright more" href="javascript:void(0);" onclick="searchLb('10');return false;">更多</a>
+        </div>
+        <div class="mt10 mb10 chexfix zxfb_new">
+
+
+            <div class="Floatleft">
+                <img src="partyMember/images/1570864718134.jpg" onerror="javascript:this.src='/resource/images/news/5.jpg';" width="164" height="110">
+            </div>
+            <div class="Floatright zxfb_right">
+                <h3 class="red FONT20 text_hid"><a class="red" href="javascript:void(0);" onclick="newDet('949ED17C8D8901ADE050007F01005A85');return false;">道里区直机关工委组织举办 “不忘初心、牢记使命”主题教育培训班</a></h3>
+                <div class=" LH30">12日，道里区直属机关工委组织举办 “不忘初心、牢记使命”主题教育培训班，240余名党员干部参训<a href="javascript:void(0);" onclick="newDet('949ED17C8D8901ADE050007F01005A85');return false;" class="red">【详细】</a></div>
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+    <div class="right">
+        <div class="login">
+            <!-- ----------------------------------------页面用户登录 -->
+            <div class="login_top" id="userLoginNew" >
+                <!-- <div></div>-->
+                <div style="height: 180px;padding: 10px;">
+                    <!--单元照片-->
+                    <div style="height:100px ">
+                        <img src="partyMember/images/20191022.jpg" style="width: 80px;height: 100px;float: left;"/>
+                        <div style="font-weight:bold;" align="center">
+                            党员基本信息
+                        </div>
+                        <div style="padding-left: 145px;margin-top: 7px;font-weight:bold;" >
+                            <p style="">姓名：XX</p><p style="margin-top: 8px;">性别：SEX</p></div>
+                        <div style="padding-left: 65px;font-weight:bold;float:left;margin-top: 8px;">
+                            <p style="">身份: YY</p></div>
+                        <!--<p style="margin-top: 8px;" align="center">YY</p>-->
+                    </div>
+                    <div style="border-left:2px #47484c dashed;border-right:2px #47484c dashed; font-size:18px;padding:8px;height:60px;margin-top: 10px;">
+                        <div class="t3"><a href="#">在线评测</a></div>
+                        <div class="t3"><a href="#">互动交流</a></div>
+                        <div class="t3" style="margin-top: 10px;"><a href="inboxEmail.html">站内信</a></div>
+                        <div class="t3" style="margin-top: 10px;"><a href="grzx/index.html">个人中心</a></div>
+
+                    </div>
+                </div>
+                <!--替换-->
+            </div>
+            <div class="login_top" id="userLoginOld" >
+                <div class="login_title FONT18 red">党员登录</div>
+                <form  id="loginForm" name="loginForm" method="post">
+                    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="mt10">
+
+                        <tbody><tr>
+                            <th width="90px">用户名：</th>
+                            <td colspan="2"><input type="text" name="yhdlm" id="yhdlm_id" value=""></td>
+                        </tr>
+                        <tr>
+                            <th>密码：</th>
+                            <td colspan="2"><input type="password" name="yhmm" id="yhmm_id" value=""></td>
+                        </tr>
+                        <tr>
+                            <th>验证码：</th>
+                            <td><input type="text" name="code" id="code_id" value="" style="width: 80px;"/></td>
+                            <td><img id="imgObj" alt="验证码" src="/index/code?a=1" onclick="changeCode();return false"/></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3"> <span class="font12 red" id="msg_id"></span><a href="javascript:void(0);" onclick="login();return false;" class="login_but Floatright mt10">登录</a><a href="http://www.harbinjgdj.gov.cn/index/register" class="red Floatright mr15 ">注册</a></td>
+                        </tr>
+
+
+                        </tbody></table>
+                </form>
+
+                <!--       <marquee height="170" behavior="scroll" direction="up" scrolldelay="1" scrollamount="4" onmouseout="scrollArea.start()" onmouseover="scrollArea.stop()" id="scrollArea">
+                         <a class="red FONT18" onclick="" href="javascript:void(0);">中共中央政治局召开会议 习近平主持</a>
+                          <p class="LH24" >中共中央政治局11月23日召开会议，审议通过《关于打赢脱贫攻坚战的决定》、《关于加强和改进新形势下党校工作的意见》</p>
+                        </marquee>   -->
+            </div>
+            <div class="two_code">
+                <img src="partyMember/images/index_07.jpg" width="350" height="89">
+            </div>
+            <form method="post" id="ff" name="ff">
+                <div class="search">
+                    <span class="Floatleft"><input name="XWBT" id="bt_id" type="text" value=""></span>
+                    <a href="javascript:void(0);" onclick="searchs();return false;" class="search_but Floatright">搜索</a>
+                </div>
+            </form>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="xxls yelllow_bg mt20">
+            <div class="zxfb_title">学习教育</div>
+        </div>
+        <div class="xxls_con">
+
+            <div class="xxls_title"><span class="Floatleft">文件学习</span> <a class="Floatright more" href="javascript:void(0);" onclick="searchLb('17');return false;">更多</a></div>
+            <ul>
+
+                <li>
+                    <a href="javascript:void(0);" onclick="newDet('8B822AF9F64B1E8DE050007F010060AB');return false;">习近平：牢记初心使命，推进自我革命</a>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0);" onclick="newDet('8BFB6CA113967FCCE050007F010060A5');return false;">新时代的思想金句——复兴篇</a>
+                </li>
+
+            </ul>
+
+            <div class="xxls_title"><span class="Floatleft">先进事迹</span> <a class="Floatright more" href="javascript:void(0);" onclick="searchLb('18');return false;">更多</a></div>
+            <ul>
+
+                <li>
+                    <a href="javascript:void(0);" onclick="newDet('8B822AF9F67F1E8DE050007F010060AB');return false;">不忘初心  牢记使命  坚定走好新时代全面从严治党长征路 | 刘兴东</a>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0);" onclick="newDet('8B822AF9F6701E8DE050007F010060AB');return false;">铭记初心 勇担使命 全力推进统计工作再上新台阶 | 佟宇</a>
+                </li>
+
+            </ul>
+
+            <div class="xxls_title"><span class="Floatleft">先锋专栏</span> <a class="Floatright more" href="javascript:void(0);" onclick="searchLb('20');return false;">更多</a></div>
+            <ul>
+
+                <li>
+                    <a href="javascript:void(0);" onclick="newDet('81EA5571F629CC81E050007F0100258C');return false;">大型系列纪录片《先生》</a>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0);" onclick="newDet('3FC17328C960F6EAE050007F01003A42');return false;">习近平引用的古典名句（20）</a>
+                </li>
+
+            </ul>
+
+            <div class="xxls_title"><span class="Floatleft">先锋论坛</span> <a class="Floatright more" href="javascript:void(0);" onclick="searchLb('19');return false;">更多</a></div>
+            <ul>
+
+                <li>
+                    <a href="javascript:void(0);" onclick="newDet('6A42BD3B57697B6EE050007F0100234E');return false;">强化机关基层党组织政治功能的路径研究</a>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0);" onclick="newDet('59C25248F6E90FE6E050007F01006BD7');return false;">敬仰领袖 真心看齐 凝聚全面振兴发展的磅礴力量</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <div class="xtbg xtbg_bg1"> <a href="http://www.harbinjgdj.gov.cn/#" onclick="searchLb('58197B5BB220E175E050007F01001884');return false;">十九大专题报道</a></div>
+        <div class="xtbg xtbg_bg2"><a href="http://www.harbinjgdj.gov.cn/#" onclick="searchLb('5702B79CF93513FAE050007F01002521');return false;">不忘初心  牢记使命</a></div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div class="djzx yelllow_bg mt20">
+        <div class="zxfb_title">组织生活</div>
+    </div>
+    <div class="Pct100 Floatleft">
+        <div class="djzx_son">
+
+            <div class="djzx_second_menu gray_bg mt15">
+                <div class="second_menu_title">三基工程</div>
+                <a class="Floatright more" href="javascript:void(0);" onclick="searchLb('12');return false;">更多</a>
+            </div>
+            <ul class="mt10 chexfix Floatleft djzx_con">
+
+                <li><a href="javascript:void(0);" onclick="newDet('730D6F2B6E993436E050007F01005C65');return false;">市卫计委检查机关党支部 “三会一课”制度执行情况</a></li>
+
+                <li><a href="javascript:void(0);" onclick="newDet('72E967E914C2D4F9E050007F01000670');return false;">市城管局检查基层党支部基本制度执行落实情况</a></li>
+
+            </ul>
+
+            <div class="djzx_second_menu gray_bg mt15">
+                <div class="second_menu_title">共产党员先锋岗</div>
+                <a class="Floatright more" href="javascript:void(0);" onclick="searchLb('14');return false;">更多</a>
+            </div>
+            <ul class="mt10 chexfix Floatleft djzx_con">
+
+                <li><a href="javascript:void(0);" onclick="newDet('949E5667C15DE789E050007F01005A3D');return false;">市档案馆：发挥先锋模范作用 积极作为高效服务</a></li>
+
+                <li><a href="javascript:void(0);" onclick="newDet('730D6F2B6EA93436E050007F01005C65');return false;">市卫计委行政审批办先锋岗立足“小窗口”做好“大服务”</a></li>
+
+            </ul>
+
+        </div>
+
+
+
+        <div class="djzx_son ml10">
+
+
+            <div class="djzx_second_menu gray_bg mt15">
+                <div class="second_menu_title">支部写真</div>
+                <a class="Floatright more" href="javascript:void(0);" onclick="searchLb('13');return false;">更多</a>
+            </div>
+
+            <ul class="mt10 chexfix Floatleft djzx_con">
+
+                <li><a href="javascript:void(0);" onclick="newDet('945DFBD3C1B7A7DAE050007F01005A89');return false;">市档案馆党员干部观看电影《我和我的祖国》</a></li>
+
+                <li><a href="javascript:void(0);" onclick="newDet('945DFBD3C1BEA7DAE050007F01005A89');return false;">市发改委离退休干部第二党总支积极开展建国70周年庆祝活动</a></li>
+
+            </ul>
+
+
+
+            <div class="djzx_second_menu gray_bg mt15">
+                <div class="second_menu_title">公仆风采</div>
+                <a class="Floatright more" href="javascript:void(0);" onclick="searchLb('15');return false;">更多</a>
+            </div>
+
+            <ul class="mt10 chexfix Floatleft djzx_con">
+
+                <li><a href="javascript:void(0);" onclick="newDet('6DB914B0EE991CB6E050007F010049FD');return false;">来自团市委脱贫攻坚一线的青春报告</a></li>
+
+                <li><a href="javascript:void(0);" onclick="newDet('58916733852F5F19E050007F0100516A');return false;">用工匠精神抒写医疗卫生事业新篇章</a></li>
+
+            </ul>
+
+
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+
+    <div class="djzx yelllow_bg mt20"> <div class="zxfb_title">党员之家</div> </div>
+    <div class="Pct100 Floatleft">
+
+
+        <div class="dyzj_news">
+            <div class="dyzj_second_menu  gray_bg mt15">
+                <div class="second_menu_title">群团天地</div>
+                <a class="Floatright more" href="javascript:void(0);" onclick="searchLb('22');return false;">更多</a>
+            </div>
+            <ul>
+
+                <li>
+                    <h4 class="FONT16 LH30 text_hid" style="font-weight: normal;"><a href="javascript:void(0);" onclick="newDet('8BFB6CA113A17FCCE050007F010060A5');return false;">“迎接第十次全国肢残人日”哈尔滨市残疾人专场文艺演出成功举行</a></h4>
+                    <div class="LH24 dyzj_con">8月11日，市肢残人协会举行了哈尔滨市残疾人专场文艺演出暨狮爱助残圆梦基金之辅具捐赠仪式...</div>
+                </li>
+
+                <li>
+                    <h4 class="FONT16 LH30 text_hid" style="font-weight: normal;"><a href="javascript:void(0);" onclick="newDet('8BFB6CA1137B7FCCE050007F010060A5');return false;">市侨联申建平会见加拿大和美国华人华侨</a></h4>
+                    <div class="LH24 dyzj_con">市侨联领导会见加拿大雷湾市华人副市长彭友连，美国硅谷东北总商会会长刘卓...</div>
+                </li>
+
+                <li>
+                    <h4 class="FONT16 LH30 text_hid" style="font-weight: normal;"><a href="javascript:void(0);" onclick="newDet('8BFB6CA113797FCCE050007F010060A5');return false;">市科协调研农技协工作  助力特色农业发展</a></h4>
+                    <div class="LH24 dyzj_con">7月11日，市科协副主席张少玉来到道里区常满食用菌协会调研，并参观了紫花脸蘑菇和赤松茸蘑菇...</div>
+                </li>
+
+            </ul>
+        </div>
+
+
+
+        <div class="dyzj_news ml10">
+            <div class="dyzj_second_menu  gray_bg mt15">
+                <div class="second_menu_title">七彩机关</div>
+                <a class="Floatright more" href="javascript:void(0);" onclick="searchLb('23');return false;">更多</a>
+            </div>
+
+            <div class="qcjg"><a href="javascript:void(0);" onclick="newDet('949E5667C15EE789E050007F01005A3D');return false;"><img src="partyMember/images/1571276171746.jpg" width="151" height="107"></a>市侨联机关党员集体观..</div>
+
+            <div class="qcjg"><a href="javascript:void(0);" onclick="newDet('949ED17C8D8C01ADE050007F01005A85');return false;"><img src="partyMember/images/1571036267839.jpg" width="151" height="107"></a>市民宗局开展庆祝新中..</div>
+
+            <div class="qcjg"><a href="javascript:void(0);" onclick="newDet('949ED17C8D8E01ADE050007F01005A85');return false;"><img src="partyMember/images/1571039386720.png" width="151" height="107"></a>市城管局勇夺市直机关..</div>
+
+            <div class="qcjg"><a href="javascript:void(0);" onclick="newDet('945DFBD3C1C0A7DAE050007F01005A89');return false;"><img src="partyMember/images/1570676983083.jpg" width="151" height="107"></a>市公共资源交易中心举..</div>
+
+        </div>
+
+
+        <div class="dyzj_mail">
+            <div class="xtbg_bot xtbg_bg3"> <a href="http://www.harbinjgdj.gov.cn/#" onclick="searchLb('4F3CC976BFE52D96E050007F01000D6C');return false;">解放思想推动高质量发展大讨论</a></div>
+            <div class="xtbg_bot xtbg_bg4"><a href="http://www.harbinjgdj.gov.cn/#" onclick="searchLb('340BD8969F07B6E2E050007F01006107');return false;">红船劈波行  精神聚人心</a></div>
+
+
+            <a href="http://www.harbinjgdj.gov.cn/index/answer" style="width: 80px;">
+                <div class="icon icon_wsdt"></div>
+                网上<br>答题
+            </a>
+            <a href="javascript:void(0);" style="width: 251px;">
+                <div class="icon  " style="width: 251px;margin: 0px 0px 0px 0px;height: 20px;font-weight: bold;font-size: 14px;text-align: left;">哈尔滨市直机关纪检监察工委举报专区</div>
+                <div class="icon  " style="width: 251px;margin: 10px 0px 0px 0px;font-size: 13px;height: 25px;text-align: left;;font-weight: bold">举报电话：0451-87173485</div>
+                <div class="icon  " style="width: 251px;margin: 0px 0px 0px 0px;font-size: 13px;height: 25px;text-align: left;;font-weight: bold">举报邮箱：jjjcgw@126.com</div>
+                <div class="icon  " style="width: 251px;margin: 0px 0px 0px 0px;font-size: 13px;height: 25px;text-align: left;;font-weight: bold">通信地址：哈市松北区世纪大道1号1105室</div>
+                <div class="icon  " style="width: 251px;margin: 0px 0px 0px 0px;font-size: 13px;height: 25px;text-align: left;;font-weight: bold">邮政编码：150021</div>
+            </a>
+
+
+
+
+
+        </div>
+    </div>
+
+
+    <div class="clr"></div>
+    <div class="left">
+
+        <div class="zxfb yelllow_bg mt20"> <div class="zxfb_title">党建大数据</div> </div>
+
+        <div class="second_menu  gray_bg mt15">
+            <div class="second_menu_title">财务预决算公开</div>
+            <a class="Floatright more" href="javascript:void(0);" onclick="searchLb('28');return false;">更多</a>
+        </div>
+        <div class="mt10 mb10 chexfix djdsj_new">
+            <ul class="chexfix">
+
+                <li><a href="javascript:void(0);" onclick="newDet('949ED17C8D8301ADE050007F01005A85');return false;">2018年中共哈尔滨市直属机关工作委员会决算公开</a></li>
+
+                <li><a href="javascript:void(0);" onclick="newDet('77EB081B61408ED4E050007F010013B4');return false;">2019年中共哈尔滨市直属机关工作委员会预算公开</a></li>
+
+            </ul>
+        </div>
+
+        <div class="second_menu  gray_bg mt15">
+            <div class="second_menu_title">党务手册</div>
+            <a class="Floatright more" href="javascript:void(0);" onclick="searchLb('29');return false;">更多</a>
+        </div>
+        <div class="mt10 mb10 chexfix djdsj_new">
+            <ul class="chexfix">
+
+                <li><a href="javascript:void(0);" onclick="newDet('58D1BCF8050371C4E050007F010055E7');return false;">《中国共产党章程》</a></li>
+
+                <li><a href="javascript:void(0);" onclick="newDet('59B0023926CB7F26E050007F010055EF');return false;">决胜全面建成小康社会 夺取新时代中国特色社会主义伟大胜利——在中国共产党第十九次全国代表大会上的报告</a></li>
+
+            </ul>
+        </div>
+
+
+
+
+        <div class="second_menu  gray_bg mt15">
+            <div class="second_menu_title">影像资料</div>
+            <a class="Floatright more" href="javascript:void(0);" onclick="searchLb('30');return false;">更多</a>
+        </div>
+        <div class="mt10 mb10 chexfix djdsj_new">
+
+            <a href="javascript:void(0);" onclick="newDet('5701CF5941BA3BDFE050007F0100251F');return false;"><img src="partyMember/images/1503890896659.jpg" width="151" height="104"></a>
+
+            <a href="javascript:void(0);" onclick="newDet('5701CF5941B83BDFE050007F0100251F');return false;"><img src="partyMember/images/1503890758454.jpg" width="151" height="104"></a>
+
+            <a href="javascript:void(0);" onclick="newDet('5701CF5941B93BDFE050007F0100251F');return false;"><img src="partyMember/images/1503890856460.jpg" width="151" height="104"></a>
+
+            <a href="javascript:void(0);" onclick="newDet('5701CF5941BB3BDFE050007F0100251F');return false;"><img src="partyMember/images/1503890952832.jpg" width="151" height="104"></a>
+
+        </div>
+
+
+    </div>
+    <div class="right">
+
+
+        <div class="xxls yelllow_bg mt20">
+            <div class="zxfb_title">纪检监察</div>
+        </div>
+        <div class="zfqy_con">
+
+            <div class="zfqy_title"><span class="Floatleft">环境建设</span> <a class="Floatright more" href="javascript:void(0);" onclick="searchLb('25');return false;">更多</a></div>
+            <ul>
+
+                <li><a href="javascript:void(0);" onclick="newDet('8BFB6CA1139D7FCCE050007F010060A5');return false;">中央和国家机关纪检监察工委：持之以恒强化正风肃纪 建设风清气正的政治机关</a></li>
+
+                <li><a href="javascript:void(0);" onclick="newDet('837CF667ABB164C7E050007F01006C29');return false;">市直机关纪检监察工委扎实推进作风整顿优化营商环境工作</a></li>
+
+                <li><a href="javascript:void(0);" onclick="newDet('81EA5571F62DCC81E050007F0100258C');return false;">市交通运输局召开全市公交行业服务百姓出行打造满意公交座谈会</a></li>
+
+            </ul>
+
+            <div class="zfqy_title"><span class="Floatleft">警钟声声</span> <a class="Floatright more" href="javascript:void(0);" onclick="searchLb('26');return false;">更多</a></div>
+            <ul>
+
+                <li><a href="javascript:void(0);" onclick="newDet('8B822AF9F6711E8DE050007F010060AB');return false;">火车站前“黑车”多 木材东街排水不畅，哈尔滨一批干部不作为被通报！</a></li>
+
+                <li><a href="javascript:void(0);" onclick="newDet('338E6CE5A2328802E050007F01001445');return false;">这样办婚宴违纪！党员干部要注意，别打擦边球</a></li>
+
+                <li><a href="javascript:void(0);" onclick="newDet('33A300249494470EE050007F0100304E');return false;">黑龙江省通报3起违反中央八项规定精神问题</a></li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+    <div class="clr"></div>
+</div>
+<div class="clr"></div>
+
+
+
+
+<div class="link chexfix mt20">
+    <div class="link_con">
+        <div class="link_title">
+            <span class="Floatleft FONT20  ">友情链接</span>
+            <ul class="tabtitle">
+                <li id="one1" class="hover" onclick="setTab('one',1,3);">政府网站</li>
+                <li id="one2" onclick="setTab('one',2,3);">党建网站</li>
+                <li id="one3" onclick="setTab('one',3,3);">媒体网站</li>
+            </ul>
+
+        </div>
+        <div class="hover" id="con_one_1">
+            <ul class="url">
+
+                <li><a href="http://www.gov.cn/" target="_blank">中国政府网</a></li>
+
+                <li><a href="http://www.ccdi.gov.cn/" target="_blank">中央纪检监察网</a></li>
+
+                <li><a href="http://www.acftu.org/" target="_blank">中华全国总工会</a></li>
+
+                <li><a href="http://www.ccyl.org.cn/" target="_blank">中国共青团网</a></li>
+
+                <li><a href="http://www.hlj.gov.cn/" target="_blank">黑龙江政府网</a></li>
+
+                <li><a href="http://www.harbin.gov.cn/" target="_blank">中国哈尔滨</a></li>
+
+                <li><a href="http://zwgk.harbin.gov.cn/" target="_blank">哈尔滨政务公开网</a></li>
+
+                <li><a href="http://www.hrbsrd.gov.cn/" target="_blank">哈尔滨市人大常委会</a></li>
+
+                <li><a href="http://www.hrbzx.gov.cn/" target="_blank">哈尔滨市政协委员会</a></li>
+
+            </ul>
+        </div>
+        <div style="display:none" id="con_one_2">
+            <ul class="url">
+
+                <li><a href="http://www.zgg.org.cn/" target="_blank">中直党建网</a></li>
+
+                <li><a href="http://www.ljjgdj.org/" target="_blank">龙江党建网</a></li>
+
+                <li><a href="http://www.12371.cn/" target="_blank">共产党员网</a></li>
+
+                <li><a href="http://www.qstheory.cn/" target="_blank">求是网</a></li>
+
+                <li><a href="http://www.hrbgbzx.com/" target="_blank">哈尔滨干部在线</a></li>
+
+                <li><a href="http://cpc.people.com.cn/" target="_blank">中国共产党新闻网</a></li>
+
+            </ul>
+        </div>
+        <div style="display:none" id="con_one_3">
+            <ul class="url">
+
+                <li><a href="http://www.xinhuanet.com/" target="_blank">新华网</a></li>
+
+                <li><a href="http://www.people.com.cn/" target="_blank">人民网</a></li>
+
+                <li><a href="http://www.cctv.com/" target="_blank">央视网</a></li>
+
+                <li><a href="http://news.qq.com/" target="_blank">腾讯新闻</a></li>
+
+                <li><a href="http://news.sohu.com/" target="_blank">搜狐新闻</a></li>
+
+                <li><a href="http://www.dbw.cn/" target="_blank">东北网</a></li>
+
+                <li><a href="http://www.hljnews.cn/" target="_blank">黑龙江新闻网</a></li>
+
+                <li><a href="http://www.my399.com/" target="_blank">哈尔滨新闻网</a></li>
+
+            </ul>
+        </div>
+    </div>
+    <div class="clr"></div>
+</div>
+
+
+<div class="foot chexfix">
+    <table width="100%" border="0" align="center">
+        <tbody><tr>
+            <td align="right" width="40%" class="pr15">
+                <script type="text/javascript">document.write(unescape("%3Cspan id='_ideConac' %3E%3C/span%3E%3Cscript src='partyMember/js/CA101600000604674050001.js' type='text/javascript'%3E%3C/script%3E"));</script>
+            </td>
+            <td>    版权所有：中共哈尔滨市直属机关工作委员会<br>
+                地址：哈尔滨市道里区兆麟街123号，黑ICP0800021</td>
+        </tr>
+        </tbody></table>
+</div>
+
+
+
+<style type="text/css">
+    * {margin:0;padding:0;}
+
+    #marquee2 {margin-top:5px;margin-right:auto;margin-left:auto;left:400px;width:1000px;height:32px;overflow:hidden; background:#fce7ac;}
+    #marquee2 ul li {float:left; padding:0 10px; line-height:25px;}
+
+
+
+</style>
+<script type="text/javascript"  src="partyMember/js/jquery-1.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $('#marquee1').kxbdMarquee({direction:'right'});
+        $('#marquee2').kxbdMarquee({isEqual:false});
+        $('#marquee3').kxbdMarquee({direction:'down'});
+        $('#marquee4').kxbdMarquee({direction:'up',isEqual:false});//一般这个是常用的,从下往上滚动
+    });
+</script>
+<script type="text/javascript">
+    (function($){
+
+        $.fn.kxbdMarquee = function(options){
+            var opts = $.extend({},$.fn.kxbdMarquee.defaults, options);
+
+            return this.each(function(){
+                var $marquee = $(this);//滚动元素容器
+                var _scrollObj = $marquee.get(0);//滚动元素容器DOM
+                var scrollW = $marquee.width();//滚动元素容器的宽度
+                var scrollH = $marquee.height();//滚动元素容器的高度
+                var $element = $marquee.children(); //滚动元素
+                var $kids = $element.children();//滚动子元素
+                var scrollSize=0;//滚动元素尺寸
+                var _type = (opts.direction == 'left' || opts.direction == 'right') ? 1:0;//滚动类型，1左右，0上下
+
+                //防止滚动子元素比滚动元素宽而取不到实际滚动子元素宽度
+                $element.css(_type?'width':'height',10000);
+                //获取滚动元素的尺寸
+                if (opts.isEqual) {
+                    scrollSize = $kids[_type?'outerWidth':'outerHeight']() * $kids.length;
+                }else{
+                    $kids.each(function(){
+                        scrollSize += $(this)[_type?'outerWidth':'outerHeight']();
+                    });
+                }
+                //滚动元素总尺寸小于容器尺寸，不滚动
+                if (scrollSize<(_type?scrollW:scrollH)) return;
+                //克隆滚动子元素将其插入到滚动元素后，并设定滚动元素宽度
+                $element.append($kids.clone()).css(_type?'width':'height',scrollSize*2);
+
+                var numMoved = 0;
+                function scrollFunc(){
+                    var _dir = (opts.direction == 'left' || opts.direction == 'right') ? 'scrollLeft':'scrollTop';
+                    if (opts.loop > 0) {
+                        numMoved+=opts.scrollAmount;
+                        if(numMoved>scrollSize*opts.loop){
+                            _scrollObj[_dir] = 0;
+                            return clearInterval(moveId);
+                        }
+                    }
+
+                    if(opts.direction == 'left' || opts.direction == 'up'){
+                        var newPos = _scrollObj[_dir] + opts.scrollAmount;
+                        if(newPos>=scrollSize){
+                            newPos -= scrollSize;
+                        }
+                        _scrollObj[_dir] = newPos;
+                    }else{
+                        var newPos = _scrollObj[_dir] - opts.scrollAmount;
+                        if(newPos<=0){
+                            newPos += scrollSize;
+                        }
+                        _scrollObj[_dir] = newPos;
+                    }
+                }
+                //滚动开始
+                var moveId = setInterval(scrollFunc, opts.scrollDelay);
+                //鼠标划过停止滚动
+                $marquee.hover(
+                    function(){
+                        clearInterval(moveId);
+                    },
+                    function(){
+                        clearInterval(moveId);
+                        moveId = setInterval(scrollFunc, opts.scrollDelay);
+                    }
+                );
+
+            });
+        };
+        $.fn.kxbdMarquee.defaults = {
+            isEqual:true,//所有滚动的元素长宽是否相等,true,false
+            loop: 0,//循环滚动次数，0时无限
+            direction: 'left',//滚动方向，'left','right','up','down'
+            scrollAmount:1,//步长
+            scrollDelay:20//时长
+
+        };
+        $.fn.kxbdMarquee.setDefaults = function(settings) {
+            $.extend( $.fn.kxbdMarquee.defaults, settings );
+        };
+    })(jQuery);
+</script>
+
+</body></html>

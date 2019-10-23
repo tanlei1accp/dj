@@ -1,0 +1,99 @@
+.m-kuan-mini{
+    padding-top:0.2em !important;
+    padding-bottom: 0.2em !important;
+}
+.m-padded-tb-tiny{
+    padding-top:0.3em !important;
+    padding-bottom: 0.3em !important;
+}
+.m-padded-tb-small{
+    padding-top:0.5em !important;
+    padding-bottom: 0.5em !important;
+}
+.m-padded-tb{
+    padding-top:1em !important;
+    padding-bottom: 1em !important;
+}
+.m-padded-tb-large{
+    padding-top:2em !important;
+    padding-bottom: 2em !important;
+}
+.m-padded-tb-big{
+    padding-top:3em !important;
+    padding-bottom:3em !important;
+}
+.m-padded-tb-huge{
+    padding-top:4em !important;
+    padding-bottom: 4em !important;
+}
+.m-padded-tb-massive{
+    padding-top:2.5em !important;
+    padding-bottom:2.5em !important;
+}
+
+/*-------text -----*/
+
+.m-text-thin {
+     font-weight: 300 ! important;
+ }
+.m-text-spaced {
+    Letter-spacing: 1px ! important;
+}
+.m-text-lined {
+     line-height: 1.8;
+ }
+.m-opacity-mini {
+    opacity: 0.8 !important;
+}
+/*----------margin-------*/
+.m-margin-top-small{
+    margin-top: 0.5em !important;
+}
+.m-margin-top-large{
+    margin-top: 2em !important;
+
+}
+.m-margin-top{
+    margin-top: 1em !important;
+
+}
+
+.m-margin-tb-tiny{
+    margin-top: 0.3em !important;
+    margin-bottom: 0.3em !important;
+}
+.m-margin-top-small{
+    margin-top: 0.5em !important;
+}
+.m-margin-top-top{
+    margin-top: 1em !important;
+}
+.m-margin-top-large{
+    margin-top: 2em !important;
+}
+/*显示的一些属性*/
+.m-inline-block{
+    display: inline-block ! important;
+
+}
+/*颜色*/
+.m-black{
+    color: #333 ! important;
+}
+.m-color{
+    background-color:#b20b13! important;
+}
+.m-color-r{
+    background-color:#A52A2A ! important;
+}
+/*position*/
+.m-right-top{
+    position: absolute;
+    top:0;
+    right:0;
+}
+/*详情页宽度*/
+.m-container-small{
+max-width: 65em ! important;
+    margin: auto ! important;
+}
