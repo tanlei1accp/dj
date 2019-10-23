@@ -1,0 +1,11 @@
+2019-10-23 09:46:40,933 INFO (StartupInfoLogger.java:50)- Starting CsdjApplication on LAPTOP-8R665O9N with PID 19416 (started by Administrator in D:\study\项目\源码\csdj)
+2019-10-23 09:46:40,940 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.9.RELEASE, Spring v5.1.9.RELEASE
+2019-10-23 09:46:40,940 INFO (SpringApplication.java:648)- No active profile set, falling back to default profiles: default
+2019-10-23 09:46:44,040 INFO (StartupInfoLogger.java:59)- Started CsdjApplication in 3.669 seconds (JVM running for 5.459)
+2019-10-23 09:46:59,327 INFO (MemberServiceImpl.java:11)- 添加了一个党员
+2019-10-23 09:54:26,850 INFO (StartupInfoLogger.java:50)- Starting CsdjApplication on LAPTOP-8R665O9N with PID 16268 (started by Administrator in D:\study\项目\源码\csdj)
+2019-10-23 09:54:26,854 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.9.RELEASE, Spring v5.1.9.RELEASE
+2019-10-23 09:54:26,855 INFO (SpringApplication.java:648)- No active profile set, falling back to default profiles: default
+2019-10-23 09:54:29,201 INFO (StartupInfoLogger.java:59)- Started CsdjApplication in 2.737 seconds (JVM running for 4.099)
+2019-10-23 10:02:37,117 INFO (MemberServiceImpl.java:11)- 添加了一个党员
+2019-10-23 10:02:55,631 INFO (MemberServiceImpl.java:11)- 添加了一个党员

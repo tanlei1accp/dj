@@ -1,0 +1,5 @@
+2019-10-17 15:52:20,106 INFO (StartupInfoLogger.java:50)- Starting CsdjApplication on LAPTOP-8R665O9N with PID 12772 (D:\study\csdj\target\classes started by Administrator in D:\study\csdj)
+2019-10-17 15:52:20,110 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.9.RELEASE, Spring v5.1.9.RELEASE
+2019-10-17 15:52:20,111 INFO (SpringApplication.java:648)- No active profile set, falling back to default profiles: default
+2019-10-17 15:52:22,242 INFO (StartupInfoLogger.java:59)- Started CsdjApplication in 2.539 seconds (JVM running for 3.815)
+2019-10-17 15:53:36,246 INFO (MemberServiceImpl.java:11)- 添加了一个党员
