@@ -9,3 +9,20 @@
 2019-10-23 09:54:29,201 INFO (StartupInfoLogger.java:59)- Started CsdjApplication in 2.737 seconds (JVM running for 4.099)
 2019-10-23 10:02:37,117 INFO (MemberServiceImpl.java:11)- 添加了一个党员
 2019-10-23 10:02:55,631 INFO (MemberServiceImpl.java:11)- 添加了一个党员
+2019-10-23 17:49:37,037 INFO (MemberServiceImpl.java:11)- 添加了一个党员
+2019-10-23 17:49:39,398 INFO (MemberServiceImpl.java:11)- 添加了一个党员
+2019-10-23 17:49:57,807 INFO (StartupInfoLogger.java:50)- Starting CsdjApplication on DESKTOP-OPC3ST8 with PID 16392 (F:\projects\dj\target\classes started by ft in F:\projects\dj)
+2019-10-23 17:49:57,811 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.9.RELEASE, Spring v5.1.9.RELEASE
+2019-10-23 17:49:57,812 INFO (SpringApplication.java:648)- No active profile set, falling back to default profiles: default
+2019-10-23 17:50:01,169 INFO (StartupInfoLogger.java:59)- Started CsdjApplication in 3.875 seconds (JVM running for 5.825)
+2019-10-23 17:50:21,078 INFO (MemberServiceImpl.java:11)- 添加了一个党员
+2019-10-23 18:54:27,430 INFO (StartupInfoLogger.java:50)- Starting CsdjApplication on DESKTOP-OPC3ST8 with PID 15356 (F:\projects\dj\target\classes started by ft in F:\projects\dj)
+2019-10-23 18:54:27,433 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.9.RELEASE, Spring v5.1.9.RELEASE
+2019-10-23 18:54:27,434 INFO (SpringApplication.java:648)- No active profile set, falling back to default profiles: default
+2019-10-23 18:54:30,655 INFO (StartupInfoLogger.java:59)- Started CsdjApplication in 3.817 seconds (JVM running for 5.867)
+2019-10-23 19:03:24,066 INFO (StartupInfoLogger.java:50)- Starting CsdjApplication on DESKTOP-OPC3ST8 with PID 17564 (F:\projects\dj\target\classes started by ft in F:\projects\dj)
+2019-10-23 19:03:24,069 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.9.RELEASE, Spring v5.1.9.RELEASE
+2019-10-23 19:03:24,070 INFO (SpringApplication.java:648)- No active profile set, falling back to default profiles: default
+2019-10-23 19:03:27,639 INFO (StartupInfoLogger.java:59)- Started CsdjApplication in 4.047 seconds (JVM running for 5.622)
+2019-10-23 19:05:14,808 INFO (MemberServiceImpl.java:11)- 添加了一个党员
+2019-10-23 19:09:07,594 INFO (MemberServiceImpl.java:11)- 添加了一个党员
