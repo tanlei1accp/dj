@@ -13,4 +13,10 @@ public class CheckingLnformationController extends BaseController {
     public String checkInformation(){
     return "/branch/experience/experienceIndex";
 }
+@RequestMapping("checkInformationDetail")
+    public String checkInformationDetail(){
+
+    return "/branch/experience/experienceDetail";
+}
+
 }
