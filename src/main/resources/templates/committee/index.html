@@ -1,11 +1,12 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="zh-CN" xmlns:th="http://www.w3.org/1999/xhtml">
 	<head>
 		<meta charset="UTF-8">
-		<link rel="stylesheet" href="css/common.css">
-		<link rel="stylesheet" href="css/style.css">
-		<script type="text/javascript" src="js/jquery.min.js"></script>
-		<script type="text/javascript" src="js/jquery.SuperSlide.js"></script>
+		<base th:href="@{/}">
+		<link rel="stylesheet" href="../partyCommittee/css/common.css">
+		<link rel="stylesheet" href="../partyCommittee/css/style.css">
+		<script type="text/javascript" src="../partyCommittee/js/jquery.min.js"></script>
+		<script type="text/javascript" src="../partyCommittee/js/jquery.SuperSlide.js"></script>
 		<script type="text/javascript">
 			$(function() {
 				$(".sideMenu").slide({
@@ -140,16 +141,17 @@
 				</ul>
 				<h3> 问卷调查</h3>
 				<ul>
-					<li><a href="wjdc/findSurvey.html" target="right" class="">问卷管理</a></li>
-					<li><a href="wjdc/addQuestion.html" target="right" class="">添加问卷问题</a></li>
-					<li><a href="wjdc/score.html" target="right" class="">测评统计</a></li>
+					<li><a href="/Survey" target="right" class="">问卷管理</a></li>
+					<li><a href="/squestion" target="right" class="">添加问卷问题</a></li>
+					<li><a href="/sscore" target="right" class="">测评统计</a></li>
 				</ul>
 				<h3>在线测评</h3>
 				<ul>
-					<li><a href="zaixianceping/question.html" target="right" class="">题库管理</a></li>
-					<li><a href="zaixianceping//exam.html" target="right" class="">试卷管理</a></li>
-					<li><a href="zaixianceping//ks.html" target="right" class="">考试管理</a></li>
-					<li><a href="zaixianceping/  /ceping.html" target="right" class="">测评统计</a></li>
+					<li><a href="/testonline/tiku" target="right" class="">题库管理</a></li>
+					<li><a href="/testonline/exam" target="right" class="">试卷管理</a></li>
+					<li><a href="/testonline/ks" target="right" class="">考试管理</a></li>
+					<li><a href="/testonline/ceping" target="right" class="">测评统计</a></li>
+
 				</ul>
 			</div>
 		</div>
