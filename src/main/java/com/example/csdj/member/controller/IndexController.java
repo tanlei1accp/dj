@@ -56,4 +56,10 @@ public class IndexController extends BaseController {
 
         return "member/partyOpenness/publicFfclList";
     }
+
+    @RequestMapping("/inboxEmail")
+    public String inboxEmail() {
+
+        return "member/inboxMail/inboxEmail";
+    }
 }
