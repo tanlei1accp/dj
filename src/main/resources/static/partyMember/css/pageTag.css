@@ -1,0 +1,26 @@
+.list-page{
+    float: right;
+}
+DIV.youtube ul li{
+    float: left;
+}
+.list-page a.cur, .task-list-page a:hover, .list-page a:hover{
+    background: #a30100 none repeat scroll 0 0;
+    border: 1px solid #a30100;
+    border-radius: 2px;
+    color: #ffffff;
+    display: inline-block;
+    height: 22px;
+    margin: 0 2px;
+    padding: 0 6px;
+}
+.dis{
+    background: #f4f4f4 none repeat scroll 0 0;
+    border: 1px solid #e5e5e5;
+    border-radius: 2px;
+    color: #aaaaaa;
+    display: inline-block;
+    height: 22px;
+    margin: 0 2px;
+    padding: 0 6px;
+}
