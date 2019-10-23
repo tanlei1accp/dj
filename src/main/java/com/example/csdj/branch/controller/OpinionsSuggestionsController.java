@@ -13,4 +13,12 @@ public class OpinionsSuggestionsController extends BaseController {
     public String opinionsSuggestions(){
         return "/branch/advice/adviceIndex";
     }
+    @RequestMapping("opinionsSuggestionsDetail")
+    public String opinionsSuggestionsDetail(){
+        return "/branch/advice/adviceDetail";
+    }
+    @RequestMapping("opinionsSuggestionsReply")
+    public String opinionsSuggestionsReply(){
+        return "/branch/advice/adviceReply";
+    }
 }
