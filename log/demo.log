@@ -9,3 +9,65 @@
 2019-10-23 09:54:29,201 INFO (StartupInfoLogger.java:59)- Started CsdjApplication in 2.737 seconds (JVM running for 4.099)
 2019-10-23 10:02:37,117 INFO (MemberServiceImpl.java:11)- 添加了一个党员
 2019-10-23 10:02:55,631 INFO (MemberServiceImpl.java:11)- 添加了一个党员
+2019-10-23 17:51:22,834 INFO (StartupInfoLogger.java:50)- Starting CsdjApplication on HcDeComputer with PID 25744 (E:\ideaProject\dj\target\classes started by 侯程 in E:\ideaProject\dj)
+2019-10-23 17:51:22,885 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.9.RELEASE, Spring v5.1.9.RELEASE
+2019-10-23 17:51:22,886 INFO (SpringApplication.java:648)- No active profile set, falling back to default profiles: default
+2019-10-23 17:52:29,960 INFO (StartupInfoLogger.java:50)- Starting CsdjApplication on HcDeComputer with PID 18032 (E:\ideaProject\dj\target\classes started by 侯程 in E:\ideaProject\dj)
+2019-10-23 17:52:29,972 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.9.RELEASE, Spring v5.1.9.RELEASE
+2019-10-23 17:52:29,973 INFO (SpringApplication.java:648)- No active profile set, falling back to default profiles: default
+2019-10-23 17:54:40,366 INFO (StartupInfoLogger.java:50)- Starting CsdjApplication on HcDeComputer with PID 17728 (E:\ideaProject\dj\target\classes started by 侯程 in E:\ideaProject\dj)
+2019-10-23 17:54:40,392 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.9.RELEASE, Spring v5.1.9.RELEASE
+2019-10-23 17:54:40,394 INFO (SpringApplication.java:648)- No active profile set, falling back to default profiles: default
+2019-10-23 17:55:54,194 INFO (StartupInfoLogger.java:50)- Starting CsdjApplication on HcDeComputer with PID 20544 (E:\ideaProject\dj\target\classes started by 侯程 in E:\ideaProject\dj)
+2019-10-23 17:55:54,198 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.9.RELEASE, Spring v5.1.9.RELEASE
+2019-10-23 17:55:54,199 INFO (SpringApplication.java:648)- No active profile set, falling back to default profiles: default
+2019-10-23 17:56:12,253 INFO (StartupInfoLogger.java:50)- Starting CsdjApplication on HcDeComputer with PID 22064 (E:\ideaProject\dj\target\classes started by 侯程 in E:\ideaProject\dj)
+2019-10-23 17:56:12,259 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.9.RELEASE, Spring v5.1.9.RELEASE
+2019-10-23 17:56:12,260 INFO (SpringApplication.java:648)- No active profile set, falling back to default profiles: default
+2019-10-23 17:59:00,397 INFO (StartupInfoLogger.java:50)- Starting CsdjApplication on HcDeComputer with PID 19220 (E:\ideaProject\dj\target\classes started by 侯程 in E:\ideaProject\dj)
+2019-10-23 17:59:00,406 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.9.RELEASE, Spring v5.1.9.RELEASE
+2019-10-23 17:59:00,408 INFO (SpringApplication.java:648)- No active profile set, falling back to default profiles: default
+2019-10-23 18:08:38,927 INFO (StartupInfoLogger.java:50)- Starting CsdjApplication on HcDeComputer with PID 5332 (E:\ideaProject\dj\target\classes started by 侯程 in E:\ideaProject\dj)
+2019-10-23 18:08:38,953 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.9.RELEASE, Spring v5.1.9.RELEASE
+2019-10-23 18:08:38,954 INFO (SpringApplication.java:648)- No active profile set, falling back to default profiles: default
+2019-10-23 18:13:45,728 INFO (StartupInfoLogger.java:50)- Starting CsdjApplication on HcDeComputer with PID 4392 (E:\ideaProject\dj\target\classes started by 侯程 in E:\ideaProject\dj)
+2019-10-23 18:13:45,732 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.9.RELEASE, Spring v5.1.9.RELEASE
+2019-10-23 18:13:45,732 INFO (SpringApplication.java:648)- No active profile set, falling back to default profiles: default
+2019-10-23 18:13:53,034 INFO (StartupInfoLogger.java:59)- Started CsdjApplication in 8.01 seconds (JVM running for 9.79)
+2019-10-23 20:29:59,234 INFO (StartupInfoLogger.java:50)- Starting CsdjApplication on HcDeComputer with PID 3256 (E:\ideaProject\dj\target\classes started by 侯程 in E:\ideaProject\dj)
+2019-10-23 20:29:59,241 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.9.RELEASE, Spring v5.1.9.RELEASE
+2019-10-23 20:29:59,242 INFO (SpringApplication.java:648)- No active profile set, falling back to default profiles: default
+2019-10-23 20:30:05,164 INFO (StartupInfoLogger.java:59)- Started CsdjApplication in 7.069 seconds (JVM running for 8.987)
+2019-10-23 20:30:32,720 INFO (MemberServiceImpl.java:11)- 添加了一个党员
+2019-10-23 20:32:10,764 INFO (StartupInfoLogger.java:50)- Starting CsdjApplication on HcDeComputer with PID 3256 (E:\ideaProject\dj\target\classes started by 侯程 in E:\ideaProject\dj)
+2019-10-23 20:32:10,764 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.9.RELEASE, Spring v5.1.9.RELEASE
+2019-10-23 20:32:10,765 INFO (SpringApplication.java:648)- No active profile set, falling back to default profiles: default
+2019-10-23 20:32:12,642 INFO (StartupInfoLogger.java:59)- Started CsdjApplication in 1.991 seconds (JVM running for 136.464)
+2019-10-23 20:32:28,438 INFO (StartupInfoLogger.java:50)- Starting CsdjApplication on HcDeComputer with PID 3256 (E:\ideaProject\dj\target\classes started by 侯程 in E:\ideaProject\dj)
+2019-10-23 20:32:28,439 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.9.RELEASE, Spring v5.1.9.RELEASE
+2019-10-23 20:32:28,440 INFO (SpringApplication.java:648)- No active profile set, falling back to default profiles: default
+2019-10-23 20:32:30,125 INFO (StartupInfoLogger.java:59)- Started CsdjApplication in 1.792 seconds (JVM running for 153.948)
+2019-10-23 20:33:12,757 INFO (StartupInfoLogger.java:50)- Starting CsdjApplication on HcDeComputer with PID 3256 (E:\ideaProject\dj\target\classes started by 侯程 in E:\ideaProject\dj)
+2019-10-23 20:33:12,758 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.9.RELEASE, Spring v5.1.9.RELEASE
+2019-10-23 20:33:12,758 INFO (SpringApplication.java:648)- No active profile set, falling back to default profiles: default
+2019-10-23 20:33:14,729 INFO (StartupInfoLogger.java:59)- Started CsdjApplication in 2.035 seconds (JVM running for 198.55)
+2019-10-23 20:42:54,871 INFO (StartupInfoLogger.java:50)- Starting CsdjApplication on HcDeComputer with PID 3256 (E:\ideaProject\dj\target\classes started by 侯程 in E:\ideaProject\dj)
+2019-10-23 20:42:54,872 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.9.RELEASE, Spring v5.1.9.RELEASE
+2019-10-23 20:42:54,872 INFO (SpringApplication.java:648)- No active profile set, falling back to default profiles: default
+2019-10-23 20:42:56,759 INFO (StartupInfoLogger.java:59)- Started CsdjApplication in 1.945 seconds (JVM running for 780.582)
+2019-10-23 20:43:34,147 INFO (StartupInfoLogger.java:50)- Starting CsdjApplication on HcDeComputer with PID 3256 (E:\ideaProject\dj\target\classes started by 侯程 in E:\ideaProject\dj)
+2019-10-23 20:43:34,148 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.9.RELEASE, Spring v5.1.9.RELEASE
+2019-10-23 20:43:34,148 INFO (SpringApplication.java:648)- No active profile set, falling back to default profiles: default
+2019-10-23 20:43:35,745 INFO (StartupInfoLogger.java:59)- Started CsdjApplication in 1.653 seconds (JVM running for 819.567)
+2019-10-23 20:49:32,423 INFO (StartupInfoLogger.java:50)- Starting CsdjApplication on HcDeComputer with PID 13928 (E:\ideaProject\dj\target\classes started by 侯程 in E:\ideaProject\dj)
+2019-10-23 20:49:32,619 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.9.RELEASE, Spring v5.1.9.RELEASE
+2019-10-23 20:49:32,625 INFO (SpringApplication.java:648)- No active profile set, falling back to default profiles: default
+2019-10-23 20:49:38,994 INFO (StartupInfoLogger.java:59)- Started CsdjApplication in 8.021 seconds (JVM running for 10.871)
+2019-10-23 20:52:34,954 INFO (StartupInfoLogger.java:50)- Starting CsdjApplication on HcDeComputer with PID 540 (E:\ideaProject\dj\target\classes started by 侯程 in E:\ideaProject\dj)
+2019-10-23 20:52:34,967 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.9.RELEASE, Spring v5.1.9.RELEASE
+2019-10-23 20:52:34,969 INFO (SpringApplication.java:648)- No active profile set, falling back to default profiles: default
+2019-10-23 20:52:40,938 INFO (StartupInfoLogger.java:59)- Started CsdjApplication in 7.08 seconds (JVM running for 8.861)
+2019-10-23 21:04:58,730 INFO (StartupInfoLogger.java:50)- Starting CsdjApplication on HcDeComputer with PID 12816 (E:\ideaProject\dj\target\classes started by 侯程 in E:\ideaProject\dj)
+2019-10-23 21:04:58,735 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.9.RELEASE, Spring v5.1.9.RELEASE
+2019-10-23 21:04:58,736 INFO (SpringApplication.java:648)- No active profile set, falling back to default profiles: default
+2019-10-23 21:05:03,133 INFO (StartupInfoLogger.java:59)- Started CsdjApplication in 5.134 seconds (JVM running for 7.067)
