@@ -1,0 +1,128 @@
+ <!doctype html>
+ <!doctype html>
+ <html lang="zh-CN">
+ <head>
+   <meta charset="UTF-8">
+     <link rel="stylesheet" href="/partyBranch/css/common.css">
+     <link rel="stylesheet" href="/partyBranch/css/style.css">
+     <link rel="stylesheet" href="/partyBranch/css/main.css">
+     <script type="text/javascript" src="/partyBranch/js/jquery.min.js"></script>
+     <script type="text/javascript" src="/partyBranch/js/jquery.SuperSlide.js"></script>
+     <script type="text/javascript" src="/partyBranch/js/colResizable-1.3.min.js"></script>
+     <script type="text/javascript" src="/partyBranch/js/common.js"></script>
+   
+   <script type="text/javascript">
+      $(function(){  
+        $(".list_table").colResizable({
+          liveDrag:true,
+          gripInnerHtml:"<div class='grip'></div>", 
+          draggingClass:"dragging", 
+          minWidth:30
+        }); 
+        
+      }); 
+   </script>
+   <title>Document</title>
+ </head>
+ <body>
+ 
+
+        
+     <div id="table" class="mt10" >
+		 <div class="box_top"><b class="pl15">审核结果</b></div>
+        <div class="box span10 oh" align="center">
+              <table width="100%" border="0" cellpadding="0" cellspacing="0" class="list_table" style="text-align: center;" >
+                <tr >
+                 
+                   <th width="30">事件</th>
+                   <th width="30">姓名</th>
+                  <th width="30">提报人</th>
+				   <th width="30">结果</th>
+				   <th width="100">上级意见</th>
+				    <th width="30">操作</th>
+                    </tr>
+                <tr class="tr">
+                
+                   <td>修改</td>
+                   <td>aad</td>
+                   <td>王旭东</td>
+				   <td>等待审核</td>
+				   <td> <textarea name="" id="" cols="30" rows="10" class="textarea"></textarea></td>
+				   <td>无法操作 </td>
+                
+                 </tr>
+                 <tr class="tr"> 
+                  
+                   <td>添加</td>
+                   <td>aad</td>
+                   <td>王旭东</td>
+				   <td>审核通过</td>
+				   <td> <textarea name="" id="" cols="30" rows="10" class="textarea">由于表现突出同意通过</textarea></td>
+                 <td>已添加</td>
+                 </tr>
+                 <tr class="tr">
+                   <td>删除</td>
+                   <td>aad</td>
+                   <td>王旭东</td>
+				   <td>审核通过</td>
+				    <td> <textarea name="" id="" cols="30" rows="10" class="textarea">同意</textarea></td>
+                 <td><input type="button"  class="btn btn82 btn_search" value="删除"> </td>
+                 </tr>
+                 <tr class="tr">
+                 
+                   <td>修改</td>
+                   <td>aad</td>
+                   <td>王旭东</td>
+				   <td>审核通过</td>
+				    <td> <textarea name="" id="" cols="30" rows="10" class="textarea">同意</textarea></td>
+                 <td><a href="upadte.html"><input type="button"  class="btn btn82 btn_search" value="修改"></a> </td>
+                 </tr>
+                 <tr class="tr">
+                   
+                   <td>添加</td>
+                   <td>add</td>
+                   <td>王旭东</td>
+				   <td>未通过</td>
+				     <td> <textarea name="" id="" cols="30" rows="10" class="textarea">奖惩记录与实际不符，不予通过</textarea></td>
+                 <td><a href="upadte.html"><input type="button"  class="btn btn82 btn_search" value="修改"></a> </td>
+                 </tr>
+                 <tr class="tr">
+                 
+                   <td>删除</td>
+                   <td>aad</td>
+                   <td>王旭东</td>
+				   <td>未通过</td>
+				   <td> <textarea name="" id="" cols="30" rows="10" class="textarea">没有职位调动及重大过失，不予通过</textarea></td>
+                 <td>无法操作</td>
+                 </tr>
+                 <tr class="tr">
+                  
+                   <td>修改</td>
+                   <td>aad</td>
+                   <td>王旭东</td>
+				   <td>未通过</td>
+				    <td> <textarea name="" id="" cols="30" rows="10" class="textarea">奖惩记录与实际不符，不予通过</textarea></td>
+                   <td><a href="upadte.html"><input type="button"  class="btn btn82 btn_search" value="修改"></a> </td>
+                 </tr>
+                 
+              
+              </table>
+              <div class="page mt10">
+                <div class="pagination">
+                  <ul>
+                      <li class="first-child"><a href="#">首页</a></li>
+                      <li class="disabled"><span>上一页</span></li>
+                      <li class="active"><span>1</span></li>
+                      <li><a href="#">2</a></li>
+                      <li><a href="#">下一页</a></li>
+                      <li class="last-child"><a href="#">末页</a></li>
+                  </ul>
+                </div>
+
+              </div>
+        </div>
+     </div>
+     
+ </body>
+ </html>
+  
