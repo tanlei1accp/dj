@@ -13,13 +13,5 @@ public class IndexController extends BaseController {
     @Autowired
     MemberService memberService;
 
-    @RequestMapping("/")
-    public String index(Model model) {
-        return "abc";
-    }
 
-    @RequestMapping("/index")
-    public String myIndex() {
-        return "index";
-    }
 }
