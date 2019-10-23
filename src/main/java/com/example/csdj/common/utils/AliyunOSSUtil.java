@@ -37,7 +37,7 @@ public class AliyunOSSUtil {
 
     }*/
     public static String uploadFile(File uploadFile, String fileName) throws IOException {
-        File file = new File("/Users/changguiying/Document/file");
+        File file = new File("/images");
         if(!file.exists()){
             file.mkdir();
         }

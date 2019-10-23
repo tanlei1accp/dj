@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="/partyBranch/css/common.css">
+  <link rel="stylesheet" href="/partyBranch/css/style.css">
+  <link rel="stylesheet" href="/partyBranch/css/main.css">
+  <script type="text/javascript" src="/partyBranch/js/jquery.min.js"></script>
+  <script type="text/javascript" src="/partyBranch/js/jquery.SuperSlide.js"></script>
+  <script type="text/javascript" src="/partyBranch/js/colResizable-1.3.min.js"></script>
+  <script type="text/javascript" src="/partyBranch/js/common.js"></script>
+ <style type="text/css">
+ 	.tc{
+ 		width: 800px;
+ 		height: 500px;
+ 		background: #FFFFFF;
+ 		position: absolute;
+ 		top: 50%;
+ 		left: 50%;
+ 		margin-left: -450px;
+ 		margin-top: -260px;
+ 		z-index: 10;
+ 		display: none;
+ 	}
+ 	.close{
+ 		position: absolute;
+ 		right: 10px;
+ 		top: 10px;
+ 		color: red;
+ 		font-size: 16px;
+ 		z-index: 100;
+ 		cursor: pointer;
+ 	}
+ 	.tc h3{
+ 		font-size: 12px;
+ 		color: black;
+ 		text-align: center;
+ 		position: relative;
+ 		z-index: 10;
+ 		line-height: 20px;
+ 	}
+ 	.bk{
+ 		width: 100%;
+ 		height: 100%;
+ 		background: #000;
+ 		opacity: 0.5;
+ 		position: absolute;
+ 		top: 0;
+ 		left: 0;
+ 	}
+ </style>
+  <script type="text/javascript">
+  $(function(){
+      $(".sideMenu").slide({
+         titCell:"h3", 
+         targetCell:"ul",
+         defaultIndex:0, 
+         effect:'slideDown', 
+         delayTime:'500' , 
+         trigger:'click', 
+         triggerTime:'150', 
+         defaultPlay:true, 
+         returnDefault:false,
+         easing:'easeInQuint',
+         endFun:function(){
+              scrollWW();
+         }
+       });
+      $(window).resize(function() {
+          scrollWW();
+      });
+  });
+  function scrollWW(){
+    if($(".side").height()<$(".sideMenu").height()){
+       $(".scroll").show();
+       var pos = $(".sideMenu ul:visible").position().top-38;
+       $('.sideMenu').animate({top:-pos});
+    }else{
+       $(".scroll").hide();
+       $('.sideMenu').animate({top:0});
+       n=1;
+    }
+  } 
+
+var n=1;
+function menuScroll(num){
+  var Scroll = $('.sideMenu');
+  var ScrollP = $('.sideMenu').position();
+  /*alert(n);
+  alert(ScrollP.top);*/
+  if(num==1){
+     Scroll.animate({top:ScrollP.top-38});
+     n = n+1;
+  }else{
+    if (ScrollP.top > -38 && ScrollP.top != 0) { ScrollP.top = -38; }
+    if (ScrollP.top<0) {
+      Scroll.animate({top:38+ScrollP.top});
+    }else{
+      n=1;
+    }
+    if(n>1){
+      n = n-1;
+    }
+  }
+}
+  </script>
+  <script>
+  	$(function(){
+  	$("#btn").click(function(){
+  		$("#tanc").fadeIn();
+  	})
+  	$("#close").click(function(){
+  		$("#tanc").fadeOut();
+  	})
+  	})
+  </script>
+  	<style>
+  
+  h1{font-size : 45px;
+ padding-left: 65px;
+  }
+  
+  </style>
+  <title>后台首页</title>
+</head>
+<body>
+	<style>
+		.vintage4{
+		color: gold;
+		letter-spacing: 0;
+		text-shadow: 0px 1px 0px #999, 0px 2px 0px #888, 0px 3px 0px #777, 0px 4px 0px #666, 0px 5px 0px #555, 0px 6px 0px #444, 0px 7px 0px #333, 0px 8px 7px #001135 }
+		
+	</style>
+    <div class="top">
+      <div id="top_t">
+        <div id="logo" class="fl"><h1 class="vintage4">XX党建后台</h1></div>
+        <div id="photo_info" class="fr">
+          <div id="photo" class="fl">
+            <a href="#"><img src="../partyBranch/images/a.png" alt="" width="60" height="60"></a>
+          </div>
+          <div id="base_info" class="fr">
+            <div class="help_info">
+           <a href="1" id="hp">&nbsp;</a>
+              <a href="2" id="gy">&nbsp;</a>
+              <a href="3" id="out">&nbsp;</a>
+			  <!-- <input type="button" name="button" class="btn btn82 btn_add" value="新增"> -->
+            </div>
+            <div class="info_center">
+              admin
+			 <!-- <input type="button" id="btn" class="btn btn82 btn_search" value="通知"> -->
+              <span id="nt">通知</span><span><a href="#" id="notice"><input type="button" id="btn" value="3"  style="border-style:none;background: red;"></a></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="side_here">
+        <div id="side_here_l" class="fl"></div>
+      </div>
+    </div>
+    <div class="side">
+        <div class="sideMenu" style="margin:0 auto">
+          <h3>党务管理</h3>
+          <ul>
+           <a href="/branch/partyMemberManage" target="right"> <li>党员管理</li></a>
+            <li>组织详情</li>
+           <a href="/branch/organizationalLife" target="right"> <li>组织生活</li></a>
+		   <a href="/branch/checkInformation" target="right"> <li>信息核对</li></a>
+            <a href="/branch/MoneyManagement" target="right"><li>党费管理</li></a>
+          </ul>
+          <h3> 检查考核</h3>
+          <ul>
+            <a href="/branch/studyNotes" target="right"><li>学习笔记</li></a>
+            <a href="/branch/feelingsExperiences" target="right"> <li >心得体会</li></a>
+           <a href="/branch/opinionsSuggestions" target="right"> <li>意见建议</li></a>
+          </ul>
+          <h3> 统计分析</h3>
+          <ul>
+            <li>党员信息统计</li>
+            <li>党员学习情况统计</li>
+            <li>组织生活统计</li>
+            <li>党费收缴统计</li>
+          </ul>
+       </div>
+    </div>
+    <div class="main">
+		<!--<div id="tanc" class="tc">
+					<span id="close" class="close">X</span>
+					 <iframe name="right" id="rightMain" src="tongzhi.html" frameborder="no" scrolling="auto" width="100%" height="100%" allowtransparency="true"></iframe>
+					<div class="bk"></div>
+				</div>-->
+       <iframe name="right" id="rightMain"  frameborder="no" scrolling="auto" width="100%" height="auto" allowtransparency="true"></iframe>
+    </div>
+    <div class="bottom">
+    </div>
+    <div class="scroll">
+       <a href="javascript:;" class="per" title="使用鼠标滚轴滚动侧栏" onclick="menuScroll(1);"></a>
+          <a href="javascript:;" class="next" title="使用鼠标滚轴滚动侧栏" onclick="menuScroll(2);"></a> 
+    </div>
+</body>
+</html>
+   
+ 
