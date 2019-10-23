@@ -1,0 +1,193 @@
+body{
+    padding-bottom: 0;
+    min-width: 1000px;
+
+}
+.login-top{
+    padding:70px 100px 55px;
+}
+
+.all{
+    height: 500px;
+    background: url(../images/pc-login-bg.jpg) no-repeat 50% 50%;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.login-w{
+    width: 370px;
+    margin:0 auto;
+    padding:50px 45px;
+    position: absolute;
+    right:60px;
+    top: 72px;
+    -webkit-box-shadow: 10px 10px 7px rgba(0,0,0,0.5);
+    box-shadow: 10px 10px 7px rgba(0,0,0,0.5);
+    background-color: white;
+}
+.login-logo{
+    font-size: 24px;
+    color:#333333;
+}
+
+
+.login-con .input-group{
+    width:100%;
+    margin-bottom: 20px;
+
+
+}
+.login-con .input-group{
+    border: 1px solid #bbb;
+    position: relative;
+    background-color: #fff;
+    height: 40px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.input-group input{
+    border:0 none;
+    color:#666;
+    height: 38px;
+}
+.input-group span{
+    width: 44px;
+    padding:0;
+    border:0 none;
+    border-radius: 0;
+    background: transparent;
+    background: url(../images/login_user.png) no-repeat center center;
+    -webkit-background-size: cover;
+    background-size:cover;
+
+}
+.input-group span.password{
+    background-image: url(../images/login_password.png);
+}
+.input-group span.yz{
+    background-image: url(../images/login-yz.png);
+}
+input::-webkit-input-placeholder{
+    color:#999!important;
+}
+input::-moz-placeholder{
+    color:#999!important;
+}
+
+input:-ms-input-placeholder{
+    color:#999!important;
+}
+
+.loginBtn{
+    border:0 none!important;
+    margin-bottom: 20px!important;
+}
+.loginBtn button{
+    background-color: #cc2929;
+    border:0 none;
+    border-radius: 0;
+    letter-spacing: 20px;
+    text-indent: 20px;
+}
+.yzmImg{
+    width: 90px;
+    height: 42px;
+    background-color: #bbb;
+    border-radius: 0 20px 20px 0;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    letter-spacing: 2px;
+    position: absolute;
+    right:0;
+    top:0;
+}
+.special-input{
+    position: relative;
+    padding-right:90px;
+}
+.special-input .input-group{
+    margin-bottom: 30px;
+    border-radius: 20px 0 0 20px;
+}
+.input-group .form-control{
+    border-radius: 20px 0 0 20px;
+}
+.form-control:focus{
+    -webkit-box-shadow:none;
+    box-shadow: none;
+}
+
+.reset-btn:hover, .reset-btn:focus, .reset-btn:active{
+    background-color: #BF2929;
+    outline: none!important;
+}
+
+.login-footer{
+    width: 100%;
+    line-height: 20px;
+    padding:80px 0;
+}
+
+.Loginerror {
+    width: 100%;
+    position: absolute;
+    right: 00px;
+    bottom: 130px;
+    display: none;
+}
+@media (max-width: 1600px) {
+    .login-top {
+    padding: 40px 100px 50px;
+    }
+    .all {
+    height: 480px;
+    }
+    .login-footer {
+    width: 100%;
+    line-height: 20px;
+    padding: 30px 0 50px;
+}
+    
+}
+@media (max-width: 1366px) {
+    .login-top {
+    padding: 20px 100px 30px;
+    }
+    .all {
+    height: 450px;
+    }
+    .login-footer {
+    width: 100%;
+    line-height: 20px;
+    padding: 20px 0 20px;
+}
+    
+}
+.input-val {
+    width: 150px;
+    height: 30px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+}
+#canvas {
+    vertical-align: middle;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+.btn {
+    display: block;
+    margin-left: 100px;
+    height: 50px;
+    width: 130px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #457adb;
+    border: none;
+    border-radius: 50px;
+}
+
+
+
