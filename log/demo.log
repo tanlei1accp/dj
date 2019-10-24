@@ -38,31 +38,12 @@
 2019-10-23 17:11:31,563 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.9.RELEASE, Spring v5.1.9.RELEASE
 2019-10-23 17:11:31,564 INFO (SpringApplication.java:648)- No active profile set, falling back to default profiles: default
 2019-10-23 17:11:39,049 INFO (StartupInfoLogger.java:59)- Started CsdjApplication in 9.137 seconds (JVM running for 15.354)
-2019-10-24 09:47:30,919 INFO (StartupInfoLogger.java:50)- Starting CsdjApplication on HcDeComputer with PID 3164 (E:\ideaProject\dj\target\classes started by 侯程 in E:\ideaProject\dj)
-2019-10-24 09:47:30,949 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.9.RELEASE, Spring v5.1.9.RELEASE
-2019-10-24 09:47:30,950 INFO (SpringApplication.java:648)- No active profile set, falling back to default profiles: default
-2019-10-24 09:47:38,945 INFO (StartupInfoLogger.java:59)- Started CsdjApplication in 10.174 seconds (JVM running for 13.75)
-2019-10-24 10:04:01,731 INFO (MemberServiceImpl.java:11)- 添加了一个党员
-2019-10-24 10:14:36,756 INFO (StartupInfoLogger.java:50)- Starting CsdjApplication on DESKTOP-03R4DTQ with PID 17732 (E:\WEIFANG\dj\target\classes started by 骆晓云 in E:\WEIFANG\dj)
-2019-10-24 10:14:36,766 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.9.RELEASE, Spring v5.1.9.RELEASE
-2019-10-24 10:14:36,766 INFO (SpringApplication.java:648)- No active profile set, falling back to default profiles: default
-2019-10-24 10:14:49,516 INFO (StartupInfoLogger.java:59)- Started CsdjApplication in 16.569 seconds (JVM running for 24.89)
-2019-10-24 10:33:19,359 INFO (StartupInfoLogger.java:50)- Starting CsdjApplication on DESKTOP-03R4DTQ with PID 2452 (E:\WEIFANG\dj\target\classes started by 骆晓云 in E:\WEIFANG\dj)
-2019-10-24 10:33:19,407 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.9.RELEASE, Spring v5.1.9.RELEASE
-2019-10-24 10:33:19,407 INFO (SpringApplication.java:648)- No active profile set, falling back to default profiles: default
-2019-10-24 10:33:24,304 INFO (StartupInfoLogger.java:59)- Started CsdjApplication in 5.865 seconds (JVM running for 8.889)
-2019-10-24 10:34:24,969 INFO (MemberServiceImpl.java:11)- 添加了一个党员
-2019-10-24 10:42:51,588 INFO (StartupInfoLogger.java:50)- Starting CsdjApplication on DESKTOP-03R4DTQ with PID 3016 (E:\WEIFANG\dj\target\classes started by 骆晓云 in E:\WEIFANG\dj)
-2019-10-24 10:42:51,588 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.9.RELEASE, Spring v5.1.9.RELEASE
-2019-10-24 10:42:51,593 INFO (SpringApplication.java:648)- No active profile set, falling back to default profiles: default
-2019-10-24 10:42:57,524 INFO (StartupInfoLogger.java:59)- Started CsdjApplication in 7.111 seconds (JVM running for 9.204)
-2019-10-24 10:49:28,162 INFO (StartupInfoLogger.java:50)- Starting CsdjApplication on DESKTOP-03R4DTQ with PID 7912 (E:\WEIFANG\dj\target\classes started by 骆晓云 in E:\WEIFANG\dj)
-2019-10-24 10:49:28,168 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.9.RELEASE, Spring v5.1.9.RELEASE
-2019-10-24 10:49:28,173 INFO (SpringApplication.java:648)- No active profile set, falling back to default profiles: default
-2019-10-24 10:49:34,113 INFO (StartupInfoLogger.java:59)- Started CsdjApplication in 7.34 seconds (JVM running for 9.316)
-2019-10-24 10:49:45,425 INFO (MemberServiceImpl.java:11)- 添加了一个党员
-2019-10-24 10:50:08,363 INFO (MemberServiceImpl.java:11)- 添加了一个党员
-2019-10-24 10:51:32,408 INFO (StartupInfoLogger.java:50)- Starting CsdjApplication on DESKTOP-03R4DTQ with PID 10056 (E:\WEIFANG\dj\target\classes started by 骆晓云 in E:\WEIFANG\dj)
-2019-10-24 10:51:32,414 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.9.RELEASE, Spring v5.1.9.RELEASE
-2019-10-24 10:51:32,414 INFO (SpringApplication.java:648)- No active profile set, falling back to default profiles: default
-2019-10-24 10:51:38,843 INFO (StartupInfoLogger.java:59)- Started CsdjApplication in 7.385 seconds (JVM running for 11.241)
+2019-10-24 14:39:15,991 INFO (StartupInfoLogger.java:50)- Starting CsdjApplication on LAPTOP-8R665O9N with PID 11888 (C:\Users\Administrator.LAPTOP-8R665O9N\Desktop\dj\target\classes started by Administrator in C:\Users\Administrator.LAPTOP-8R665O9N\Desktop\dj)
+2019-10-24 14:39:15,994 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.9.RELEASE, Spring v5.1.9.RELEASE
+2019-10-24 14:39:15,994 INFO (SpringApplication.java:648)- No active profile set, falling back to default profiles: default
+2019-10-24 14:39:19,261 INFO (StartupInfoLogger.java:59)- Started CsdjApplication in 3.733 seconds (JVM running for 5.382)
+2019-10-24 14:39:29,578 INFO (MemberServiceImpl.java:11)- 添加了一个党员
+2019-10-24 15:15:35,142 INFO (MemberServiceImpl.java:11)- 添加了一个党员
+2019-10-24 15:18:10,256 INFO (MemberServiceImpl.java:11)- 添加了一个党员
+2019-10-24 15:34:03,859 INFO (MemberServiceImpl.java:11)- 添加了一个党员
+2019-10-24 15:38:35,589 INFO (MemberServiceImpl.java:11)- 添加了一个党员
