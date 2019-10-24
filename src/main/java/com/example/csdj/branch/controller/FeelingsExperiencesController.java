@@ -13,4 +13,8 @@ public class FeelingsExperiencesController  extends BaseController {
     public String feelingsExperiences(){
         return "/branch/informationCheck/informationCheckIndex";
     }
+    @RequestMapping("feelingsExperiencesDetail")
+    public String feelingsExperiencesDetail(){
+        return "/branch/informationCheck/informationCheckDetail";
+    }
 }
