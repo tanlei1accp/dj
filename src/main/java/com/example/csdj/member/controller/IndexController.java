@@ -29,11 +29,11 @@ public class IndexController extends BaseController {
 
         return "member/login";
     }
-    //个人中心新
+    //个人中心
     @RequestMapping("/personCenter")
     public String personCenter() {
 
-        return "member/personCenter/owninformation";
+        return "member/personCenter/index";
     }
     //党务公开
     @RequestMapping("/dflzList")

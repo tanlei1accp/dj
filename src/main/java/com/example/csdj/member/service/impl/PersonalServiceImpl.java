@@ -8,6 +8,6 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class PersonalServiceImpl extends BaseServiceImpl implements PersonalService {
-    @Autowired
-     PersonalMapper personalMapper;
+/*    @Autowired
+     PersonalMapper personalMapper;*/
 }

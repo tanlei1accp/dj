@@ -5,8 +5,8 @@ import com.example.csdj.member.service.PersonalService;
 import org.springframework.beans.factory.annotation.Autowired;
 
 public class PersonalController extends BaseController {
-    @Autowired
+   /* @Autowired
     PersonalService personalService;
-
+*/
 
 }
