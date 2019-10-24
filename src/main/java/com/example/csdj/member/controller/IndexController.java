@@ -32,8 +32,27 @@ public class IndexController extends BaseController {
     //个人中心新
     @RequestMapping("/personCenter")
     public String personCenter() {
-
         return "member/personCenter/index";
+    }
+    @RequestMapping("note")
+    public String note(){
+        return "member/personCenter/updateblog";
+    }
+    @RequestMapping("experience")
+    public String experience(){
+        return "member/personCenter/updateblog";
+    }
+    @RequestMapping("suggest")
+    public String suggest(){
+        return "member/personCenter/updateblog";
+    }
+    @RequestMapping("mainindex")
+    public String mainindex(){
+        return "member/index";
+    }
+    @RequestMapping("blogindex")
+    public String blogindex(){
+        return "member/index";
     }
     //党务公开
     @RequestMapping("/dflzList")
