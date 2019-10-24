@@ -32,7 +32,7 @@ public class IndexController extends BaseController {
     //个人中心新
     @RequestMapping("/personCenter")
     public String personCenter() {
-        return "member/personCenter/index";
+        return "member/personCenter/updateindex";
     }
     @RequestMapping("note")
     public String note(){
