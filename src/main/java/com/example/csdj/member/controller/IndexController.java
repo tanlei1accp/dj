@@ -34,26 +34,7 @@ public class IndexController extends BaseController {
     public String personCenter() {
         return "member/personCenter/updateindex";
     }
-    @RequestMapping("note")
-    public String note(){
-        return "member/personCenter/updateblog";
-    }
-    @RequestMapping("experience")
-    public String experience(){
-        return "member/personCenter/updateblog";
-    }
-    @RequestMapping("suggest")
-    public String suggest(){
-        return "member/personCenter/updateblog";
-    }
-    @RequestMapping("mainindex")
-    public String mainindex(){
-        return "member/index";
-    }
-    @RequestMapping("blogindex")
-    public String blogindex(){
-        return "member/index";
-    }
+
     //党务公开
     @RequestMapping("/dflzList")
     public String dflzList() {
