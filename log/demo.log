@@ -22,3 +22,80 @@
 2019-10-23 19:40:28,040 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.9.RELEASE, Spring v5.1.9.RELEASE
 2019-10-23 19:40:28,041 INFO (SpringApplication.java:648)- No active profile set, falling back to default profiles: default
 2019-10-23 19:40:30,965 INFO (StartupInfoLogger.java:59)- Started CsdjApplication in 3.394 seconds (JVM running for 4.81)
+2019-10-23 20:02:06,560 INFO (StartupInfoLogger.java:50)- Starting CsdjApplication on DESKTOP-OPC3ST8 with PID 1664 (F:\projects\dj\target\classes started by ft in F:\projects\dj)
+2019-10-23 20:02:06,564 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.9.RELEASE, Spring v5.1.9.RELEASE
+2019-10-23 20:02:06,565 INFO (SpringApplication.java:648)- No active profile set, falling back to default profiles: default
+2019-10-23 20:02:09,975 INFO (StartupInfoLogger.java:59)- Started CsdjApplication in 3.952 seconds (JVM running for 5.474)
+2019-10-23 20:02:11,225 INFO (MemberServiceImpl.java:11)- 添加了一个党员
+2019-10-23 20:04:31,147 INFO (MemberServiceImpl.java:11)- 添加了一个党员
+2019-10-23 20:05:28,588 INFO (StartupInfoLogger.java:50)- Starting CsdjApplication on DESKTOP-OPC3ST8 with PID 17996 (F:\projects\dj\target\classes started by ft in F:\projects\dj)
+2019-10-23 20:05:28,592 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.9.RELEASE, Spring v5.1.9.RELEASE
+2019-10-23 20:05:28,593 INFO (SpringApplication.java:648)- No active profile set, falling back to default profiles: default
+2019-10-23 20:05:31,600 INFO (StartupInfoLogger.java:59)- Started CsdjApplication in 3.531 seconds (JVM running for 5.285)
+2019-10-23 20:05:48,409 INFO (MemberServiceImpl.java:11)- 添加了一个党员
+2019-10-23 20:07:59,043 INFO (StartupInfoLogger.java:50)- Starting CsdjApplication on DESKTOP-OPC3ST8 with PID 20256 (F:\projects\dj\target\classes started by ft in F:\projects\dj)
+2019-10-23 20:07:59,046 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.9.RELEASE, Spring v5.1.9.RELEASE
+2019-10-23 20:07:59,046 INFO (SpringApplication.java:648)- No active profile set, falling back to default profiles: default
+2019-10-23 20:08:02,219 INFO (StartupInfoLogger.java:59)- Started CsdjApplication in 3.714 seconds (JVM running for 5.309)
+2019-10-23 20:08:06,419 INFO (MemberServiceImpl.java:11)- 添加了一个党员
+2019-10-23 20:13:55,783 INFO (StartupInfoLogger.java:50)- Starting CsdjApplication on DESKTOP-OPC3ST8 with PID 7804 (F:\projects\dj\target\classes started by ft in F:\projects\dj)
+2019-10-23 20:13:55,787 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.9.RELEASE, Spring v5.1.9.RELEASE
+2019-10-23 20:13:55,787 INFO (SpringApplication.java:648)- No active profile set, falling back to default profiles: default
+2019-10-23 20:13:59,082 INFO (StartupInfoLogger.java:59)- Started CsdjApplication in 3.793 seconds (JVM running for 5.301)
+2019-10-23 20:14:17,731 INFO (MemberServiceImpl.java:11)- 添加了一个党员
+2019-10-23 20:14:45,307 INFO (StartupInfoLogger.java:50)- Starting CsdjApplication on DESKTOP-OPC3ST8 with PID 10884 (F:\projects\dj\target\classes started by ft in F:\projects\dj)
+2019-10-23 20:14:45,311 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.9.RELEASE, Spring v5.1.9.RELEASE
+2019-10-23 20:14:45,312 INFO (SpringApplication.java:648)- No active profile set, falling back to default profiles: default
+2019-10-23 20:14:48,487 INFO (StartupInfoLogger.java:59)- Started CsdjApplication in 3.703 seconds (JVM running for 5.241)
+2019-10-23 20:15:07,104 INFO (MemberServiceImpl.java:11)- 添加了一个党员
+2019-10-23 20:16:25,958 INFO (StartupInfoLogger.java:50)- Starting CsdjApplication on DESKTOP-OPC3ST8 with PID 12428 (F:\projects\dj\target\classes started by ft in F:\projects\dj)
+2019-10-23 20:16:25,961 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.9.RELEASE, Spring v5.1.9.RELEASE
+2019-10-23 20:16:25,962 INFO (SpringApplication.java:648)- No active profile set, falling back to default profiles: default
+2019-10-23 20:16:30,078 INFO (StartupInfoLogger.java:59)- Started CsdjApplication in 4.727 seconds (JVM running for 6.377)
+2019-10-23 20:16:37,796 INFO (MemberServiceImpl.java:11)- 添加了一个党员
+2019-10-23 20:16:53,794 INFO (StartupInfoLogger.java:50)- Starting CsdjApplication on DESKTOP-OPC3ST8 with PID 16468 (F:\projects\dj\target\classes started by ft in F:\projects\dj)
+2019-10-23 20:16:53,798 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.9.RELEASE, Spring v5.1.9.RELEASE
+2019-10-23 20:16:53,799 INFO (SpringApplication.java:648)- No active profile set, falling back to default profiles: default
+2019-10-23 20:16:57,387 INFO (StartupInfoLogger.java:59)- Started CsdjApplication in 4.168 seconds (JVM running for 6.098)
+2019-10-23 20:17:02,136 INFO (MemberServiceImpl.java:11)- 添加了一个党员
+2019-10-23 20:18:50,396 INFO (MemberServiceImpl.java:11)- 添加了一个党员
+2019-10-23 20:27:55,906 INFO (StartupInfoLogger.java:50)- Starting CsdjApplication on DESKTOP-OPC3ST8 with PID 6656 (F:\projects\dj\target\classes started by ft in F:\projects\dj)
+2019-10-23 20:27:55,909 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.9.RELEASE, Spring v5.1.9.RELEASE
+2019-10-23 20:27:55,910 INFO (SpringApplication.java:648)- No active profile set, falling back to default profiles: default
+2019-10-23 20:27:58,961 INFO (StartupInfoLogger.java:59)- Started CsdjApplication in 3.627 seconds (JVM running for 5.497)
+2019-10-23 20:30:05,899 INFO (StartupInfoLogger.java:50)- Starting CsdjApplication on DESKTOP-OPC3ST8 with PID 17452 (F:\projects\dj\target\classes started by ft in F:\projects\dj)
+2019-10-23 20:30:05,902 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.9.RELEASE, Spring v5.1.9.RELEASE
+2019-10-23 20:30:05,903 INFO (SpringApplication.java:648)- No active profile set, falling back to default profiles: default
+2019-10-23 20:30:09,037 INFO (StartupInfoLogger.java:59)- Started CsdjApplication in 3.704 seconds (JVM running for 5.408)
+2019-10-23 20:40:56,062 INFO (MemberServiceImpl.java:11)- 添加了一个党员
+2019-10-23 20:41:28,738 INFO (MemberServiceImpl.java:11)- 添加了一个党员
+2019-10-23 20:41:30,412 INFO (MemberServiceImpl.java:11)- 添加了一个党员
+2019-10-23 20:41:31,196 INFO (MemberServiceImpl.java:11)- 添加了一个党员
+2019-10-23 20:41:52,661 INFO (MemberServiceImpl.java:11)- 添加了一个党员
+2019-10-23 20:42:48,405 INFO (MemberServiceImpl.java:11)- 添加了一个党员
+2019-10-23 20:42:49,860 INFO (MemberServiceImpl.java:11)- 添加了一个党员
+2019-10-23 20:43:36,534 INFO (MemberServiceImpl.java:11)- 添加了一个党员
+2019-10-23 20:44:12,220 INFO (MemberServiceImpl.java:11)- 添加了一个党员
+2019-10-23 20:44:33,436 INFO (MemberServiceImpl.java:11)- 添加了一个党员
+2019-10-23 20:44:45,606 INFO (MemberServiceImpl.java:11)- 添加了一个党员
+2019-10-23 20:45:05,075 INFO (MemberServiceImpl.java:11)- 添加了一个党员
+2019-10-23 20:45:18,197 INFO (MemberServiceImpl.java:11)- 添加了一个党员
+2019-10-23 20:45:28,478 INFO (MemberServiceImpl.java:11)- 添加了一个党员
+2019-10-23 20:45:31,588 INFO (MemberServiceImpl.java:11)- 添加了一个党员
+2019-10-23 20:45:39,697 INFO (MemberServiceImpl.java:11)- 添加了一个党员
+2019-10-23 20:45:51,575 INFO (MemberServiceImpl.java:11)- 添加了一个党员
+2019-10-23 20:47:19,689 INFO (MemberServiceImpl.java:11)- 添加了一个党员
+2019-10-23 20:47:41,037 INFO (MemberServiceImpl.java:11)- 添加了一个党员
+2019-10-23 20:48:02,902 INFO (MemberServiceImpl.java:11)- 添加了一个党员
+2019-10-23 20:48:31,995 INFO (MemberServiceImpl.java:11)- 添加了一个党员
+2019-10-23 20:48:34,870 INFO (MemberServiceImpl.java:11)- 添加了一个党员
+2019-10-23 20:48:49,721 INFO (MemberServiceImpl.java:11)- 添加了一个党员
+2019-10-23 20:48:51,318 INFO (MemberServiceImpl.java:11)- 添加了一个党员
+2019-10-23 20:49:12,959 INFO (MemberServiceImpl.java:11)- 添加了一个党员
+2019-10-23 20:52:08,033 INFO (MemberServiceImpl.java:11)- 添加了一个党员
+2019-10-23 20:52:48,848 INFO (MemberServiceImpl.java:11)- 添加了一个党员
+2019-10-23 20:52:54,925 INFO (MemberServiceImpl.java:11)- 添加了一个党员
+2019-10-23 20:58:11,256 INFO (MemberServiceImpl.java:11)- 添加了一个党员
+2019-10-23 21:09:21,614 INFO (MemberServiceImpl.java:11)- 添加了一个党员
+2019-10-23 21:10:22,979 INFO (MemberServiceImpl.java:11)- 添加了一个党员
+2019-10-23 21:15:34,399 INFO (MemberServiceImpl.java:11)- 添加了一个党员

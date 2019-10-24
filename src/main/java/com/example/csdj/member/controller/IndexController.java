@@ -62,4 +62,11 @@ public class IndexController extends BaseController {
 
         return "member/inboxMail/inboxEmail";
     }
+
+    @RequestMapping("/notice")
+    public String notice() {
+        System.out.println("调到collection层");
+        return "member/notice";
+    }
+
 }
