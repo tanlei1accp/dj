@@ -33,7 +33,7 @@ public class IndexController extends BaseController {
     @RequestMapping("/personCenter")
     public String personCenter() {
 
-        return "member/personCenter/index";
+        return "member/personCenter/owninformation";
     }
     //党务公开
     @RequestMapping("/dflzList")
@@ -62,4 +62,11 @@ public class IndexController extends BaseController {
 
         return "member/inboxMail/inboxEmail";
     }
+
+    @RequestMapping("/notice")
+    public String notice() {
+        System.out.println("调到collection层");
+        return "member/notice";
+    }
+
 }
