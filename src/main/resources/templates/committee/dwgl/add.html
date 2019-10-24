@@ -1,21 +1,22 @@
  <!doctype html>
  <!doctype html>
  <html lang="zh-CN">
+	 <!-- 添加党员页面 -->
  <head>
    <meta charset="UTF-8">
-	 <link rel="stylesheet" href="/partyBranch/css/common.css">
-	 <link rel="stylesheet" href="/partyBranch/css/style.css">
-	 <link rel="stylesheet" href="/partyBranch/css/main.css">
-	 <script type="text/javascript" src="/partyBranch/js/jquery.min.js"></script>
-	 <script type="text/javascript" src="/partyBranch/js/jquery.SuperSlide.js"></script>
-	 <script type="text/javascript" src="/partyBranch/js/colResizable-1.3.min.js"></script>
-	 <script type="text/javascript" src="/partyBranch/js/common.js"></script>
-
-	 <script type="text/javascript"src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+   <link rel="stylesheet" href="../css/common.css">
+   <link rel="stylesheet" href="../css/main.css">
+   <script type="text/javascript" src="../js/jquery.min.js"></script>
+   <script type="text/javascript" src="../js/colResizable-1.3.min.js"></script>
+   <script type="text/javascript" src="../js/common.js"></script>
+   
+   		<script type="text/javascript"src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
    		<script>
    			$(function(){
    			$("#add").click(function(){
-   			alert("确定提交？提交后不可修改！")
+   				alert("确定添加？")
+   			
+   			
    			})})
    		</script>
 		
@@ -77,12 +78,48 @@
 					   <td class=""> 
 					     <input type="text" name="name" class="input-text lh30" size="40">
 					   </td>
-					   <td class="td_right">学历：</td>
-					   <td class=""> 
-					     <input type="text" name="name" class="input-text lh30" size="40">
-					   </td>
-					
+					  <td class="td_right">学历：</td>
+					  <td class=""> 
+					    <input type="text" name="name" class="input-text lh30" size="40">
+					  </td>
 						 </tr>
+						 <tr>
+						 <td class="td_right">单位：</td>
+						 <td class="">
+						  
+						   <span class="fl">
+						     <div class="select_border"> 
+						       <div class="select_containers "> 
+						       <select name="" class="select"> 
+						       <option>第一党支部</option> 
+						       <option>第二党支部</option> 
+						       <option>第三党支部</option> 
+						       <option>机关党委</option> 
+						 							 
+						       </select> 
+						       </div> 
+						     </div> 
+						   </span>
+						 </td>
+						    <td class="td_right">职务：</td>
+						    <td class="">
+						     
+						      <span class="fl">
+						        <div class="select_border"> 
+						          <div class="select_containers "> 
+						          <select name="" class="select"> 
+						          <option>党支部书记</option> 
+						          <option>党支部副书记</option> 
+						          <option>干事</option> 
+						          <option>预备党员</option> 
+						    							 <option>积极分子</option> 
+						          </select> 
+						          </div> 
+						        </div> 
+						      </span>
+						    </td>
+						       
+						  </tr>
 						 <tr>
 						
 						 <td class="td_right">上传照片：</td>
@@ -94,30 +131,11 @@
 						   
 						   
 						     </tr>
-							 <tr>
-							 <td class="td_right">职务：</td>
-							 <td class="">
-							  
-							   <span class="fl">
-							     <div class="select_border"> 
-							       <div class="select_containers "> 
-							       <select name="" class="select"> 
-							       <option>党支部书记</option> 
-							       <option>党支部副书记</option> 
-							       <option>干事</option> 
-							       <option>预备党员</option> 
-							 							 <option>积极分子</option> 
-							       </select> 
-							       </div> 
-							     </div> 
-							   </span>
-							 </td>
-							  </tr>  
               
                  <tr>
                   <td class="td_right">奖惩记录：</td>
                   <td class="">
-                    <textarea name="" id="a" cols="30" rows="10" class="textarea"></textarea>
+                    <textarea name="" id="" cols="30" rows="10" class="textarea"></textarea>
                   </td>
 				  <td class="td_right">家庭情况：</td>
 				  <td class="">
@@ -127,14 +145,14 @@
                  
                <tr >
                    <td class="td_right">
-                     <input type="button" name="button" id="add" class="btn btn82 btn_save2" value="提报"> 
+                     <input type="button" name="button" id="add" class="btn btn82 btn_save2" value="添加"> 
                    
                    </td>
 				  
                  </tr>
                </table>
                </form>
-			  
+			 
             </div>
           </div>
         </div>
