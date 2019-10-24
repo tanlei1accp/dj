@@ -1,0 +1,134 @@
+ <!doctype html>
+ <!doctype html>
+ <html lang="zh-CN">
+ <head>
+   <meta charset="UTF-8">
+   <link rel="stylesheet" href="../partyCommittee/css/common.css">
+   <link rel="stylesheet" href="../partyCommittee/css/main.css">
+   <script type="text/javascript" src="../partyCommittee/js/jquery.min.js"></script>
+   <script type="text/javascript" src="../partyCommittee/js/colResizable-1.3.min.js"></script>
+   <script type="text/javascript" src="../partyCommittee/js/common.js"></script>
+   
+   <script type="text/javascript">
+      $(function(){  
+        $(".list_table").colResizable({
+          liveDrag:true,
+          gripInnerHtml:"<div class='grip'></div>", 
+          draggingClass:"dragging", 
+          minWidth:30
+        }); 
+        
+      }); 
+   </script>
+   <title>Document</title>
+   <!-- 未审核 -->
+ </head>
+ <body>
+ 
+
+        
+     <div id="table" class="mt10" >
+		<div align="right"><a href="/partyMemberManagement/add"><input type="button" name="button" class="btn btn82 btn_add" value="新增"></a>  </div>
+		 <div class="box_top"><b class="pl15">审核</b></div>
+        <div class="box span10 oh" align="center">
+              <table width="100%" border="0" cellpadding="0" cellspacing="0" class="list_table" style="text-align: center;" >
+                <tr >
+                 
+                   <th>事件</th>
+                   <th>姓名</th>
+                  <th >提报人</th>
+				  <th>提报时间</th>
+				    <th>操作</th>
+                    </tr>
+                <tr class="tr">
+                
+                   <td>修改</td>
+                   <td>aad</td>
+                   <td>王旭东</td>
+				     <td>2018-10-11</td>
+				
+				   <td><a href="/partyMemberManagement/member"><input type="button" class="btn btn82 btn_search" value="详情"></a>
+				   <a href="/partyMemberManagement/audit_member"><input type="button" name="button" class="btn btn82 btn_config" value="审核"> </a> </td>
+                
+                 </tr>
+                 <tr class="tr"> 
+                  
+                   <td>添加</td>
+                   <td>aad</td>
+                   <td>王旭东</td>
+				     <td>2018-10-11</td>
+				   
+                 <td><a href="/partyMemberManagement/member"><input type="button" class="btn btn82 btn_search" value="详情"></a>
+				 <a href="/partyMemberManagement/audit_member"><input type="button" name="button" class="btn btn82 btn_config" value="审核"> </a></td>
+                 </tr>
+                 <tr class="tr">
+                   <td>删除</td>
+                   <td>aad</td>
+                   <td>王旭东</td>
+				     <td>2018-10-11</td>
+				   
+              <td><a href="/partyMemberManagement/member"><input type="button" class="btn btn82 btn_search" value="详情"></a>
+			   <a href="/partyMemberManagement/audit_member"><input type="button" name="button" class="btn btn82 btn_config" value="审核"> </a></td>
+                 </tr>
+                 <tr class="tr">
+                 
+                   <td>修改</td>
+                   <td>aad</td>
+                   <td>王旭东</td>
+				    <td>2018-10-11</td>
+				   <td><a href="/partyMemberManagement/member"><input type="button" class="btn btn82 btn_search" value="详情"></a>
+				   <a href="/partyMemberManagement/audit_member"><input type="button" name="button" class="btn btn82 btn_config" value="审核"> </a></td>
+               
+                 </tr>
+                 <tr class="tr">
+                   
+                   <td>添加</td>
+                   <td>add</td>
+                   <td>王旭东</td>
+				      <td>2018-10-11</td>
+				     
+               <td><a href="/partyMemberManagement/member"><input type="button" class="btn btn82 btn_search" value="详情"></a>
+				<a href="/partyMemberManagement/audit_member"><input type="button" name="button" class="btn btn82 btn_config" value="审核"> </a></td>
+                 </tr>
+                 <tr class="tr">
+                 
+                   <td>删除</td>
+                   <td>aad</td>
+                   <td>王旭东</td>
+				     <td>2018-10-11</td>
+				
+                 <td>无法操作</td>
+                 </tr>
+                 <tr class="tr">
+                  
+                   <td>修改</td>
+                   <td>aad</td>
+                   <td>王旭东</td>
+				   <td>2018-10-11</td>
+			
+               <td><a href="/partyMemberManagement/member"><input type="button" class="btn btn82 btn_search" value="详情"></a>
+				<a href="/partyMemberManagement/audit_member"><input type="button" name="button" class="btn btn82 btn_config" value="审核"></a>
+				</td>
+                 </tr>
+                 
+              
+              </table>
+              <div class="page mt10">
+                <div class="pagination">
+                  <ul>
+                      <li class="first-child"><a href="#">首页</a></li>
+                      <li class="disabled"><span>上一页</span></li>
+                      <li class="active"><span>1</span></li>
+                      <li><a href="#">2</a></li>
+                      <li><a href="#">下一页</a></li>
+                      <li class="last-child"><a href="#">末页</a></li>
+                  </ul>
+                </div>
+
+              </div>
+        </div>
+     </div>
+     
+ </body>
+ </html>
+  

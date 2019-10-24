@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>树形菜单</title>
+	</head>
+	<style>
+		.box{
+			width: 180px;
+			}
+		a{
+			font-size: 15px;
+			color:aqua;
+			text-decoration:none;
+			}
+		a:hover{
+			font-size: 17px;
+			color: #999999;
+			 }
+	</style>
+	<body>
+		<div class="box">
+			
+			<div>
+				<a href="javascript:onClick=show('1')"><input type="checkbox" value="一支部">一支部</a>
+			</div>
+			<div id="1" style="display: none;margin-left: 10px;">
+				<input type="checkbox" value="一支部">默默</a><br />
+				<input type="checkbox" value="一支部">默默</a><br>
+				<input type="checkbox" value="一支部">默默</a><br>
+				<input type="checkbox" value="一支部">默默</a><br>
+				<input type="checkbox" value="一支部">默默</a><br>
+			</div>
+			
+			<div>
+				<a href="javascript:onClick=show('2')"><input type="checkbox" value="二支部">二支部</a>
+			</div>
+			<div id="2" style="display: none;margin-left: 10px;">
+				<input type="checkbox" value="一支部">默默</a><br />
+				<input type="checkbox" value="一支部">默默</a><br>
+				<input type="checkbox" value="一支部">默默</a><br>
+				<input type="checkbox" value="一支部">默默</a><br>
+				<input type="checkbox" value="一支部">默默</a><br>
+			</div>
+			
+			<div>
+				<a href="javascript:onClick=show('3')"><input type="checkbox" value="三支部">三支部</a>
+			</div>
+			<div id="3" style="display: none;margin-left: 10px;">
+				<input type="checkbox" value="一支部">默默</a><br />
+				<input type="checkbox" value="一支部">默默</a><br>
+				<input type="checkbox" value="一支部">默默</a><br>
+				<input type="checkbox" value="一支部">默默</a><br>
+				<input type="checkbox" value="一支部">默默</a><br>
+			</div>
+			
+			<div>
+				<a href="javascript:onClick=show('4')"><input type="checkbox" value="四支部">四支部</a>
+			</div>
+			<div id="4" style="display: none;margin-left: 10px;">
+				<input type="checkbox" value="一支部">默默</a><br />
+				<input type="checkbox" value="一支部">默默</a><br>
+				<input type="checkbox" value="一支部">默默</a><br>
+				<input type="checkbox" value="一支部">默默</a><br>
+				<input type="checkbox" value="一支部">默默</a><br>
+			</div>
+			<div><input type="button" value="发布"></div>
+		</div>
+		<script>
+			function show(d1){
+				if (document.getElementById(d1).style.display == 'none') {
+					document.getElementById(d1).style.display = 'block'; //触动的层如果处于隐藏状态，即显示
+				} else {
+					document.getElementById(d1).style.display = 'none'; //触动的层如果处于显示状态，即隐藏
+				}
+			}
+		</script>
+	</body>
+</html>

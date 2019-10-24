@@ -13,4 +13,8 @@ public class StudyNotesController extends BaseController {
     public String studyNotes(){
         return "/branch/studyNotes/studyNotesIndex";
     }
+    @RequestMapping("studyNotesDetail")
+    public String studyNotesDetail(){
+        return "/branch/studyNotes/studyNotesDetail";
+    }
 }
