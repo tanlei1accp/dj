@@ -19,20 +19,4 @@ public class PartyMemberController extends BaseController {
     public String partyMemberManage() {
         return "/branch/memberManagement/memberManage";
     }
-    @RequestMapping("/memberDetails")
-    public String memberDetails() {
-        return "/branch/memberManagement/memberDetails";
-    }
-    @RequestMapping("/memberUpdate")
-    public String memberUpdate() {
-        return "/branch/memberManagement/memberUpdate";
-    }
-    @RequestMapping("/audit")
-    public String audit() {
-        return "/branch/memberManagement/audit";
-    }
-    @RequestMapping("/memberAdd")
-    public String memberAdd() {
-        return "/branch/memberManagement/memberAdd";
-    }
 }
