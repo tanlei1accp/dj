@@ -18,7 +18,7 @@
     </delete>
 
     <update id="updById" parameterType="com.example.csdj.member.entity.Notice">
-        update from tb_notice set(null,notice_name=#{name},notice_content=#{content},notice_time=#{time},notice_flag=#{flag},notice_publisher=#{publisher},notice_date=#{date},notice_people=#{people},notice_state=#{state}) where notice_id=#{id}
+        update from tb_notice set notice_name=#{name},notice_content=#{content},notice_time=#{time},notice_flag=#{flag},notice_publisher=#{publisher},notice_date=#{date},notice_people=#{people},notice_state=#{state} where notice_id=#{id}
     </update>
 
 </mapper>

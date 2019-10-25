@@ -1166,3 +1166,14 @@ Caused by: java.net.UnknownHostException: kingbugs
 2019-10-25 16:31:05,693 DEBUG (BaseJdbcLogger.java:143)- ==>  Preparing: select * from tb_member where member_name=? and member_pwd=? and member_flag=1 
 2019-10-25 16:31:05,694 DEBUG (BaseJdbcLogger.java:143)- ==> Parameters: 张三(String), 123(String)
 2019-10-25 16:31:05,698 DEBUG (BaseJdbcLogger.java:143)- <==      Total: 1
+2019-10-25 16:52:36,788 INFO (StartupInfoLogger.java:50)- Starting CsdjApplication on 2013-20160222QN with PID 6864 (E:\dj\target\classes started by Administrator in E:\dj)
+2019-10-25 16:52:36,793 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.9.RELEASE, Spring v5.1.9.RELEASE
+2019-10-25 16:52:36,793 INFO (SpringApplication.java:648)- No active profile set, falling back to default profiles: default
+2019-10-25 17:10:28,991 INFO (StartupInfoLogger.java:50)- Starting CsdjApplication on 2013-20160222QN with PID 8496 (E:\dj\target\classes started by Administrator in E:\dj)
+2019-10-25 17:10:28,991 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.9.RELEASE, Spring v5.1.9.RELEASE
+2019-10-25 17:10:28,991 INFO (SpringApplication.java:648)- No active profile set, falling back to default profiles: default
+2019-10-25 18:46:27,073 INFO (StartupInfoLogger.java:50)- Starting CsdjApplication on 2013-20160222QN with PID 9500 (E:\dj\target\classes started by Administrator in E:\dj)
+2019-10-25 18:46:27,077 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.9.RELEASE, Spring v5.1.9.RELEASE
+2019-10-25 18:46:27,078 INFO (SpringApplication.java:648)- No active profile set, falling back to default profiles: default
+2019-10-25 18:46:32,333 INFO (StartupInfoLogger.java:59)- Started CsdjApplication in 5.86 seconds (JVM running for 7.057)
+2019-10-25 18:46:43,019 INFO (MemberServiceImpl.java:11)- 添加了一个党员
