@@ -44,11 +44,13 @@ public class ShiroConfig {
         map.put("/system/roleManage","perms[system:roleManage]");
         map.put("/system/addUser","perms[system:addUser]");
         map.put("/system/updUser","perms[system:updUser]");
+        //map.put("/committee/wjdc/findSurvey","perms[committee:wjdc:findSurvey]");
         //以下路径必须经过认证才可以访问
         map.put("/index","authc");
         map.put("/basic/*","authc");
         map.put("/column/*","authc");
         map.put("/system/*","authc");
+        //map.put("/committee/*","authc");
         shiroFilterFactoryBean.setFilterChainDefinitionMap(map);
         //设置登录页面，也就是未经认证时要跳转到的登录页面让用户去登录
         shiroFilterFactoryBean.setLoginUrl("/login");
