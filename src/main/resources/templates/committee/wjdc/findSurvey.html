@@ -1,5 +1,5 @@
  <!doctype html>
- <html lang="zh-CN">
+ <html lang="zh-CN" xmlns:th="http://www.w3.org/1999/xhtml">
  <head>
    <meta charset="UTF-8">
    <link rel="stylesheet" href="partyCommittee/css/common.css">
@@ -28,65 +28,20 @@
         <div class="box span10 oh">
               <table width="100%" border="0" cellpadding="0" cellspacing="0" class="list_table">
                 <tr>
-                   <th width="20%">问卷编号</th>
-                   <th width="20%">问卷名称</th>
-                   <th width="20%">问卷类型</th>
-                   <th colspan="2">问卷操作</th>
+                   <th width="17%">问卷编号</th>
+                   <th width="17%">问卷名称</th>
+                   <th width="17%">问卷类型</th>
+                   <th colspan="3">问卷操作</th>
                     </tr>
-                <tr class="tr" align="center" height="50ox">
+                <tr th:each="survey:${surveys}" class="tr" align="center" height="50ox">
                    
-                   <td>1</td>
-                   <td>党员收入调查问卷</td>
-                   <td>生活类</td>
+                   <td th:text="${survey.id}"></td>
+                   <td th:text="${survey.name}">党员收入调查问卷</td>
+                   <td th:text="${survey.type}">生活类</td>
                    <td><a href="/sfa">发布</a></td>
+                    <td><a th:href="@{squestion(id=${survey.id})}">添加试题</a></td>
                    <td><a href="#">下架试卷</a></td>
                  </tr>
-				  <tr class="tr" align="center" height="50px;">
-				    
-				    <td>1</td>
-				    <td>党员收入调查问卷</td>
-				    <td>生活类</td>
-				   
-				    <td><a>发布</a></td>
-				    <td><a>下架试卷</a></td>
-				  </tr>
-				   <tr class="tr" align="center" height="50px;">
-				     
-				     <td>1</td>
-				     <td>党员收入调查问卷</td>
-				     <td>生活类</td>
-				    
-				     <td><a>发布</a></td>
-				     <td><a>下架试卷</a></td>
-				   </tr>
-				    <tr class="tr" align="center" height="50px;">
-				      
-				      <td>1</td>
-				      <td>党员收入调查问卷</td>
-				      <td>生活类</td>
-				      
-				      <td><a>发布</a></td>
-				      <td><a>下架试卷</a></td>
-				    </tr>
-					 <tr class="tr" align="center" height="50px;">
-					   
-					   <td>1</td>
-					   <td>党员收入调查问卷</td>
-					   <td>生活类</td>
-					   
-					   <td><a>发布</a></td>
-					   <td><a>下架试卷</a></td>
-					 </tr>
-					  <tr class="tr" align="center" height="50px;">
-					    
-					    <td>1</td>
-					    <td>党员收入调查问卷</td>
-					    <td>生活类</td>
-					   
-					    <td><a>发布</a></td>
-					    <td><a>下架试卷</a></td>
-					  </tr>
-              
               </table>
               <div class="page mt10" align="center">
                 <div class="pagination">
@@ -103,6 +58,8 @@
               </div>
         </div>
      </div>
+     </div>
+  </div>
  </body>
  </html>
   

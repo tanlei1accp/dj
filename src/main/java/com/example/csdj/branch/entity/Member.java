@@ -17,6 +17,15 @@ public class Member {
     private String resume;//简历
     private String background;//学历
     private int flag;//状态  0 审核中 1审核通过2审核未通过
+    private Integer member_flag;
+
+    public Integer getMember_flag() {
+        return member_flag;
+    }
+
+    public void setMember_flag(Integer member_flag) {
+        this.member_flag = member_flag;
+    }
 
     public int getMemId() {
         return memId;
