@@ -33,7 +33,7 @@ public class IndexController extends BaseController {
     @RequestMapping("/personCenter")
     public String personCenter() {
 
-        return "member/personCenter/index";
+        return "member/personCenter/updateindex";
     }
     //党务公开
     @RequestMapping("/dflzList")
