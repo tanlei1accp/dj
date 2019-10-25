@@ -7,6 +7,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.servlet.http.HttpSession;
+
 @Controller
 public class IndexController extends BaseController {
 
@@ -25,8 +27,9 @@ public class IndexController extends BaseController {
     }
 
     @RequestMapping("/userlogin")
-    public String userLogin() {
-
+    public String userLogin(HttpSession session) {
+        session.setAttribute("admin","admin");
+        System.out.println("创建session"+session);
         return "member/login";
     }
     //个人中心

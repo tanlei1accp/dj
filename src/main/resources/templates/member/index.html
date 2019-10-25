@@ -1,6 +1,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <!-- saved from url=(0029)http://www.harbinjgdj.gov.cn/ -->
-<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns:th="http://www.thymeleaf.org">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>哈尔滨机关党建网</title>
     <style type="text/css"></style>
 
@@ -89,13 +91,25 @@
         }
 
     </script>
-    <script type='text/javascript'>
+    <script th:inline="javascript" >
 
         $(document).ready(function (){
-            //alert("提示！");
-            //$("#userLoginNew").hide();//隐藏登录后的div
 
-             $("#userLoginOld").hide();//隐藏登录前的div
+            if([[${session.admin}]]==null){
+           //alert("成功");
+                $("#userLoginNew").hide();//隐藏登录后的div
+                $("#userLoginOld").show();
+                //$("#userLoginNew").show();
+            }
+            else {
+                $("#userLoginNew").show();
+                $("#userLoginOld").hide();//隐藏登录前的div
+                 }
+            //alert("失败");
+
+
+
+
 
         });
 
@@ -126,13 +140,6 @@
 <div class="top chexfix">
     <div class="logo"></div>
 </div>
-
-
-
-
-
-
-
 
 
 <!--头目录：start-->
@@ -229,35 +236,15 @@
 </div>
 <!--头目录：end-->
 
-<!--<div id="marquee2">
-    <ul>
-        <li><span style="color: #ec0327;font-weight: bold;">通知:</span><a href="#">新闻公告一</a></li>
-        <li><span style="color: #ec0327;font-weight: bold;">通知:</span><a href="#">新闻公告二新闻公告二新闻公告二新闻公告二</a></li>
-        <li><span style="color: #ec0327;font-weight: bold;">通知:</span><a href="/userlogin">新闻公告三新闻公告三</a></li>
-        <li><span style="color: #ec0327;font-weight: bold;">通知:</span><a href="/notice">这里是新的通知公告栏</a></li>
-        <li><span style="color: #ec0327;font-weight: bold;">通知:</span><a href="#">新闻公告五新闻公告五新闻公告五新闻公告五新闻公告五新闻公告五新闻公告五新闻公告五新闻公告五新闻公告五</a></li>
-    </ul>
-</div>-->
+
 <div style="margin-left: auto;margin-right: auto;width: 995px;height: 32px;">
     <iframe style="margin-left: auto;margin-right: auto;width: 995px;height: 38px;"
     src="/notice" ></iframe>
 </div>
 
 
-
-
-
-
-
 <div class="main chexfix">
     <div class="left">
-
-
-
-
-
-
-
 
 
         <!-- 滚动图片：start-->
@@ -305,14 +292,6 @@
 
         </div>
         <!--滚动图片：end-->
-
-
-
-
-
-
-
-
 
 
 
@@ -419,7 +398,8 @@
             <!-- ----------------------------------------页面用户登录 -->
             <div class="login_top" id="userLoginNew" >
                 <!-- <div></div>-->
-                <div style="height: 180px;padding: 10px;">
+                <!--<span th:text="${session.admin}"></span>-->
+                <div  style="height: 180px;padding: 10px;">
                     <!--单元照片-->
                     <div style="height:100px ">
                         <img src="partyMember/images/20191022.jpg" style="width: 80px;height: 100px;float: left;"/>
@@ -433,10 +413,10 @@
                         <!--<p style="margin-top: 8px;" align="center">YY</p>-->
                     </div>
                     <div style="border-left:2px #47484c dashed;border-right:2px #47484c dashed; font-size:18px;padding:8px;height:60px;margin-top: 10px;">
+                        <div class="t3"><a href="/inboxEmail">站内信</a></div>
                         <div class="t3"><a href="#">在线评测</a></div>
-                        <div class="t3"><a href="#">互动交流</a></div>
-                        <div class="t3" style="margin-top: 10px;"><a href="/inboxEmail">站内信</a></div>
                         <div class="t3" style="margin-top: 10px;"><a href="grzx/index.html">个人中心</a></div>
+                        <div class="t3" style="margin-top: 10px;"><a href="">注销</a></div>
 
                     </div>
                 </div>
@@ -449,11 +429,11 @@
 
                         <tbody><tr>
                             <th width="90px">用户名：</th>
-                            <td colspan="2"><input type="text" name="yhdlm" id="yhdlm_id" value=""></td>
+                            <td colspan="2"><input type="text" name="userName" id="yhdlm_id" value=""></td>
                         </tr>
                         <tr>
                             <th>密码：</th>
-                            <td colspan="2"><input type="password" name="yhmm" id="yhmm_id" value=""></td>
+                            <td colspan="2"><input type="password" name="userPwd" id="yhmm_id" value=""></td>
                         </tr>
                         <tr>
                             <th>验证码：</th>
