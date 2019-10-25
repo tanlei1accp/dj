@@ -46,25 +46,3 @@
 2019-10-24 16:58:57,439 INFO (SpringApplication.java:648)- No active profile set, falling back to default profiles: default
 2019-10-24 16:59:00,943 INFO (StartupInfoLogger.java:59)- Started CsdjApplication in 4.155 seconds (JVM running for 6.009)
 2019-10-24 17:00:51,042 INFO (MemberServiceImpl.java:11)- 添加了一个党员
-2019-10-25 15:20:46,328 INFO (MemberServiceImpl.java:11)- 添加了一个党员
-2019-10-25 17:07:38,638 INFO (StartupInfoLogger.java:50)- Starting CsdjApplication on DESKTOP-OPC3ST8 with PID 18284 (F:\projects\dj\target\classes started by ft in F:\projects\dj)
-2019-10-25 17:07:38,643 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.9.RELEASE, Spring v5.1.9.RELEASE
-2019-10-25 17:07:38,644 INFO (SpringApplication.java:648)- No active profile set, falling back to default profiles: default
-2019-10-25 17:19:23,321 INFO (StartupInfoLogger.java:50)- Starting CsdjApplication on DESKTOP-OPC3ST8 with PID 17416 (F:\projects\dj\target\classes started by ft in F:\projects\dj)
-2019-10-25 17:19:23,326 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.9.RELEASE, Spring v5.1.9.RELEASE
-2019-10-25 17:19:23,327 INFO (SpringApplication.java:648)- No active profile set, falling back to default profiles: default
-2019-10-25 17:21:18,051 INFO (StartupInfoLogger.java:50)- Starting CsdjApplication on DESKTOP-OPC3ST8 with PID 8752 (F:\projects\dj\target\classes started by ft in F:\projects\dj)
-2019-10-25 17:21:18,054 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.9.RELEASE, Spring v5.1.9.RELEASE
-2019-10-25 17:21:18,055 INFO (SpringApplication.java:648)- No active profile set, falling back to default profiles: default
-2019-10-25 17:26:26,169 INFO (StartupInfoLogger.java:50)- Starting CsdjApplication on DESKTOP-OPC3ST8 with PID 18964 (F:\projects\dj\target\classes started by ft in F:\projects\dj)
-2019-10-25 17:26:26,172 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.9.RELEASE, Spring v5.1.9.RELEASE
-2019-10-25 17:26:26,173 INFO (SpringApplication.java:648)- No active profile set, falling back to default profiles: default
-2019-10-25 17:39:12,166 INFO (StartupInfoLogger.java:50)- Starting CsdjApplication on DESKTOP-OPC3ST8 with PID 15708 (F:\projects\dj\target\classes started by ft in F:\projects\dj)
-2019-10-25 17:39:12,170 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.9.RELEASE, Spring v5.1.9.RELEASE
-2019-10-25 17:39:12,172 INFO (SpringApplication.java:648)- No active profile set, falling back to default profiles: default
-2019-10-25 17:40:03,890 INFO (StartupInfoLogger.java:50)- Starting CsdjApplication on DESKTOP-OPC3ST8 with PID 18512 (F:\projects\dj\target\classes started by ft in F:\projects\dj)
-2019-10-25 17:40:03,894 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.9.RELEASE, Spring v5.1.9.RELEASE
-2019-10-25 17:40:03,896 INFO (SpringApplication.java:648)- No active profile set, falling back to default profiles: default
-2019-10-25 18:43:55,209 INFO (StartupInfoLogger.java:50)- Starting CsdjApplication on DESKTOP-OPC3ST8 with PID 18064 (F:\projects\dj\target\classes started by ft in F:\projects\dj)
-2019-10-25 18:43:55,215 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.9.RELEASE, Spring v5.1.9.RELEASE
-2019-10-25 18:43:55,216 INFO (SpringApplication.java:648)- No active profile set, falling back to default profiles: default
