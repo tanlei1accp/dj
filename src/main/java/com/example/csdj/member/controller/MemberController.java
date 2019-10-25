@@ -17,16 +17,16 @@ public class MemberController extends BaseController {
     @Autowired
     MemberService memberService;
 
-    @RequestMapping("/indexMemberLogin")
+   /* @RequestMapping("/indexMemberLogin")
     @ResponseBody
     public String indexMemberLogin(Member member){
 
         memberService.memberLogin(member);
     return "true";
-    }
+    }*/
     @RequestMapping("/memberLogin")
     public String memberLogin(ModelMap model,HttpSession session, Member member){
-
+        System.out.println("跳转成功");
         if(memberService.memberLogin(member)==null){
             model.put("message","登录失败");
             return "member/index";
