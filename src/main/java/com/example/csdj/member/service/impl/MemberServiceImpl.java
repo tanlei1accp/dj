@@ -4,6 +4,7 @@ import com.example.csdj.branch.entity.Member;
 import com.example.csdj.common.service.impl.BaseServiceImpl;
 import com.example.csdj.member.mapper.MemberMapper;
 import com.example.csdj.member.service.MemberService;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,6 +20,7 @@ public class MemberServiceImpl extends BaseServiceImpl implements MemberService 
 
     @Override
     public Member memberLogin(Member member) {
+
         return memberMapper.memberLogin(member);
     }
 }

@@ -14,16 +14,16 @@ import javax.servlet.http.HttpSession;
 @Controller
 @RequestMapping("/member")
 public class MemberController extends BaseController {
-   @Autowired
+    @Autowired
     MemberService memberService;
 
-    /*@RequestMapping("/indexMemberLogin")
+    @RequestMapping("/indexMemberLogin")
     @ResponseBody
     public String indexMemberLogin(Member member){
 
         memberService.memberLogin(member);
     return "true";
-    }*/
+    }
     @RequestMapping("/memberLogin")
     public String memberLogin(ModelMap model,HttpSession session, Member member){
 
