@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.csdj.member.mapper.MemberMapper">
+
+
+    <!--党员登录-->
+    <select id="memberLogin" resultType="com.example.csdj.branch.entity.Member">
+        select * from tb_member where member_pwd=#{member.memName} and member_pwd=#{member.memPwd}
+    </select>
+</mapper>

@@ -10,6 +10,11 @@
     <script type="text/javascript" src="partyMember/js/jquery.form.2.36.js"></script>
     <link href="partyMember/css/style.css" rel="stylesheet" type="text/css">
     <link href="partyMember/css/main.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript">
+        if([[${message!=null}]]){
+            alert("${message}");
+        }
+    </script>
     <style type="text/css">
         .t3{
             width:128px;
@@ -49,21 +54,17 @@
                 $("#yhdlm_id").focus();
                 return;
             }
-            if($("#code_id").val()==""){
+            /*if($("#code_id").val()==""){
                 $("#msg_id").hide().html("验证码不能为空!").fadeIn();
                 $("#msg_id").focus();
                 return;
-            }
-            document.loginForm.action="/index/login";
-            $("#loginForm").ajaxSubmit(function(result){
-                if(result!="1"){
-                    $("#msg_id").html(result);
-                    changeCode();
-                }else{
-                    document.loginForm.action="/login";
-                    document.loginForm.submit();
-                }
-            });
+            }*/
+
+
+            document.loginForm.action="member/memberLogin";
+            document.loginForm.submit();
+
+
         }
 
 
@@ -429,19 +430,19 @@
 
                         <tbody><tr>
                             <th width="90px">用户名：</th>
-                            <td colspan="2"><input type="text" name="userName" id="yhdlm_id" value=""></td>
+                            <td colspan="2"><input type="text" name="memName" id="memName" value=""></td>
                         </tr>
                         <tr>
                             <th>密码：</th>
-                            <td colspan="2"><input type="password" name="userPwd" id="yhmm_id" value=""></td>
+                            <td colspan="2"><input type="password" name="memPwd" id="memPwd" value=""></td>
                         </tr>
                         <tr>
-                            <th>验证码：</th>
+                            <!--<th>验证码：</th>
                             <td><input type="text" name="code" id="code_id" value="" style="width: 80px;"/></td>
-                            <td><img id="imgObj" alt="验证码" src="/index/code?a=1" onclick="changeCode();return false"/></td>
+                            <td><img id="imgObj" alt="验证码" src="/index/code?a=1" onclick="changeCode();return false"/></td>-->
                         </tr>
                         <tr>
-                            <td colspan="3"> <span class="font12 red" id="msg_id"></span><a href="javascript:void(0);" onclick="login();return false;" class="login_but Floatright mt10">登录</a><a href="http://www.harbinjgdj.gov.cn/index/register" class="red Floatright mr15 ">注册</a></td>
+                            <td colspan="3"> <span class="font12 red" id="msg_id"></span><a onclick="login();return false;" class="login_but Floatright mt10">登录</a><a href="http://www.harbinjgdj.gov.cn/index/register" class="red Floatright mr15 ">注册</a></td>
                         </tr>
 
 
