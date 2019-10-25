@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.csdj.member.mapper.PublicPublicityMapper">
+    <!-- 添加党内公示 -->
+    <insert id="addPublicPublicity" parameterType="com.example.csdj.member.entity.PublicPublicity">
+        insert  into tb_public_publicity values (null,#{publicity_name},#{publicity_content},null,#{publicity_create_time},null,null,0,#{publicity_create},0)
+    </insert>
+    <!-- 查询所有党内公示 -->
+    <select id="findAllPublicPublicity" resultType="com.example.csdj.member.entity.PublicPublicity">
+        SELECT * FROM tb_public_publicity
+    </select>
+    <!-- 根据主键id查询某个党内公示详细信息 -->
+    <select id="findPublicPublicityById" parameterType="com.example.csdj.member.entity.PublicPublicity" resultType="com.example.csdj.member.entity.PublicPublicity">
+        SELECT * FROM tb_public_publicity where publicity_id=#{publicityId}
+    </select>
+    <!-- 根据主键id删除某个党内公示（修改删除标记） -->
+    <update id="deletePublicPublicityById" parameterType="com.example.csdj.member.entity.PublicPublicity" >
+        update tb_public_publicity set publicity_delete_flag=1 where publicity_id=#{publicityId}
+    </update>
+    <!-- 根据主键id修改某个党内公示标题、内容、修改者、修改时间 -->
+    <update id="updatePublicCleanById" parameterType="com.example.csdj.member.entity.PublicPublicity" >
+        update tb_public_publicity set publicity_name=#{publicityName},publicity_content=#{publicityContent},publicity_modifier=#{publicityModifier},publicity_modify_time=#{publicityModifyTime} where publicity_id=#{publicityId}
+    </update>
+    <!-- 根据主键id修改某个党内公示发布状态、发布时间 -->
+    <update id="updatePublicPublicityFlagById" parameterType="com.example.csdj.member.entity.PublicPublicity" >
+        update tb_public_publicity set publicity_time=#{publicityTime},publicity_issue_flag=1 where publicity_id=#{publicityId}
+    </update>
+</mapper>

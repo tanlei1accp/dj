@@ -51,7 +51,7 @@ public class ShiroConfig {
         //设置登录页面，也就是未经认证时要跳转到的登录页面让用户去登录
         shiroFilterFactoryBean.setLoginUrl("/branch/login");
         //设置未经授权要访问的页面，也就是说虽然已经登录了。但是你还没有权限访问这个资源，那么九会 跳转到这个页面
-//        shiroFilterFactoryBean.setUnauthorizedUrl("/unAuthor");
+        shiroFilterFactoryBean.setUnauthorizedUrl("/unAuthor");
         return shiroFilterFactoryBean;
     }
 

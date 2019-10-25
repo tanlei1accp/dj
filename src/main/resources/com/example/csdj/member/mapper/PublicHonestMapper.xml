@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.csdj.member.mapper.PublicHonestMapper">
+    <!-- 添加党风廉政 -->
+    <insert id="addPublicHonest" parameterType="com.example.csdj.member.entity.PublicHonest">
+       insert  into tb_public_honest values (null,#{honestName},#{honestContent},null,0,#{honestCreate},#{honestCreateTime},null,null,0)
+    </insert>
+    <!-- 查询所有党风廉政 -->
+    <select id="findAllPublicHonest" resultType="com.example.csdj.member.entity.PublicHonest">
+        SELECT * FROM tb_public_honest
+    </select>
+    <!-- 根据主键id查询某个党风廉政详细信息 -->
+    <select id="findPublicHonestById" parameterType="com.example.csdj.member.entity.PublicHonest" resultType="com.example.csdj.member.entity.PublicHonest">
+        SELECT * FROM tb_public_honest where honest_id=#{honestId}
+    </select>
+    <!-- 根据主键id删除某个党风廉政（修改删除标记） -->
+    <update id="deletePublicHonestById" parameterType="com.example.csdj.member.entity.PublicHonest" >
+       update tb_public_honest set honest_delete_flag=1 where honest_id=#{honestId}
+    </update>
+    <!-- 根据主键id修改某个党风廉政标题、内容、修改者、修改时间 -->
+    <update id="updatePublicHonestById" parameterType="com.example.csdj.member.entity.PublicHonest" >
+        update tb_public_honest set honest_name=#{honestName},honest_content=#{honestContent},honest_modifier=#{honestModifier},honest_modify_time=#{honestModifyTime} where honest_id=#{honestId}
+    </update>
+    <!-- 根据主键id修改某个党风廉政发布状态、发布时间 -->
+    <update id="updatePublicHonestFlagById" parameterType="com.example.csdj.member.entity.PublicHonest" >
+        update tb_public_honest set honest_time=#{honestTime},honest_issue_flag=1 where honest_id=#{honestId}
+    </update>
+</mapper>
