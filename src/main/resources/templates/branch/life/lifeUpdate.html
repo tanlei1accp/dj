@@ -1,235 +1,117 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title></title>
-		<link rel="stylesheet" href="/partyBranch/css/common.css">
-		<link rel="stylesheet" href="/partyBranch/css/style.css">
-		<link rel="stylesheet" href="/partyBranch/css/main.css">
-		<script type="text/javascript" src="/partyBranch/js/jquery.min.js"></script>
-		<script type="text/javascript" src="/partyBranch/js/jquery.SuperSlide.js"></script>
-		<script type="text/javascript" src="/partyBranch/js/colResizable-1.3.min.js"></script>
-		<script type="text/javascript" src="/partyBranch/js/common.js"></script>
-		   <script type="text/javascript">
-		     $(function(){
-		         $(".sideMenu").slide({
-		            titCell:"h3", 
-		            targetCell:"ul",
-		            defaultIndex:0, 
-		            effect:'slideDown', 
-		            delayTime:'500' , 
-		            trigger:'click', 
-		            triggerTime:'150', 
-		            defaultPlay:true, 
-		            returnDefault:false,
-		            easing:'easeInQuint',
-		            endFun:function(){
-		                 scrollWW();
-		            }
-		          });
-		         $(window).resize(function() {
-		             scrollWW();
-		         });
-		     });
-		     function scrollWW(){
-		       if($(".side").height()<$(".sideMenu").height()){
-		          $(".scroll").show();
-		          var pos = $(".sideMenu ul:visible").position().top-38;
-		          $('.sideMenu').animate({top:-pos});
-		       }else{
-		          $(".scroll").hide();
-		          $('.sideMenu').animate({top:0});
-		          n=1;
-		       }
-		     } 
-		   
-		   var n=1;
-		   function menuScroll(num){
-		     var Scroll = $('.sideMenu');
-		     var ScrollP = $('.sideMenu').position();
-		     /*alert(n);
-		     alert(ScrollP.top);*/
-		     if(num==1){
-		        Scroll.animate({top:ScrollP.top-38});
-		        n = n+1;
-		     }else{
-		       if (ScrollP.top > -38 && ScrollP.top != 0) { ScrollP.top = -38; }
-		       if (ScrollP.top<0) {
-		         Scroll.animate({top:38+ScrollP.top});
-		       }else{
-		         n=1;
-		       }
-		       if(n>1){
-		         n = n-1;
-		       }
-		     }
-		   }
-		     </script>
-	</head>
-	<body>
-		<div class="top">
-		  <div id="top_t">
-		    <div id="logo" class="fl"></div>
-		    <div id="photo_info" class="fr">
-		      <div id="photo" class="fl">
-		        <a href="#"><img src="images/a.png" alt="" width="60" height="60"></a>
-		      </div>
-		      <div id="base_info" class="fr">
-		        <div class="help_info">
-		          <a href="1" id="hp">&nbsp;</a>
-		          <a href="2" id="gy">&nbsp;</a>
-		          <a href="3" id="out">&nbsp;</a>
-		        </div>
-		        <div class="info_center">
-		          admin
-		          <span id="nt">通知</span><span><a href="#" id="notice">3</a></span>
-		        </div>
-		      </div>
-		    </div>
-		  </div>
-		  <div id="side_here">
-		    <div id="side_here_l" class="fl"></div>
-		    <div id="here_area" class="fl">当前位置：</div>
-		  </div>
-		</div>
-		<div class="side">
-		    <div class="sideMenu" style="margin:0 auto">
-		      <h3>导航菜单</h3>
-		      <ul>
-		        <li><a href="money-committee.html">机关党委</a></li>
-		        <li><a href="money-after.html">补交党费</a></li>
-		        <li>导航菜单</li>
-		        <li class="on"><a href="life-list.html">组织生活</a></li>
-		        <li><a href="money-committee.html">党费管理</a></li>
-		      </ul>
-		      <h3> 导航菜单</h3>
-		      <ul>
-		        <li>导航菜单</li>
-		        <li>导航菜单</li>
-		        <li>导航菜单</li>
-		        <li>导航菜单</li>
-		        <li>导航菜单</li>
-		      </ul>
-		      <h3> 导航菜单</h3>
-		      <ul>
-		        <li>导航菜单</li>
-		        <li>导航菜单</li>
-		        <li>导航菜单</li>
-		        <li>导航菜单</li>
-		        <li>导航菜单</li>
-		        <li>导航菜单</li>
-		        <li>导航菜单</li>
-		        <li>导航菜单</li>
-		        <li>导航菜单</li>
-		        <li>导航菜单</li>
-		        <li>导航菜单</li>
-		        <li>导航菜单</li>
-		        <li>导航菜单</li>
-		        <li>导航菜单</li>
-		        <li>导航菜单</li>
-		        <li>导航菜单</li>
-		        <li>导航菜单</li>
-		        <li>导航菜单</li>
-		        <li>导航菜单</li>
-		        <li>导航菜单</li>
-		      </ul>
-		      <h3>导航菜单</h3>
-		      <ul>
-		        <li >导航菜单</li>
-		        <li>导航菜单</li>
-		        <li>导航菜单</li>
-		        <li class="on">导航菜单</li>
-		        <li>导航菜单</li>
-		      </ul>
-		      <h3> 导航菜单</h3>
-		      <ul>
-		        <li>导航菜单</li>
-		        <li>导航菜单</li>
-		        <li>导航菜单</li>
-		        <li>导航菜单</li>
-		        <li>导航菜单</li>
-		      </ul>
-		      <h3> 导航菜单</h3>
-		      <ul>
-		        <li>导航菜单</li>
-		        <li>导航菜单</li>
-		        <li>导航菜单</li>
-		        <li>导航菜单</li>
-		        <li>导航菜单</li>
-		        <li>导航菜单</li>
-		        <li>导航菜单</li>
-		        <li>导航菜单</li>
-		        <li>导航菜单</li>
-		        <li>导航菜单</li>
-		        <li>导航菜单</li>
-		        <li>导航菜单</li>
-		        <li>导航菜单</li>
-		        <li>导航菜单</li>
-		        <li>导航菜单</li>
-		        <li>导航菜单</li>
-		        <li>导航菜单</li>
-		        <li>导航菜单</li>
-		        <li>导航菜单</li>
-		        <li>导航菜单</li>
-		      </ul>
-		 
-		 
-		 
-		
-		   </div>
-		</div>
-		<div class="main">
-		<div id="forms" class="mt10">
-		        <div class="box">
-		          <div class="box_border">
-		            <div class="box_top"><b class="pl15">修改</b></div>
-		            <div class="box_center">
-		              <form action="" class="jqtransform">
-		               <table class="form_table pt15 pb15" width="100%" border="0" cellpadding="0" cellspacing="0">
-		                 <tr>
-		                  <td class="td_right">举行时间：</td>
-		                  <td class=""> 
-		                    <input type="text" name="name" class="input-text lh30" size="40">
-		                  </td>
-						  </tr><tr>
-		                  <td class="td_right">举行地点：</td>
-						  <td>
-							<input type="text" name="name" class="input-text lh30" size="40">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" href="/partyBranch/css/common.css">
+	<link rel="stylesheet" href="/partyBranch/css/style.css">
+	<link rel="stylesheet" href="/partyBranch/css/main.css">
+	<script type="text/javascript" src="/partyBranch/js/jquery.min.js"></script>
+	<script type="text/javascript" src="/partyBranch/js/jquery.SuperSlide.js"></script>
+	<script type="text/javascript" src="/partyBranch/js/colResizable-1.3.min.js"></script>
+	<script type="text/javascript" src="/partyBranch/js/common.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$(".sideMenu").slide({
+				titCell:"h3",
+				targetCell:"ul",
+				defaultIndex:0,
+				effect:'slideDown',
+				delayTime:'500' ,
+				trigger:'click',
+				triggerTime:'150',
+				defaultPlay:true,
+				returnDefault:false,
+				easing:'easeInQuint',
+				endFun:function(){
+					scrollWW();
+				}
+			});
+			$(window).resize(function() {
+				scrollWW();
+			});
+		});
+		function scrollWW(){
+			if($(".side").height()<$(".sideMenu").height()){
+				$(".scroll").show();
+				var pos = $(".sideMenu ul:visible").position().top-38;
+				$('.sideMenu').animate({top:-pos});
+			}else{
+				$(".scroll").hide();
+				$('.sideMenu').animate({top:0});
+				n=1;
+			}
+		}
+
+		var n=1;
+		function menuScroll(num){
+			var Scroll = $('.sideMenu');
+			var ScrollP = $('.sideMenu').position();
+			/*alert(n);
+            alert(ScrollP.top);*/
+			if(num==1){
+				Scroll.animate({top:ScrollP.top-38});
+				n = n+1;
+			}else{
+				if (ScrollP.top > -38 && ScrollP.top != 0) { ScrollP.top = -38; }
+				if (ScrollP.top<0) {
+					Scroll.animate({top:38+ScrollP.top});
+				}else{
+					n=1;
+				}
+				if(n>1){
+					n = n-1;
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+
+<div id="forms" class="mt10">
+	<div class="box">
+		<div class="box_border">
+			<div class="box_top"><b class="pl15">修改</b></div>
+			<div class="box_center">
+				<form action="" class="jqtransform">
+					<table class="form_table pt15 pb15" width="100%" border="0" cellpadding="0" cellspacing="0">
+						<tr>
+							<td class="td_right">举行时间：</td>
+							<td class="">
+								<input type="text" name="name" class="input-text lh30" size="40">
 							</td>
-		                </tr>
-		                 <tr>
-		                  <td class="td_right">参会人员：</td>
-		                  <td class="">
-		                    <textarea name="" id="" cols="30" rows="10" class="textarea"></textarea>
-		                  </td>
-		                 </tr>
-						 <tr>
-						  <td class="td_right">会议纪要：</td>
-						  <td class="">
-						    <textarea name="" id="" cols="30" rows="10" class="textarea"></textarea>
-						  </td>
-						 </tr>
-		                 <tr>
-		                   <td class="td_right">&nbsp;</td>
-		                   <td class="">
-		                     <input type="button" name="button" class="btn btn82 btn_save2" value="保存"> 
-		                    <input type="button" name="button" class="btn btn82 btn_res" value="重置"> 
-		                   </td>
-		                 </tr>
-		               </table>
-		               </form>
-		            </div>
-		          </div>
-		        </div>
-		     </div>
+						</tr><tr>
+						<td class="td_right">举行地点：</td>
+						<td>
+							<input type="text" name="name" class="input-text lh30" size="40">
+						</td>
+					</tr>
+						<tr>
+							<td class="td_right">参会人员：</td>
+							<td class="">
+								<textarea name="" id="a" cols="30" rows="10" class="textarea"></textarea>
+							</td>
+						</tr>
+						<tr>
+							<td class="td_right">会议纪要：</td>
+							<td class="">
+								<textarea name="" id="" cols="30" rows="10" class="textarea"></textarea>
+							</td>
+						</tr>
+						<tr>
+							<td class="td_right">&nbsp;</td>
+							<td class="">
+								<input type="button" name="button" class="btn btn82 btn_save2" value="保存">
+								<input type="button" name="button" class="btn btn82 btn_res" value="重置">
+							</td>
+						</tr>
+					</table>
+				</form>
+			</div>
+		</div>
+	</div>
 </div>
-    <div class="bottom">
-      <div id="bottom_bg">版权</div>
-    </div>
-    <div class="scroll">
-          <a href="javascript:;" class="per" title="使用鼠标滚轴滚动侧栏" onclick="menuScroll(1);"></a>
-          <a href="javascript:;" class="next" title="使用鼠标滚轴滚动侧栏" onclick="menuScroll(2);"></a>
-    </div>
+
 </body>
 
 </html>
