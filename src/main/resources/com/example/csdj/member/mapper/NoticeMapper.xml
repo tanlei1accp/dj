@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.csdj.member.mapper.NoticeMapper">
+   <select id="findAll" resultType="com.example.csdj.member.entity.Notice">
+       select * from tb_notice
+   </select>
+
+    <insert id="addNotice" parameterType="com.example.csdj.member.entity.Notice">
+        insert into tb_notice values(null,#{name},#{content},#{time},#{flag},#{publisher},#{date},#{people},#{state})
+    </insert>
+
+    <select id="findById" resultType="com.example.csdj.member.entity.Notice">
+        select * from tb_notice where notice_id=#{id}
+    </select>
+
+    <delete id="delById" parameterType="com.example.csdj.member.entity.Notice">
+        delete from tb_notice where where notice_id=#{id}
+    </delete>
+
+    <update id="updById" parameterType="com.example.csdj.member.entity.Notice">
+        update from tb_notice set(null,notice_name=#{name},notice_content=#{content},notice_time=#{time},notice_flag=#{flag},notice_publisher=#{publisher},notice_date=#{date},notice_people=#{people},notice_state=#{state}) where notice_id=#{id}
+    </update>
+
+</mapper>
