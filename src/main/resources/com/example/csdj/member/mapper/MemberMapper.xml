@@ -6,6 +6,6 @@
 
     <!--党员登录-->
     <select id="memberLogin" resultType="com.example.csdj.branch.entity.Member">
-        select * from tb_member where member_pwd=#{member.memName} and member_pwd=#{member.memPwd}
+        select * from tb_member where member_name=#{member.memName} and member_pwd=#{member.memPwd}
     </select>
 </mapper>
