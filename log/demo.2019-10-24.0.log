@@ -34,6 +34,28 @@
 2019-10-23 16:55:31,183 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.9.RELEASE, Spring v5.1.9.RELEASE
 2019-10-23 16:55:31,184 INFO (SpringApplication.java:648)- No active profile set, falling back to default profiles: default
 2019-10-23 16:55:34,042 INFO (StartupInfoLogger.java:59)- Started CsdjApplication in 3.331 seconds (JVM running for 5.4)
+<<<<<<< HEAD
+2019-10-24 09:27:29,559 INFO (StartupInfoLogger.java:50)- Starting CsdjApplication on DESKTOP-OPC3ST8 with PID 16032 (F:\projects\dj\target\classes started by ft in F:\projects\dj)
+2019-10-24 09:27:29,563 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.9.RELEASE, Spring v5.1.9.RELEASE
+2019-10-24 09:27:29,564 INFO (SpringApplication.java:648)- No active profile set, falling back to default profiles: default
+2019-10-24 09:27:33,405 INFO (StartupInfoLogger.java:59)- Started CsdjApplication in 4.502 seconds (JVM running for 6.195)
+2019-10-24 09:31:06,360 INFO (MemberServiceImpl.java:11)- 添加了一个党员
+2019-10-24 09:46:48,691 INFO (MemberServiceImpl.java:11)- 添加了一个党员
+2019-10-24 11:05:12,138 INFO (MemberServiceImpl.java:11)- 添加了一个党员
+2019-10-24 16:58:57,427 INFO (StartupInfoLogger.java:50)- Starting CsdjApplication on DESKTOP-OPC3ST8 with PID 804 (F:\projects\dj\target\classes started by ft in F:\projects\dj)
+2019-10-24 16:58:57,438 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.9.RELEASE, Spring v5.1.9.RELEASE
+2019-10-24 16:58:57,439 INFO (SpringApplication.java:648)- No active profile set, falling back to default profiles: default
+2019-10-24 16:59:00,943 INFO (StartupInfoLogger.java:59)- Started CsdjApplication in 4.155 seconds (JVM running for 6.009)
+2019-10-24 17:00:51,042 INFO (MemberServiceImpl.java:11)- 添加了一个党员
+2019-10-24 17:35:28,014 INFO (StartupInfoLogger.java:50)- Starting CsdjApplication on LAPTOP-PB20U6AE with PID 13888 (C:\Users\Lenovo\Desktop\dj\target\classes started by Lenovo in C:\Users\Lenovo\Desktop\dj)
+2019-10-24 17:35:28,020 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.9.RELEASE, Spring v5.1.9.RELEASE
+2019-10-24 17:35:28,020 INFO (SpringApplication.java:648)- No active profile set, falling back to default profiles: default
+2019-10-24 17:36:39,648 INFO (StartupInfoLogger.java:50)- Starting CsdjApplication on LAPTOP-PB20U6AE with PID 5896 (C:\Users\Lenovo\Desktop\dj\target\classes started by Lenovo in C:\Users\Lenovo\Desktop\dj)
+2019-10-24 17:36:39,653 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.9.RELEASE, Spring v5.1.9.RELEASE
+2019-10-24 17:36:39,654 INFO (SpringApplication.java:648)- No active profile set, falling back to default profiles: default
+2019-10-24 17:36:43,946 INFO (StartupInfoLogger.java:59)- Started CsdjApplication in 4.89 seconds (JVM running for 5.887)
+2019-10-24 17:36:50,936 INFO (MemberServiceImpl.java:11)- 添加了一个党员
+=======
 2019-10-23 17:11:31,535 INFO (StartupInfoLogger.java:50)- Starting CsdjApplication on SKY-20170713CAE with PID 13604 (D:\svn\dj\target\classes started by Administrator in D:\svn\dj)
 2019-10-23 17:11:31,563 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.9.RELEASE, Spring v5.1.9.RELEASE
 2019-10-23 17:11:31,564 INFO (SpringApplication.java:648)- No active profile set, falling back to default profiles: default
@@ -1727,3 +1749,4 @@ java.lang.NullPointerException: null
 2019-10-24 21:06:42,737 DEBUG (BaseJdbcLogger.java:143)- ==>  Preparing: SELECT t.type_id id,t.type_name type FROM tb_type t 
 2019-10-24 21:06:42,799 DEBUG (BaseJdbcLogger.java:143)- ==> Parameters: 
 2019-10-24 21:06:42,896 DEBUG (BaseJdbcLogger.java:143)- <==      Total: 2
+>>>>>>> origin/master

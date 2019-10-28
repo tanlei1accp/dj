@@ -1,10 +1,13 @@
 package com.example.csdj.member.controller;
 
 import com.example.csdj.common.web.BaseController;
+import com.example.csdj.member.entity.Note;
 import com.example.csdj.member.service.PersonalService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class PersonalController extends BaseController {
@@ -30,6 +33,12 @@ public class PersonalController extends BaseController {
     @RequestMapping("goupdateindex")
     public String goupdateindex(){
         return "member/personCenter/updateindex";
+    }
+    @RequestMapping("subContent")
+    @ResponseBody
+    public String subContent(Note note){
+        System.out.println("内容"+note);
+        return "";
     }
 
 }
