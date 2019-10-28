@@ -6,10 +6,11 @@
     <title>哈尔滨机关党建网</title>
     <style type="text/css"></style>
 
-    <script type="text/javascript" src="partyMember/js/jquery-1.9.1.min.js"></script>
-    <script type="text/javascript" src="partyMember/js/jquery.form.2.36.js"></script>
-    <link href="partyMember/css/style.css" rel="stylesheet" type="text/css">
-    <link href="partyMember/css/main.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="/partyMember/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="/partyMember/js/jquery.form.2.36.js"></script>
+    <link href="/partyMember/css/style.css" rel="stylesheet" type="text/css">
+    <link href="/partyMember/css/main.css" rel="stylesheet" type="text/css">
+
     <style type="text/css">
         .t3{
             width:128px;
@@ -36,34 +37,30 @@
 
     </style>
 
-    <script src="partyMember/js/tab.js" type="text/javascript"></script>
+    <script src="/partyMember/js/tab.js" type="text/javascript"></script>
 
-    <script type="text/javascript" src="partyMember/js/effect_commonv1.1.js"></script>
-    <script type="text/javascript" src="partyMember/js/slide.js"></script>
+    <script type="text/javascript" src="/partyMember/js/effect_commonv1.1.js"></script>
+    <script type="text/javascript" src="/partyMember/js/slide.js"></script>
 
 
     <script type="text/javascript">
         function login(){
-            if($("#yhdlm_id").val()==""||$("#yhmm_id").val()==""){
+            if($("#memName").val()==""||$("#memPwd").val()==""){
                 $("#msg_id").hide().html("用户名或密码不能为空!").fadeIn();
-                $("#yhdlm_id").focus();
+                /*$("#yhdlm_id").focus();*/
                 return;
             }
-            if($("#code_id").val()==""){
+            /*if($("#code_id").val()==""){
                 $("#msg_id").hide().html("验证码不能为空!").fadeIn();
                 $("#msg_id").focus();
                 return;
-            }
-            document.loginForm.action="/index/login";
-            $("#loginForm").ajaxSubmit(function(result){
-                if(result!="1"){
-                    $("#msg_id").html(result);
-                    changeCode();
-                }else{
-                    document.loginForm.action="/login";
-                    document.loginForm.submit();
-                }
-            });
+            }*/
+
+
+            document.loginForm.action="member/memberLogin";
+            document.loginForm.submit();
+
+
         }
 
 
@@ -72,10 +69,10 @@
             $('#imgObj').hide().attr('src', '/index/code?' + Math.floor(Math.random()*100) ).fadeIn();
         }
 
-        function jr(){
+        /*function jr(){
             document.loginForm.action="/login";
             document.loginForm.submit();
-        }
+        }*/
         function logout(){
             location.href="/index/logout";
         }
@@ -95,7 +92,7 @@
 
         $(document).ready(function (){
 
-            if([[${session.admin}]]==null){
+            if([[${session.member}]]==null){
            //alert("成功");
                 $("#userLoginNew").hide();//隐藏登录后的div
                 $("#userLoginOld").show();
@@ -424,16 +421,16 @@
             </div>
             <div class="login_top" id="userLoginOld" >
                 <div class="login_title FONT18 red">党员登录</div>
-                <form  id="loginForm" name="loginForm" method="post">
+                <form  id="loginForm" name="loginForm" method="post" action="/member/memberLogin">
                     <table width="100%" border="0" cellpadding="0" cellspacing="0" class="mt10">
 
                         <tbody><tr>
                             <th width="90px">用户名：</th>
-                            <td colspan="2"><input type="text" name="userName" id="yhdlm_id" value=""></td>
+                            <td colspan="2"><input type="text" name="memName" id="memName" value=""></td>
                         </tr>
                         <tr>
                             <th>密码：</th>
-                            <td colspan="2"><input type="password" name="userPwd" id="yhmm_id" value=""></td>
+                            <td colspan="2"><input type="password" name="memPwd" id="memPwd" value=""></td>
                         </tr>
                         <tr>
                             <th>验证码：</th>
@@ -441,7 +438,8 @@
                             <td><img id="imgObj" alt="验证码" src="/index/code?a=1" onclick="changeCode();return false"/></td>
                         </tr>
                         <tr>
-                            <td colspan="3"> <span class="font12 red" id="msg_id"></span><a href="javascript:void(0);" onclick="login();return false;" class="login_but Floatright mt10">登录</a><a href="http://www.harbinjgdj.gov.cn/index/register" class="red Floatright mr15 ">注册</a></td>
+
+                            <td colspan="3"> <span class="font12 red" id="msg_id"></span><a onclick="login();return false;" class="login_but Floatright mt10">登录</a><a href="http://www.harbinjgdj.gov.cn/index/register" class="red Floatright mr15 ">注册</a></td>
                         </tr>
 
 
