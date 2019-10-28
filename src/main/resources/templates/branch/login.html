@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<html lang="zh-cn" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="#"/>
+    <title>党建后台管理</title>
+    <link rel="stylesheet" href="/partyBranch/css/styles.css">
+    <link rel="stylesheet" href="/partyBranch/css/index.css">
+    <script type="text/javascript" src="/partyBranch/js/jquery.min.js"></script>
+    <!-- 点选验证码控制器 -->
+    <script type="text/javascript" src="/partyBranch/js/verify.js" ></script>
+    <script>
+function aa() {
+   var u_name=document.getElementById('u_name')
+   var u_pwd=document.getElementById('u_pwd')
+   var single=document.getElementById('single-select')
+    if(u_name.value==null ||u_name.value==""){
+        alert("请输入账号")
+        return false;
+    }else if(u_pwd.value==null ||u_pwd.value==""){
+        alert("请输入密码")
+        return false;
+    }else if(single.value==0){
+        alert("请选择身份 ")
+        return false;
+    }else {
+        return true;
+    }
+}
+    </script>
+</head>
+<body>
+
+<!--<th:if test="${msg!=null}">
+<script type="application/javascript">
+       /* alert(${msg});*/
+       登陆失败
+    </script>
+
+
+</th:if>-->
+<div class="page-wrapper flex-row align-items-center">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-5">
+                <div class="card p-4">
+                    <p th:text="${msg}"></p>
+
+                    <div class="card-header text-center text-uppercase h4 font-weight-light">
+                        Login
+                    </div>
+                    <form action="/branch/doLogin" method="post">
+                    <div class="card-body py-5">
+                        <div class="form-group">
+                            <label class="form-control-label">No</label>
+                            <input type="text" class="form-control" id="u_name" name="u_name">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-control-label">Password</label>
+                            <input type="password" class="form-control" id="u_pwd" name="u_pwd">
+                        </div>
+                        <div class="form-group">
+                            <label for="single-select">Example select</label>
+                            <select id="single-select" class="form-control" name="select">
+                                <option value="0">--请选择--</option>
+                                <option value="1">党支部</option>
+                                <option value="2">机关党委</option>
+                            </select>
+                        </div>
+                        <div class="form-group row m-b-20">
+                            <div class="col-12">
+                                <div id="mpanel6"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="row">
+                            <div class="col-6">
+                                <button type="submit" class="btn btn-primary px-5" id="btn" disabled="disabled" onclick="return(aa())" >Login</button>
+                            </div>
+                            <div class="col-6">
+                                <a href="#" class="btn btn-link">Forgot password?</a>
+                            </div>
+                        </div>
+                    </div>
+</form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $('#mpanel6').pointsVerify({
+        defaultNum : 4,	//默认的文字数量
+        checkNum : 2,	//校对的文字数量
+        vSpace : 4,	//间隔
+        imgName : ['/partyBranch/images/1.jpg', '/partyBranch/images/2.jpg'],
+        imgSize : {
+            width: '100%',
+            height: '124px',
+        },
+        barSize : {
+            width : '100%',
+            height : '50px',
+        },
+        ready : function() {
+        },
+        success : function() {
+            // alert('验证成功！');
+            $("#btn").attr('disabled',false);
+            //......后续操作
+        },
+        error : function() {
+            // alert('验证失败！');
+        }
+    });
+</script>
+</body>
+</html>

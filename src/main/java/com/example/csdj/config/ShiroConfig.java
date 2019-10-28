@@ -45,13 +45,11 @@ public class ShiroConfig {
         map.put("/system/addUser","perms[system:addUser]");
         map.put("/system/updUser","perms[system:updUser]");
         //以下路径必须经过认证才可以访问
-        map.put("/index","authc");
-        map.put("/basic/*","authc");
-        map.put("/column/*","authc");
-        map.put("/system/*","authc");
+        map.put("/branch/","authc");
+
         shiroFilterFactoryBean.setFilterChainDefinitionMap(map);
         //设置登录页面，也就是未经认证时要跳转到的登录页面让用户去登录
-        shiroFilterFactoryBean.setLoginUrl("/login");
+        shiroFilterFactoryBean.setLoginUrl("/branch/login");
         //设置未经授权要访问的页面，也就是说虽然已经登录了。但是你还没有权限访问这个资源，那么九会 跳转到这个页面
         shiroFilterFactoryBean.setUnauthorizedUrl("/unAuthor");
         return shiroFilterFactoryBean;

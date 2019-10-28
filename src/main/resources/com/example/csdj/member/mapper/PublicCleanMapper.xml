@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.csdj.member.mapper.PublicCleanMapper">
+    <!-- 添加反腐倡廉 -->
+    <insert id="addPublicClean" parameterType="com.example.csdj.member.entity.PublicClean">
+       insert  into tb_public_clean values (null,#{cleanName},#{cleanContent},#{cleanImage},null,0,#{cleanCreate},#{cleanCreateTime},null,null,0)
+    </insert>
+    <!-- 查询所有反腐倡廉 -->
+    <select id="findAllPublicClean" resultType="com.example.csdj.member.entity.PublicClean">
+        SELECT * FROM tb_public_clean
+    </select>
+    <!-- 根据主键id查询某个反腐倡廉详细信息 -->
+    <select id="findPublicCleanById" parameterType="com.example.csdj.member.entity.PublicClean" resultType="com.example.csdj.member.entity.PublicClean">
+        SELECT * FROM tb_public_clean where clean_id=#{cleanId}
+    </select>
+    <!-- 根据主键id删除某个反腐倡廉（修改删除标记） -->
+    <update id="deletePublicCleanById" parameterType="com.example.csdj.member.entity.PublicClean" >
+       update tb_public_clean set clean_delete_flag=1 where clean_id=#{cleanId}
+    </update>
+    <!-- 根据主键id修改某个反腐倡廉标题、内容、修改者、修改时间 -->
+    <update id="updatePublicCleanById" parameterType="com.example.csdj.member.entity.PublicClean" >
+        update tb_public_clean set clean_name=#{cleanName},clean_content=#{cleanContent},clean_image=#{cleanImage},clean_modifier=#{cleanModifier},clean_modify_time=#{cleanModifyTime} where clean_id=#{cleanId}
+    </update>
+    <!-- 根据主键id修改某个反腐倡廉发布状态、发布时间 -->
+    <update id="updatePublicCleanFlagById" parameterType="com.example.csdj.member.entity.PublicClean" >
+        update tb_public_clean set clean_time=#{cleanTime},clean_issue_flag=1 where clean_id=#{cleanId}
+    </update>
+</mapper>
