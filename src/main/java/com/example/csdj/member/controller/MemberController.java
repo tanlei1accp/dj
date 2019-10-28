@@ -29,7 +29,8 @@ public class MemberController extends BaseController {
         System.out.println("跳转成功");
         if(memberService.memberLogin(member)==null){
             //model.put("message","登录失败");
-            System.out.println("登录失败");
+            model.put("message","登录失败");
+            //System.out.println("登录失败");
             return "member/index.html";
         }
           else{
