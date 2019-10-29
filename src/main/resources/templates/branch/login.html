@@ -33,26 +33,24 @@ function aa() {
     </script>
 </head>
 <body>
-
-<!--<th:if test="${msg!=null}">
+<th:if test="${msg!=null}">
 <script type="application/javascript">
        /* alert(${msg});*/
        登陆失败
     </script>
-
-
-</th:if>-->
+</th:if>
 <div class="page-wrapper flex-row align-items-center">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-5">
                 <div class="card p-4">
-                    <p th:text="${msg}"></p>
+                    <!--<p th:text="${msg}"></p>-->
 
                     <div class="card-header text-center text-uppercase h4 font-weight-light">
                         Login
                     </div>
                     <form action="/branch/doLogin" method="post">
+                        <span th:text="${msg}" style="font-size: 20px"></span>
                     <div class="card-body py-5">
                         <div class="form-group">
                             <label class="form-control-label">No</label>
