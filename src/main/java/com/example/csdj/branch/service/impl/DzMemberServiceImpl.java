@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 @Service
 @Transactional(rollbackFor = Exception.class)
 public class DzMemberServiceImpl implements DzMemberService {
@@ -22,5 +24,40 @@ public class DzMemberServiceImpl implements DzMemberService {
     public Member selectUserByNameAndPwdforJg(Member member) {
         System.out.println("member"+member.getMemName());
         return dzMemberMapper.selectUserByNameAndPwdforJg(member);
+    }
+
+    @Override
+    public List<Member> selectMemberAll() {
+        return dzMemberMapper.selectMemberAll();
+    }
+
+    @Override
+    public Member selectMemberById(int memId) {
+        return dzMemberMapper.selectMemberById(memId);
+    }
+
+    @Override
+    public List<Member> selectMemberByDepaId(int depaId) {
+        return dzMemberMapper.selectMemberByDepaId(depaId);
+    }
+
+    @Override
+    public void deleteMemberById(int memId) {
+        dzMemberMapper.deleteMemberById(memId);
+    }
+
+    @Override
+    public void updateMemberById(Member member) {
+        dzMemberMapper.updateMemberById(member);
+    }
+
+    @Override
+    public void addMember(Member member) {
+        dzMemberMapper.addMember(member);
+    }
+
+    @Override
+    public int selectMemberMaxId() {
+        return dzMemberMapper.selectMemberMaxId();
     }
 }

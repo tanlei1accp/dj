@@ -1,10 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.example.csdj.branch.mapper.DzMemberMapper">
-    <select id="selectUserByNameAndPwd" resultType="com.example.csdj.branch.entity.Member">
+<resultMap id="DzMemberMapper" type="com.example.csdj.branch.entity.Member">
+    <id property="memId" column="member_id"></id>
+    <result property="memName" column="member_name"></result>
+    <result property="memPwd" column="member_pwd"></result>
+    <result property="email" column="email"></result>
+    <result property="idnum" column="id_number"></result>
+    <result property="joinTime" column="join_time"></result>
+    <result property="site" column="site"></result>
+    <result property="img" column="img"></result>
+    <result property="sex" column="sex"></result>
+    <result property="age" column="age"></result>
+    <result property="resume" column="resume"></result>
+    <result property="background" column="background"></result>
+    <result property="flag" column="flag"></result>
+    <result property="member_flag" column="member_flag"></result>
+
+    <association property="tb_member" javaType="com.example.csdj.branch.entity.Duty">
+        <id property="dutyId" column="duty_id"></id>
+        <result column="dutyName" property="duty_name"></result>
+    </association>
+    <association property="department" javaType="com.example.csdj.branch.entity.Department">
+        <id property="depaId" column="department_id"></id>
+        <result column="depaName" property="department_name"></result>
+    </association>
+
+</resultMap>
+<select id="selectUserByNameAndPwd" resultMap="DzMemberMapper">
         select * from tb_member where member_name=#{member.memName} and member_pwd=#{member.memPwd} and member_flag=1
     </select>
-    <select id="selectUserByNameAndPwdforJg" resultType="com.example.csdj.branch.entity.Member">
+<select id="selectUserByNameAndPwdforJg" resultMap="DzMemberMapper">
         select * from tb_member where member_name=#{member.memName} and member_pwd=#{member.memPwd} and member_flag=2
+    </select>
+<select id="selectMemberAll" resultMap="DzMemberMapper">
+        select * from tb_member  left join tb_duty on tb_member.duty=tb_duty.duty_id
+         left join tb_department on tb_member.department=tb_department.department_id
+    </select>
+<select id="selectMemberById" resultMap="DzMemberMapper">
+        select * from tb_member
+        left join tb_duty on tb_member.duty=tb_duty.duty_id
+         left join tb_department on tb_member.department=tb_department.department_id
+         where member_id=#{memId}
+    </select>
+<select id="selectMemberByDepaId" resultMap="DzMemberMapper">
+    select * from tb_member
+      left join tb_duty on tb_member.duty=tb_duty.duty_id
+      left join tb_department on tb_member.department=tb_department.department_id
+      where tb_department.department_id=#{depaId}
+</select>
+    <delete id="deleteMemberById" >
+        delete from tb_member where member_id=#{memId}
+    </delete>
+    <update id="updateMemberById" parameterType="com.example.csdj.branch.entity.Member">
+
+    </update>
+    <insert id="addMember" parameterType="com.example.csdj.branch.entity.Member">
+
+    </insert>
+    <select id="selectMemberMaxId" resultType="Integer">
+        select max(member_id) from tb_member
     </select>
 </mapper>
