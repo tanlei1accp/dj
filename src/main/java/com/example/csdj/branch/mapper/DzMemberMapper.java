@@ -6,8 +6,9 @@ import org.apache.ibatis.annotations.Param;
 import java.util.List;
 
 public interface DzMemberMapper {
-    Member selectUserByNameAndPwd(@Param("member") Member member);
+    Member selectUserByNameAndPwd(String name);
 
+    Member selectUserByNameAndPwdforJg(String name);
     Member selectUserByNameAndPwdforJg(@Param("member") Member member);
 
     List<Member> selectMemberAll();

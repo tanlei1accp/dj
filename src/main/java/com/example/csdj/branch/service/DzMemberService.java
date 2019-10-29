@@ -6,8 +6,9 @@ import com.example.csdj.branch.entity.Member;
 import java.util.List;
 
 public interface DzMemberService {
-    Member selectUserByNameAndPwd(Member member);
+    Member selectUserByNameAndPwd(String name,String select);
 
+   /* Member selectUserByNameAndPwdforJg(Member member);*/
     Member selectUserByNameAndPwdforJg(Member member);
     List<Member> selectMemberAll();
     Member selectMemberById(int memId);

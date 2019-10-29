@@ -55,12 +55,8 @@
                 $("#msg_id").focus();
                 return;
             }*/
-
-
-            document.loginForm.action="member/memberLogin";
+            document.loginForm.action="/member/memberLogin";
             document.loginForm.submit();
-
-
         }
 
 
@@ -212,7 +208,7 @@
         <li class="mainlevel" id="mainlevel_01"><a onclick="">互动交流</a>
             <ul id="sub_01" style="display: none;">
 
-                <li><a href="chat.html" >讨论交流</a></li>
+                <li><a href="/chattest" >讨论交流</a></li>
 
                 <li><a href="javascrip:void(0);" onclick="searchLb('29');return false;">问卷调查</a></li>
 
@@ -413,8 +409,7 @@
                         <div class="t3"><a href="/inboxEmail">站内信</a></div>
                         <div class="t3"><a href="#">在线评测</a></div>
                         <div class="t3" style="margin-top: 10px;"><a href="grzx/index.html">个人中心</a></div>
-                        <div class="t3" style="margin-top: 10px;"><a href="">注销</a></div>
-
+                        <div class="t3" style="margin-top: 10px;"><a href="/member/memberLoginOut">注销</a></div>
                     </div>
                 </div>
                 <!--替换-->

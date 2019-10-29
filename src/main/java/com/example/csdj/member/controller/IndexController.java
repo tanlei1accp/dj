@@ -72,4 +72,9 @@ public class IndexController extends BaseController {
         return "member/notice";
     }
 
+    @RequestMapping("/chattest")
+    public String chattest() {
+        System.out.println("调到collection层");
+        return "member/chat";
+    }
 }
