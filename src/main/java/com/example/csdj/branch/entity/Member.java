@@ -18,6 +18,15 @@ public class Member {
     private String background;//学历
     private int flag;//状态  0 审核中 1审核通过2审核未通过
     private Integer member_flag;
+    private String nation;
+
+    public String getNation() {
+        return nation;
+    }
+
+    public void setNation(String nation) {
+        this.nation = nation;
+    }
 
     public Integer getMember_flag() {
         return member_flag;
