@@ -18,7 +18,7 @@ public class Member {
     private String background;//学历
     private int flag;//状态  0 审核中 1审核通过2审核未通过
     private Integer member_flag;
-    private String nation;
+    private String nation;//民族
 
     public String getNation() {
         return nation;

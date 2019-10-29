@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.csdj.branch.mapper.DzDutyMapper">
+    <resultMap id="DzDutyMapper" type="com.example.csdj.branch.entity.Duty">
+            <id property="dutyId" column="duty_id"></id>
+            <result column="dutyName" property="duty_name"></result>
+    </resultMap>
+<select id="selectDutyAll" resultMap="DzDutyMapper">
+    select * from tb_duty
+</select>
+</mapper>

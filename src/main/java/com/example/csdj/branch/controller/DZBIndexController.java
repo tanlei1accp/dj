@@ -1,18 +1,20 @@
 package com.example.csdj.branch.controller;
-
 import com.example.csdj.branch.entity.Member;
 import com.example.csdj.branch.service.DzMemberService;
 import com.example.csdj.common.web.BaseController;
 import com.example.csdj.member.service.MemberService;
 import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.authc.AuthenticationException;
+import org.apache.shiro.authc.IncorrectCredentialsException;
+import org.apache.shiro.authc.UnknownAccountException;
+import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
-
 import javax.servlet.http.HttpSession;
-
 @RequestMapping("/branch")
 @Controller
 public class DZBIndexController {
@@ -24,42 +26,48 @@ public class DZBIndexController {
     }
    @RequestMapping("/login")
     public String login(){
+       System.out.println("登陆");
         return "/branch/login";
     }
     @RequestMapping("doLogin")
-    public String doLogin(Integer select, ModelMap model, String u_name, String u_pwd, HttpSession session){
+    public String doLogin(String select, Model model, String u_name, String u_pwd, HttpSession session){
         System.out.println("值"+select);
         Member member=new Member();
         member.setMemName(u_name);
         member.setMemPwd(u_pwd);
-        if(select==1){
+        //获取subject
+        //封装用户数据到token，token表示令牌
             System.out.println(member+"党支部传值");
-            Member a=dzMemberService.selectUserByNameAndPwd(member);
-            System.out.println("党支部登陆"+a);
-            if (a != null) {
-            session.setAttribute("member",a);
-//                model.put("member",a);
-                return "/branch/index";
-            }else {
-                model.put("msg","登录失败");
-                System.out.println("登陆失败");
-                return "redirect:login";
+            Subject subject = SecurityUtils.getSubject();
+            UsernamePasswordToken token = new UsernamePasswordToken(member.getMemName(),member.getMemPwd(),select);
+            try {
+                if(subject.isAuthenticated()) {
+                }
+                subject.login(token);
+            }catch (UnknownAccountException ex) {
+                //该异常表示用户名不存在
+                model.addAttribute("msg","用户名不存在");
+                System.out.println("该异常表示用户名不存在");
+                return "/branch/login";
+            }catch(IncorrectCredentialsException ex) {
+                //表示密码错误
+                model.addAttribute("msg","密码错误");
+                System.out.println("表示密码错误");
+                return "/branch/login";
+            } catch (AuthenticationException ex) {
+                //表示认证失败
+                model.addAttribute("msg","用户名或密码错误");
+                System.out.println("表示认证失败");
+                return "/branch/login";
             }
+        if(select.equals("1")){
+            System.out.println("到党支部");
+            model.addAttribute("model",token);
+            return "/branch/index";
+        }else{
+            System.out.println("到机关党委返回");
+            return "/committee/index";
         }
-        if(select==2){
-            Member b=dzMemberService.selectUserByNameAndPwdforJg(member);
-            System.out.println("机关党委登陆"+b);
-            if (b != null) {
-                session.setAttribute("member",b);
-//                model.put("member",b);
-                return "/committee/index";
-            }else {
-                System.out.println("登陆失败");
-                model.put("msg","登录失败");
-                return "redirect:login";
-            }
-        }
-        return "redirect:login";
     }
     @RequestMapping("/logout")
     public String logout() {
@@ -69,5 +77,4 @@ public class DZBIndexController {
         }
         return "/branch/login";
     }
-
 }

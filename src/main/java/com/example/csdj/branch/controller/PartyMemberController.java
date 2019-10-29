@@ -1,8 +1,14 @@
 package com.example.csdj.branch.controller;
 
+import com.example.csdj.branch.entity.Duty;
+import com.example.csdj.branch.service.DzDutyService;
 import com.example.csdj.common.web.BaseController;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import java.util.List;
 
 /**
  * 党员管理
@@ -34,5 +40,13 @@ public class PartyMemberController extends BaseController {
     @RequestMapping("/memberAdd")
     public String memberAdd() {
         return "/branch/memberManagement/memberAdd";
+    }
+    @Autowired
+    DzDutyService dzDutyService;
+    @RequestMapping("/selectDutyAll")
+    public String selectDutyAll(Model model){
+        List<Duty> list=dzDutyService.selectDutyAll();
+        model.addAttribute("dutylist",list);
+        return"add";
     }
 }
