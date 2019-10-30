@@ -24,9 +24,9 @@ public class ChatController extends BaseController {
         //根据session对象得到ServletContext对象
         ServletContext application = session.getServletContext();
         //根据ServletContext对象的getAttribute方法得到用户列表
-        //如果能够再次得到已经登录的用户列表，name再次之前的某个地方已经向这个列表中存过值
+        //如果能够再次得到已经登录的用户列表，那么再此之前的某个地方已经向这个列表中存过值
         List<Member> members = (List<Member>)application.getAttribute("members");
-        //取除当前用户
+        //取出当前用户
         Member member = (Member)session.getAttribute("member");
         //期初聊天信息
         Chat chat = (Chat)application.getAttribute("chat");
