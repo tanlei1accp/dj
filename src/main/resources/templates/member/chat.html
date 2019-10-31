@@ -1,0 +1,129 @@
+<html>
+<head>
+    <title>党员聊天室</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link href="/partyMember/css/chat.css" rel="stylesheet">
+    <script src="/js/jquery/jquery-1.12.4.min.js"></script>
+    <script src="/js/jquery/jquery.form.js"></script>
+    <script src="/js/moment/moment.min.js"></script>
+    <script src="/js/numeral/numeral.min.js"></script>
+    <script src="/js/numeral/chs.min.js"></script>
+    <script src="/js/common/base.js"></script>
+    <script src="/js/common/normal.js"></script>
+    <script>
+        document.getElementsByTagName('body').height=window.innerHeight;
+    </script>
+
+</head>
+
+<body class="box">
+
+<div class="leftbar" >
+<!--做其他的聊天室的拓展-->
+    <ul>
+         <li><i class="fas fa-user"></i></li>
+         <li><i class="fas fa-users"></i></li>
+         <li><i class="fas fa-smile"></i></li>
+         <li><i class="fas fa-envelope"></i></li>
+         <li><i class="fas fa-bell"></i></li>
+         <li><i class="fas fa-calendar-alt"></i></li>
+         <li><i class="fas fa-power-off"></i></li>
+     </ul>
+</div>
+
+<div class="container">
+    <div class="chatbox">
+        <div class="chatleft">
+            <div class="center">
+                <ul id="userList">
+
+                </ul>
+            </div>
+        </div>
+        <div class="chatright">
+            <div class="top">
+                <img style="border-radius: 20px; vertical-align: middle;" src="http://placehold.it/40x40">
+                <!--聊天室的名字-->
+                <span style="margin-left: 20px;" id="me"></span>
+                <i class="fas fa-ellipsis-v" style="font-size: 1.4em; position: absolute; right: 20px; color: gray;"></i>
+            </div>
+            <div class="center">
+                <ul id="msgList">
+
+                </ul>
+            </div>
+            <div class="footer">
+               <!-- <div style="background-color: #ec0327;">加表情或截图的工具如果，不加把上面的显示聊天记录高+10%</div>-->
+                <textarea id="msg" maxlength="800" rows="5" cols="40" style="width: 100%;height: 60%; resize: none; border: none; " placeholder="请在此输入要发送的内容..."></textarea>
+                <button class="sendbtn" onclick="chat()">发送</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(function () {
+        initChat();
+    })
+    //初始化聊天室
+    function initChat() {
+        $.post("initChat",function(result){
+            //解析json
+            var obj = $.dealJSONObj(result);
+            var s = "";
+            var str = "<li><img style='border-radius: 20px; vertical-align: middle;' src='http://placehold.it/40x40'><span style='margin-left: 10px;'>{0}</span></li>"
+
+            //显示当前用户
+            $("#me").empty();
+            $("#me").html(obj.data.member.memName);
+
+            //显示所有聊天的用户
+            $.each(obj.data.members,function (k,v) {
+                s += str.formatStr(v.memName)
+            })
+            $("#userList").empty();
+            $("#userList").html(s);
+
+            //显示所有的聊天列表
+            var msgStr = "<li class='msgleft'><img style='border-radius: 20px; vertical-align: top;' src='http://placehold.it/40x40'>" +
+                "<p class='msgcard'>{0}</p></li>";
+            var msgS = "";
+            $.each(obj.data.chats,function (k,v) {
+                msgS += msgStr.formatStr(v);
+            })
+            $("#msgList").empty();
+            $("#msgList").html(msgS);
+        })
+
+        //每隔两秒刷新一次最新数据
+        setTimeout("initChat()",2000);
+    }
+
+    //发送聊天数据
+    function chat() {
+        //得到聊天信息
+        var msg = $("#msg").val();
+        //判断发送内容是否为空
+        if(msg == ""){
+            alert("发送内容不能为空");
+            return;
+        }
+
+        //发送聊天信息
+        $.post("sendChat",{"msg":msg},function (result){
+            var obj = $.dealJSONObj(result);
+            var s = "";
+
+            //再次刷新聊天列表
+            var str = "<li class='msgleft'><img style='border-radius: 20px; vertical-align: top;' src='http://placehold.it/40x40'" +
+                "<p class='msgcard'>{0}</p></li>"
+            $.each(obj.data.chats,function (k,v) {
+                s += str.formatStr(v);
+            })
+            $("#msgList").empty();
+            $("#msgList").html(s);
+            $("#msg").val('');
+        })
+    }
+</script>
+</body>
+</html>

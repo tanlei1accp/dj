@@ -95,7 +95,7 @@ input {
 }
 .chatright .center {
     background-color: #edf5f8;
-    height: 60%;
+    height: 65%;
     overflow-y: scroll;
 }
 .chatright .center ul {

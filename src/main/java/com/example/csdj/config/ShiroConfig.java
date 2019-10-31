@@ -28,7 +28,7 @@ public class ShiroConfig {
         Map<String,String> map = new LinkedHashMap<>();
 
         //以下路径必须授权才可访问
-        map.put("/basic/info","perms[basic:info]");
+       /* map.put("/basic/info","perms[basic:info]");
         map.put("/basic/page","perms[basic:page]");
         map.put("/basic/adv","perms[basic:adv]");
         map.put("/basic/book","perms[basic:book]");
@@ -43,17 +43,16 @@ public class ShiroConfig {
         map.put("/system/updRole","perms[system:updRole]");
         map.put("/system/roleManage","perms[system:roleManage]");
         map.put("/system/addUser","perms[system:addUser]");
-        map.put("/system/updUser","perms[system:updUser]");
+        map.put("/system/updUser","perms[system:updUser]");*/
         //以下路径必须经过认证才可以访问
-        map.put("/index","authc");
-        map.put("/basic/*","authc");
-        map.put("/column/*","authc");
-        map.put("/system/*","authc");
+
+        map.put("/branch/","authc");
+        map.put("/branch","authc");
+        map.put("/committee/*","authc");
         shiroFilterFactoryBean.setFilterChainDefinitionMap(map);
         //设置登录页面，也就是未经认证时要跳转到的登录页面让用户去登录
-        shiroFilterFactoryBean.setLoginUrl("/login");
-        //设置未经授权要访问的页面，也就是说虽然已经登录了。但是你还没有权限访问这个资源，那么九会 跳转到这个页面
-        shiroFilterFactoryBean.setUnauthorizedUrl("/unAuthor");
+        shiroFilterFactoryBean.setLoginUrl("/branch/login");
+        //设置未经授权要访问的页面，也就是说虽然已经登录了。但是你还没有权限访问这个资源，那么就会 跳转到这个页面
         return shiroFilterFactoryBean;
     }
 
@@ -68,7 +67,6 @@ public class ShiroConfig {
         defaultWebSecurityManager.setRealm(userRealm);
         return defaultWebSecurityManager;
     }
-
     /**
      * 创建Realm
      * @return

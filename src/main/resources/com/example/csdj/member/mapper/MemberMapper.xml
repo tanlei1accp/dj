@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.csdj.member.mapper.MemberMapper">
+
+    <resultMap id="memberResultMap" type="com.example.csdj.branch.entity.Member">
+        <id column="member_id" property="memId" javaType="int"></id>
+        <result column="member_name" property="memName" javaType="String"></result>
+        <result column="member_pwd" property="memPwd" javaType="String"></result>
+        <result column="email" property="email" javaType="String"></result>
+        <result column="phone" property="phone" javaType="int"></result>
+        <result column="id_number" property="idnum" javaType="int"></result>
+        <result column="join_time" property="joinTime" javaType="String"></result>
+        <result column="site" property="site" javaType="String"></result>
+        <result column="img" property="img" javaType="String"></result>
+        <result column="sex" property="sex" javaType="String"></result>
+        <result column="age" property="age" javaType="int"></result>
+        <result column="resume" property="resume" javaType="String"></result>
+        <result column="background" property="background" javaType="String"></result>
+        <result column="flag" property="flag" javaType="int"></result>
+        <result column="member_flag" property="member_flag" javaType="int"></result>
+        <result column="nation" property="nation" javaType="String"></result>
+    </resultMap>
+
+    <!--党员登录-->
+    <select id="memberLogin" resultMap="memberResultMap">
+        select *
+        from tb_member
+        where member_name=#{member.memName} and member_pwd=#{member.memPwd}
+    </select>
+</mapper>

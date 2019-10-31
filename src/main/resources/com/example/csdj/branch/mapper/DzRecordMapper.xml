@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+        <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.csdj.branch.mapper.DzRecordMapper">
+<resultMap id="DzRecordMapper" type="com.example.csdj.branch.entity.Record">
+
+    <id property="reiId" column="record_id"></id>
+    <result column="event" property="event"></result>
+    <result column="reTime" property="record_time"></result>
+    <result column="recordDepartment" property="record_department"></result>
+    <association property="member" javaType="com.example.csdj.branch.entity.Member">
+        <id property="memId" column="member_id"></id>
+    </association>
+
+</resultMap>
+    <select id="selectRecordByMemId" resultMap="DzRecordMapper">
+        select * from tb_record where member=#{memId}
+    </select>
+   <insert id="addRecord" parameterType="com.example.csdj.branch.entity.Record">
+
+   </insert>
+
+</mapper>

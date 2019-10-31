@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.csdj.committee.mapper.SurveyMapper">
+
+    <select id="findSurvey" resultType="com.example.csdj.committee.entity.Survey">
+        SELECT s.survey_id id,s.survey_name name,t.type_name type FROM tb_survey s LEFT JOIN tb_type t ON t.type_id=s.type_id
+    </select>
+    <insert id="addSurvey" parameterType="com.example.csdj.committee.entity.Survey">
+        INSERT INTO tb_survey VALUES (NULL,#{name},#{typeId},1)
+    </insert>
+    <select id="findType" resultType="com.example.csdj.committee.entity.Types">
+        SELECT t.type_id id,t.type_name type FROM tb_type t
+    </select>
+    <select id="findSurveyById" parameterType="int" resultType="com.example.csdj.committee.entity.Issue">
+SELECT i.issue_id id,i.issue_name name,i.a_answer aanswer,i.b_answer banswer,i.c_answer canswer,i.d_answer danswer FROM tb_issue i WHERE i.survey_id=1     </select>
+    <insert id="addIssue" parameterType="com.example.csdj.committee.entity.Issue">
+        INSERT INTO tb_issue VALUES (NULL,#{name},#{aanswer},#{banswer},#{canswer},#{danswer},#{surveyId})
+    </insert>
+</mapper>
