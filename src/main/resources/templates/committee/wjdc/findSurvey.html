@@ -40,6 +40,7 @@
                    <td th:text="${survey.type}">生活类</td>
                    <td><a href="/sfa">发布</a></td>
                     <td><a th:href="@{squestion(id=${survey.id})}">添加试题</a></td>
+                    <!--<td><a href="javascript:void(0);" th:onclick="'javascript: ret('+${survey.id}+')' ">添加试题</a></td>-->
                    <td><a href="#">下架试卷</a></td>
                  </tr>
               </table>
@@ -60,6 +61,17 @@
      </div>
      </div>
   </div>
+<!-- <script type="text/javascript">
+     function ret(id){
+         alert(id);
+         $.post("squestion",{"id":id},function (result) {
+                alert(result);
+            window.location="committee/wjdc/addQuestion?issues="+result;
+
+
+         })
+     }
+
+ </script>-->
  </body>
  </html>
-  

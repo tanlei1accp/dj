@@ -9,8 +9,8 @@ import java.util.List;
 public interface SurveyService {
     List<Survey> findSurvey();
     List<Types> findType();
-    boolean addSurvey(Survey survey);
+    int addSurvey(Survey survey);
     List<Issue> findSurveyById(int id);
-    boolean addIssue(Issue issue);
+    int addIssue(Issue issue);
 
 }

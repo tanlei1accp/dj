@@ -22,25 +22,25 @@
 		<div class="box">
 			
 			<div>
-				<a href="javascript:onClick=show('1')"><input type="checkbox" value="一支部">一支部</a>
+				<a href="javascript:onClick=show('1')"><input type="checkbox"  id="selectall" value="一支部">一支部</a>
 			</div>
 			<div id="1" style="display: none;margin-left: 10px;">
-				<input type="checkbox" value="一支部">默默</a><br />
-				<input type="checkbox" value="一支部">默默</a><br>
-				<input type="checkbox" value="一支部">默默</a><br>
-				<input type="checkbox" value="一支部">默默</a><br>
-				<input type="checkbox" value="一支部">默默</a><br>
+				<input type="checkbox" name="select" value="一支部">默默</a><br />
+				<input type="checkbox" name="select" value="一支部">默默</a><br>
+				<input type="checkbox" name="select" value="一支部">默默</a><br>
+				<input type="checkbox" name="select" value="一支部">默默</a><br>
+				<input type="checkbox" name="select" value="一支部">默默</a><br>
 			</div>
 			
 			<div>
 				<a href="javascript:onClick=show('2')"><input type="checkbox" value="二支部">二支部</a>
 			</div>
 			<div id="2" style="display: none;margin-left: 10px;">
-				<input type="checkbox" value="一支部">默默</a><br />
-				<input type="checkbox" value="一支部">默默</a><br>
-				<input type="checkbox" value="一支部">默默</a><br>
-				<input type="checkbox" value="一支部">默默</a><br>
-				<input type="checkbox" value="一支部">默默</a><br>
+				<input type="checkbox" name="select" value="一支部">默默</a><br />
+				<input type="checkbox" name="select" value="一支部">默默</a><br>
+				<input type="checkbox" name="select" value="一支部">默默</a><br>
+				<input type="checkbox" name="select" value="一支部">默默</a><br>
+				<input type="checkbox" name="select" value="一支部">默默</a><br>
 			</div>
 			
 			<div>
@@ -72,6 +72,51 @@
 					document.getElementById(d1).style.display = 'block'; //触动的层如果处于隐藏状态，即显示
 				} else {
 					document.getElementById(d1).style.display = 'none'; //触动的层如果处于显示状态，即隐藏
+				}
+			}
+		</script>
+		<script type="text/javascript">
+			window.onload = function() {
+
+				var allbtn = document.getElementById("selectall");//这儿的selectall表示全选checkbox的id
+
+				allbtn.onclick = function(){
+
+					if(allbtn.checked) {
+						var allchooses = document.getElementsByName("select");//这儿的select表示单选的checkbox的name
+						for(var i = 0; i < allchooses.length; i++) {
+							allchooses[i].checked = true;
+						}
+					} else {
+						var allchooses = document.getElementsByName("select");//这儿的select表示单选的checkbox的name
+						for(var i = 0; i < allchooses.length; i++) {
+							allchooses[i].checked = false;
+						}
+					}
+				}
+				var singlebtn = document.getElementsByName("select");//这儿的select表示单选的checkbox的name
+				var n ;
+				for(n= 0; n < singlebtn.length; n++) {
+					singlebtn[n].onclick = function() {
+						if(this.checked) {
+							for(var m=0;m<singlebtn.length;m++){
+								if(!singlebtn[m].checked){
+									break;
+								}
+								else if(m==singlebtn.length-1){
+									allbtn.checked=true;
+								}
+							}
+						} else {
+							for(var m=0;m<singlebtn.length;m++){
+								if(singlebtn[m].checked){
+									break;
+								}
+
+							}
+							allbtn.checked=false;
+						}
+					}
 				}
 			}
 		</script>
