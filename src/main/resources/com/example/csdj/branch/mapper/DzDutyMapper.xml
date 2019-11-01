@@ -3,7 +3,7 @@
 <mapper namespace="com.example.csdj.branch.mapper.DzDutyMapper">
     <resultMap id="DzDutyMapper" type="com.example.csdj.branch.entity.Duty">
             <id property="dutyId" column="duty_id"></id>
-            <result column="dutyName" property="duty_name"></result>
+            <result property="dutyName" column="duty_name" ></result>
     </resultMap>
 <select id="selectDutyAll" resultMap="DzDutyMapper">
     select * from tb_duty

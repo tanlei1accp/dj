@@ -29,7 +29,7 @@ public class TbFamily {
     /**
      * 党员外键
      */
-    private Integer member;
+    private Member member;
 
     /**
      * 身体情况
@@ -76,11 +76,11 @@ public class TbFamily {
         this.family_phone = family_phone;
     }
 
-    public Integer getMember() {
+    public Member getMember() {
         return member;
     }
 
-    public void setMember(Integer member) {
+    public void setMember(Member member) {
         this.member = member;
     }
 

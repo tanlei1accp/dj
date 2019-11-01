@@ -7,7 +7,8 @@
     <result property="memName" column="member_name"></result>
     <result property="memPwd" column="member_pwd"></result>
     <result property="email" column="email"></result>
-    <result property="idnum" column="id_number"></result>
+    <result property="tel" column="tel"></result>
+    <result property="idnum" column="id_num"></result>
     <result property="joinTime" column="join_time"></result>
     <result property="site" column="site"></result>
     <result property="img" column="img"></result>
@@ -17,15 +18,14 @@
     <result property="background" column="background"></result>
     <result property="flag" column="flag"></result>
     <result property="member_flag" column="member_flag"></result>
+    <result column="duty_name" property="dutyName"></result>
 
-    <association property="tb_member" javaType="com.example.csdj.branch.entity.Duty">
-        <id property="dutyId" column="duty_id"></id>
-        <result column="dutyName" property="duty_name"></result>
-    </association>
-    <association property="department" javaType="com.example.csdj.branch.entity.Department">
-        <id property="depaId" column="department_id"></id>
-        <result column="depaName" property="department_name"></result>
-    </association>
+    <result column="duty_name" property="dutyName"></result>
+
+
+
+        <result column="department_name" property="depaName"></result>
+
 
 </resultMap>
 
@@ -56,10 +56,11 @@
         delete from tb_member where member_id=#{memId}
     </delete>
     <update id="updateMemberById" parameterType="com.example.csdj.branch.entity.Member">
-
+ update tb_member set duty=#{duty},department=#{department} where member_id=#{memId}
     </update>
     <insert id="addMember" parameterType="com.example.csdj.branch.entity.Member">
-
+      insert into tb_member
+       values (null,#{memName},123456,#{email},#{tel},#{duty},#{idnum},#{joinTime},#{department},#{site},#{img},#{sex},#{age},#{resume},#{background},1,0,#{nation})
     </insert>
     <select id="selectMemberMaxId" resultType="Integer">
         select max(member_id) from tb_member

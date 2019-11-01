@@ -5,7 +5,7 @@
        select * from tb_family where member=#{memId}
    </select>
     <insert id="addFamily" parameterType="com.example.csdj.branch.entity.TbFamily">
-
+    insert into tb_family values (null,#{family_name},#{relation},#{family_age},#{family_phone},#{member.memId},#{physical})
     </insert>
  <update id="updateFamilyById" >
 
