@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.csdj.committee.mapper.XFZLMapper">
+
+    <resultMap id="basePioneer" type="com.example.csdj.committee.entity.PioneerColumn">
+        <result property="pioneerid" column="pioneer_id"></result>
+        <result property="pioneertitle" column="pioneer_title"></result>
+        <result property="pioneercontent" column="pioneer_content"></result>
+        <result property="pioneerstate" column="pioneer_state"></result>
+        <result property="createtime" column="create_date"></result>
+        <result property="createpeople" column="create_people"></result>
+        <result property="updatetime" column="update_date"></result>
+        <result property="updatepeople" column="update_people"></result>
+        <result property="deletetag" column="delete_tag"></result>
+
+    </resultMap>
+
+    <select id="findAll" resultMap="basePioneer">
+      select * from tb_pioneer_column
+    </select>
+
+    <select id="findByPionId" parameterType="int" resultMap="basePioneer">
+      select * from tb_pioneer_column where pioneer_id=#{pioneerid}
+    </select>
+
+    <insert id="save" parameterType="com.example.csdj.committee.entity.PioneerColumn">
+        INSERT into tb_pioneer_column(pioneer_title,pioneer_content,pioneer_state,create_date,create_people,delete_tag)
+        VALUES(#{pioneertitle},#{pioneercontent},#{pioneerstate},#{createtime},#{createpeople},#{deletetag})
+    </insert>
+
+    <update id="pioneerUpdate" parameterType="com.example.csdj.committee.entity.PioneerColumn">
+        UPDATE tb_pioneer_column set pioneer_title=#{pioneertitle},pioneer_content=#{pioneercontent},update_date=#{updatetime},update_people=#{updatepeople}
+        where pioneer_id=#{pioneerid}
+
+    </update>
+
+    <update id="updatePionDel">
+       update tb_pioneer_column set delete_tag=1 where pioneer_id=#{pioneerid}
+    </update>
+
+    <update id="updatePionDelRe">
+       update tb_pioneer_column set delete_tag=0 where pioneer_id=#{pioneerid}
+    </update>
+
+
+    <update id="updatePionFabu">
+       update tb_pioneer_column set pioneer_state=1 where pioneer_id=#{pioneerid}
+    </update>
+
+    <update id="updatePionFbRe">
+         update tb_pioneer_column set pioneer_state=0 where pioneer_id=#{pioneerid}
+    </update>
+
+
+
+</mapper>

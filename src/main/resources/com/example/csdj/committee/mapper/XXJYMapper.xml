@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.csdj.committee.mapper.XXJYMapper">
+
+    <resultMap id="baseDocument" type="com.example.csdj.committee.entity.DocumentLearn">
+        <result property="docuid" column="document_id"></result>
+        <result property="docutitle" column="document_title"></result>
+        <result property="docucontent" column="document_content"></result>
+        <result property="docustate" column="document_state"></result>
+        <result property="createdate" column="create_date"></result>
+        <result property="createpeo" column="create_people"></result>
+        <result property="updatedate" column="update_date"></result>
+        <result property="updatepeople" column="update_people"></result>
+        <result property="deletetag" column="delete_tag"></result>
+    </resultMap>
+
+    <select id="findAll" resultMap="baseDocument">
+          select * from tb_document_learning
+
+    </select>
+
+    <insert id="add" parameterType="com.example.csdj.committee.entity.DocumentLearn">
+      INSERT INTO tb_document_learning ( document_title, document_content, document_state, create_date,create_people,delete_tag)
+      VALUES
+	  (#{docutitle},#{docucontent},#{docustate},#{createdate},#{createpeo},#{deletetag})
+    </insert>
+
+    <select id="findById" parameterType="int" resultMap="baseDocument">
+        select * from tb_document_learning where document_id=#{docuid}
+
+    </select>
+
+    <update id="update" parameterType="com.example.csdj.committee.entity.DocumentLearn">
+        UPDATE tb_document_learning d
+SET d.document_title = #{docutitle},d.document_content=#{docucontent},d.update_people=#{updatepeople},d.update_date=#{updatedate}
+where d.document_id=#{docuid}
+
+    </update>
+
+    <update id="updateFabu">
+UPDATE tb_document_learning d
+SET d.document_state=1
+where d.document_id=#{docuid}
+    </update>
+    <update id="updateDel">
+UPDATE tb_document_learning d
+SET d.delete_tag=1
+where d.document_id=#{docuid}
+    </update>
+
+    <update id="updateDelRe">
+        UPDATE tb_document_learning d
+SET d.delete_tag=0
+where d.document_id=#{docuid}
+    </update>
+
+    <update id="updateFbRe">
+UPDATE tb_document_learning d
+SET d.document_state=0
+where d.document_id=#{docuid}
+    </update>
+</mapper>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.csdj.committee.mapper.XJSJMapper">
+
+    <resultMap id="baseDeed" type="com.example.csdj.committee.entity.MeritorDeed">
+        <result column="deeds_id" property="deedid"></result>
+        <result column="deeds_title" property="deedtitle"></result>
+        <result column="deeds_content" property="deedcontent"></result>
+        <result column="deeps_state" property="deedstate"></result>
+        <result column="create_date" property="createtime"></result>
+        <result column="create_people" property="createpeople"></result>
+        <result column="update_date" property="updatetime"></result>
+        <result column="update_people" property="updatepeople"></result>
+        <result column="delete_tag" property="deleteflag"></result>
+
+    </resultMap>
+
+    <select id="findAll" resultMap="baseDeed">
+       select * from tb_meritorious_deeds
+    </select>
+
+    <select id="findByDeedId" parameterType="int" resultMap="baseDeed">
+         select * from tb_meritorious_deeds where deeds_id=#{deedid}
+    </select>
+
+    <insert id="add" parameterType="com.example.csdj.committee.entity.MeritorDeed">
+INSERT into
+tb_meritorious_deeds(deeds_title,deeds_content,deeps_state,create_date,create_people,delete_tag)
+VALUES
+(#{deedtitle},#{deedcontent},#{deedstate},#{createtime},#{createpeople},#{deleteflag})
+    </insert>
+
+    <update id="updateDeedFabu">
+    update tb_meritorious_deeds md set md.deeps_state=1 where md.deeds_id=#{deedid}
+    </update>
+
+    <update id="updateDeedFbRe">
+         update tb_meritorious_deeds md set md.deeps_state=0 where md.deeds_id=#{deedid}
+    </update>
+
+    <update id="updateDeedDelRe">
+        update tb_meritorious_deeds md set md.delete_tag=0 where md.deeds_id=#{deedid}
+    </update>
+
+    <update id="updateDeedDel">
+         update tb_meritorious_deeds md set md.delete_tag=1 where md.deeds_id=#{deedid}
+    </update>
+
+ <update id="update" parameterType="com.example.csdj.committee.entity.MeritorDeed">
+UPDATE tb_meritorious_deeds
+SET deeds_title = #{deedtitle},
+deeds_content = #{deedcontent},
+update_date = #{updatetime},
+update_people=#{updatepeople}
+WHERE
+	deeds_id =#{deedid}
+ </update>
+
+</mapper>

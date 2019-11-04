@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-cn" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../partyCommittee/css/common.css">
+    <link rel="stylesheet" href="../partyCommittee/css/main.css">
+    <link rel="stylesheet" href="../partyCommittee/css/H-ui.min.css">
+    <link rel="stylesheet" href="../partyCommittee/css/H-ui.admin.css">
+    <script type="text/javascript" src="../partyCommittee/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../partyCommittee/js/colResizable-1.3.min.js"></script>
+    <script type="text/javascript" src="../partyCommittee/js/common.js"></script>
+    <script type="text/javascript" src="../partyCommittee/js/layer.js"></script>
+    <script type="text/javascript" src="../partyCommittee/js/H-ui.min.js"></script>
+    <script type="text/javascript" src="../partyCommittee/js/H-ui.admin.js"></script>
+    <script type="text/javascript" src="../partyCommittee/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="../partyCommittee/js/laypage.js"></script>
+
+
+
+
+    <title>文件学习</title>
+</head>
+<body>
+<div id="table" class="mt10" >
+    <a href="/xxjy/toAdd"><input type="button" name="button" class="btn btn82 btn_search" value="新增"></a>
+    <div class="box_top"><b class="pl15">全部学习文件</b></div>
+    <div class="box span10 oh" align="center">
+        <div class="mt-20">
+      <table width="100%" border="0" cellpadding="0" cellspacing="0" class="table table-border table-bordered table-hover table-bg table-sort" style="text-align: center;">
+          <thead>
+         <tr>
+           <th>文件标题</th>
+           <th>文件内容</th>
+           <th>发布状态</th>
+          <th>创建时间</th>
+          <th>创建人</th>
+          <th>修改时间</th>
+          <th>修改人</th>
+          <th>存在状态</th>
+             <th></th>
+          <th >操作</th>
+             <th></th>
+      </tr>
+          </thead>
+          <tbody>
+      <tr th:each="docu:${list}">
+          <td th:text="${docu.docutitle}"></td>
+          <td th:text="${docu.docucontent}"></td>
+          <td th:if="${docu.docustate==0}" th:text="未发布" ></td>
+          <td th:if="${docu.docustate==1}" th:text="已发布"></td>
+          <td th:text="${#dates.format(docu.createdate)}"></td>
+          <td th:text="${docu.createpeo}"></td>
+          <td th:text="${#dates.format(docu.updatedate)}"></td>
+          <td th:text="${docu.updatepeople}"></td>
+          <td th:if="${docu.deletetag==0}" th:text="未删除"></td>
+          <td th:if="${docu.deletetag==1}" th:text="已删除"></td>
+          <td><a th:href="@{/xxjy/findById(docuid=${docu.docuid})}"><input type="button" class="btn btn82 btn_update" value="修改"></a></td>
+          <td th:if="${docu.deletetag==0}"><a th:href="@{/xxjy/updateDel(docuid=${docu.docuid})}"><input type="button" class="btn btn82 btn_delete" value="删除"></a></td>
+          <td th:if="${docu.deletetag==1}"><a th:href="@{/xxjy/updateDelRe(docuid=${docu.docuid})}"><input type="button" class="btn btn82 btn_delete" value="撤销"></a></td>
+          <td th:if="${docu.docustate==0}"><a th:href="@{/xxjy/updateFabu(docuid=${docu.docuid})}"><input type="button" class="btn btn82 btn_ddd" value="发布"></a></td>
+          <td th:if="${docu.docustate==1}"><a th:href="@{/xxjy/updateFbRe(docuid=${docu.docuid})}"><input type="button" class="btn btn82 btn_delete" value="撤销"></a></td>
+      </tr>
+          </tbody>
+   </table>
+        </div>
+    </div>
+    </div>
+<script type="text/javascript">
+    $(function(){
+
+        $('.table-sort').dataTable({
+            "aaSorting" : [ [ 5, "desc" ] ],//默认第几个排序
+            "bStateSave" : true,//状态保存
+
+        });
+
+    });
+
+</script>
+</body>
+</html>
