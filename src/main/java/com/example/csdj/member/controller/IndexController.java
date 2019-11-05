@@ -1,5 +1,11 @@
 package com.example.csdj.member.controller;
 
+import com.example.csdj.committee.entity.DocumentLearn;
+import com.example.csdj.committee.entity.MeritorDeed;
+import com.example.csdj.committee.entity.PioneerColumn;
+import com.example.csdj.committee.service.XFZLService;
+import com.example.csdj.committee.service.XJSJService;
+import com.example.csdj.committee.service.XXJYService;
 import com.example.csdj.common.web.BaseController;
 import com.example.csdj.member.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,6 +14,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpSession;
+import java.util.List;
 
 @Controller
 public class IndexController extends BaseController {
@@ -15,9 +22,30 @@ public class IndexController extends BaseController {
     @Autowired
     MemberService memberService;
 
+    //先锋专栏
+    @Autowired
+    private XFZLService xfzlService;
+
+    //先进事迹
+    @Autowired
+    private XJSJService xjsjService;
+
+    //文件学习
+    @Autowired
+    private XXJYService xxjyService;
+
     @RequestMapping("/")
-    public String index() {
+    public String index(Model model) {
         memberService.addPartyMember();
+        //先锋专栏
+        List<PioneerColumn> xflist= xfzlService.findByNdYb();//拿到已发布未删除的数据List<PioneerColumn> xflist=
+        model.addAttribute("xflist",xflist);
+        //先进事迹
+        List<MeritorDeed> deedList= xjsjService.findByNdYb();
+        model.addAttribute("deedList",deedList);
+        //学习教育
+        List<DocumentLearn> learnList= xxjyService.findByNdYb();
+        model.addAttribute("learnList",learnList);
         return "member/index.html";
     }
 
