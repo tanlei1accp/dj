@@ -1,6 +1,7 @@
 package com.example.csdj.branch.controller;
 import com.example.csdj.branch.entity.Member;
 import com.example.csdj.branch.service.DzMemberService;
+import com.example.csdj.committee.annotation.SysLog;
 import com.example.csdj.common.web.BaseController;
 import com.example.csdj.member.service.MemberService;
 import org.apache.shiro.SecurityUtils;
@@ -29,6 +30,7 @@ public class DZBIndexController {
        System.out.println("登陆");
         return "/branch/login";
     }
+    @SysLog("登录到系统")
     @RequestMapping("doLogin")
     public String doLogin(String select, Model model, String u_name, String u_pwd, HttpSession session){
         System.out.println("值"+select);

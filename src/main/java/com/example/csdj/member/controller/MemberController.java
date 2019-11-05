@@ -2,15 +2,14 @@ package com.example.csdj.member.controller;
 
 import com.example.csdj.common.utils.RandomValidateCode;
 import com.example.csdj.common.web.BaseController;
-import com.example.csdj.config.OnlineMemberListener;
-import com.example.csdj.member.entity.Chat;
+
+
 import com.example.csdj.branch.entity.Member;
 import com.example.csdj.member.service.MemberService;
-import org.apache.ibatis.annotations.Mapper;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 

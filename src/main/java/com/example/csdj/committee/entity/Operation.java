@@ -1,10 +1,14 @@
 package com.example.csdj.committee.entity;
 
-import java.util.Date;
+import org.joda.time.DateTime;
+import org.springframework.stereotype.Component;
 
-public class Operation {
+import java.io.Serializable;
+import java.util.Date;
+@Component
+public class Operation implements Serializable {
     private Integer logId;
-    private Integer userId;
+    private String userName;
     private String operation;
     private Date time;
 
@@ -16,12 +20,12 @@ public class Operation {
         this.logId = logId;
     }
 
-    public Integer getUserId() {
-        return userId;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setUserId(Integer userId) {
-        this.userId = userId;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     public String getOperation() {
