@@ -77,4 +77,10 @@ public class XJSJServiceImpl implements XJSJService {
 
          xjsjMapper.add(meritorDeed);
     }
+
+    @Override
+    public List<MeritorDeed> findByNdYb() {
+        List<MeritorDeed> list=xjsjMapper.findByNdYb();
+        return list;
+    }
 }

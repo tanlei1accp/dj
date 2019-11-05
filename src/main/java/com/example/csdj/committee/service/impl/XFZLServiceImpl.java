@@ -84,4 +84,11 @@ public class XFZLServiceImpl implements XFZLService {
     public void updatePionFbRe(int pioneerid) {
        xfzlMapper.updatePionFbRe(pioneerid);
     }
+
+    @Override
+    public List<PioneerColumn> findByNdYb() {
+
+        List<PioneerColumn> list= xfzlMapper.findByNdYb();
+        return list;
+    }
 }

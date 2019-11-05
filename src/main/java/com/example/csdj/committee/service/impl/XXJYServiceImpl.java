@@ -83,4 +83,11 @@ public class XXJYServiceImpl implements XXJYService {
     public void updateFbRe(int docuid) {
        xxjyMapper.updateFbRe(docuid);
     }
+
+    @Override
+    public List<DocumentLearn> findByNdYb() {
+
+        List<DocumentLearn> list=xxjyMapper.findByNdYb();
+        return list;
+    }
 }
