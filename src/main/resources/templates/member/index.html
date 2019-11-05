@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <!-- saved from url=(0029)http://www.harbinjgdj.gov.cn/ -->
-<html xmlns="http://www.w3.org/1999/xhtml">
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="zh-cn" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en">
 <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>哈尔滨机关党建网</title>
     <style type="text/css"></style>
@@ -474,16 +474,11 @@
             <div class="zxfb_title">学习教育</div>
         </div>
         <div class="xxls_con">
-
             <div class="xxls_title"><span class="Floatleft">文件学习</span> <a class="Floatright more" href="javascript:void(0);" onclick="searchLb('17');return false;">更多</a></div>
             <ul>
 
-                <li>
-                    <a href="javascript:void(0);" onclick="newDet('8B822AF9F64B1E8DE050007F010060AB');return false;">习近平：牢记初心使命，推进自我革命</a>
-                </li>
-
-                <li>
-                    <a href="javascript:void(0);" onclick="newDet('8BFB6CA113967FCCE050007F010060A5');return false;">新时代的思想金句——复兴篇</a>
+                <li th:each="learn:${learnList}">
+                    <a th:text="${learn.docutitle}" href="javascript:void(0);" onclick=""></a>
                 </li>
 
             </ul>
@@ -491,26 +486,21 @@
             <div class="xxls_title"><span class="Floatleft">先进事迹</span> <a class="Floatright more" href="javascript:void(0);" onclick="searchLb('18');return false;">更多</a></div>
             <ul>
 
-                <li>
-                    <a href="javascript:void(0);" onclick="newDet('8B822AF9F67F1E8DE050007F010060AB');return false;">不忘初心  牢记使命  坚定走好新时代全面从严治党长征路 | 刘兴东</a>
+                <li th:each="deed:${deedList}">
+                    <a th:text="${deed.deedtitle}" href="javascript:void(0);" onclick="newDet('8B822AF9F67F1E8DE050007F010060AB');return false;"></a>
                 </li>
 
-                <li>
-                    <a href="javascript:void(0);" onclick="newDet('8B822AF9F6701E8DE050007F010060AB');return false;">铭记初心 勇担使命 全力推进统计工作再上新台阶 | 佟宇</a>
-                </li>
+
 
             </ul>
 
             <div class="xxls_title"><span class="Floatleft">先锋专栏</span> <a class="Floatright more" href="javascript:void(0);" onclick="searchLb('20');return false;">更多</a></div>
             <ul>
 
-                <li>
-                    <a href="javascript:void(0);" onclick="newDet('81EA5571F629CC81E050007F0100258C');return false;">大型系列纪录片《先生》</a>
+                <li th:each="xf:${xflist}">
+                    <a th:text="${xf.pioneertitle}" href="javascript:void(0);" onclick="newDet('81EA5571F629CC81E050007F0100258C');return false;"></a>
                 </li>
 
-                <li>
-                    <a href="javascript:void(0);" onclick="newDet('3FC17328C960F6EAE050007F01003A42');return false;">习近平引用的古典名句（20）</a>
-                </li>
 
             </ul>
 
@@ -970,6 +960,10 @@
             $.extend( $.fn.kxbdMarquee.defaults, settings );
         };
     })(jQuery);
+
+    function showDocument(id){
+          alert(id);
+    }
 </script>
 
 </body></html>
