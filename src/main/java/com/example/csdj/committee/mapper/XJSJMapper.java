@@ -22,4 +22,6 @@ public interface XJSJMapper {
     void updateDeedDel(int deedid);
 
     void update(MeritorDeed meritorDeed);
+
+    List<MeritorDeed> findByNdYb();
 }

@@ -20,4 +20,6 @@ public interface XXJYMapper {
     void updateDelRe(int docuid);
 
     void updateFbRe(int docuid);
+
+    List<DocumentLearn> findByNdYb();
 }
