@@ -50,11 +50,11 @@
                 /*$("#yhdlm_id").focus();*/
                 return;
             }
-            /*if($("#code_id").val()==""){
+            if($("#validate").val()==""){
                 $("#msg_id").hide().html("验证码不能为空!").fadeIn();
-                $("#msg_id").focus();
+                /*$("#msg_id").focus();*/
                 return;
-            }*/
+            }
             document.loginForm.action="/member/memberLogin";
             document.loginForm.submit();
         }
@@ -99,11 +99,6 @@
                 $("#userLoginOld").hide();//隐藏登录前的div
                  }
             //alert("失败");
-
-
-
-
-
         });
 
     </script>
@@ -124,6 +119,25 @@
         document.searchForm.action="/index/newDet";
         document.searchForm.submit();
     }
+</script>
+
+<!-- 验证码 -->
+<script type="text/javascript">
+
+    /*$(function () {
+        $("#validate").blur(function () {
+            var validate = $("#validate").val();
+            if(validate == null || validate == ""){
+                //alert("验证码不能为空!");
+            }
+        })
+    })*/
+
+    function fer()
+    {
+        document.getElementById("mm").src = document
+                .getElementById("mm").src
+            + "?nocache=" + new Date().getTime(); }
 </script>
 
 <form id="searchForm" name="searchForm" method="post">
@@ -208,7 +222,7 @@
         <li class="mainlevel" id="mainlevel_01"><a onclick="">互动交流</a>
             <ul id="sub_01" style="display: none;">
 
-                <li><a href="/chattest" >讨论交流</a></li>
+                <li><a href="/chattest" target="_blank">讨论交流</a></li>
 
                 <li><a href="javascrip:void(0);" onclick="searchLb('29');return false;">问卷调查</a></li>
 
@@ -429,12 +443,12 @@
                         </tr>
                         <tr>
                             <th>验证码：</th>
-                            <td><input type="text" name="code" id="code_id" value="" style="width: 80px;"/></td>
-                            <td><img id="imgObj" alt="验证码" src="/index/code?a=1" onclick="changeCode();return false"/></td>
+                            <td><input type="text" name="validate" id="validate" value="" style="width: 80px;"/></td>
+                            <td><img id="mm" alt="验证码" src="/member/checkCode" onclick="fer()"/></td>
                         </tr>
                         <tr>
 
-                            <td colspan="3"> <span class="font12 red" id="msg_id"></span><a onclick="login();return false;" class="login_but Floatright mt10">登录</a><a href="http://www.harbinjgdj.gov.cn/index/register" class="red Floatright mr15 ">注册</a></td>
+                            <td colspan="3"> <span  class="font12 red" id="msg_id"></span><a onclick="login();return false;" class="login_but Floatright mt10">登录</a><a href="http://www.harbinjgdj.gov.cn/index/register" class="red Floatright mr15 ">注册</a></td>
                         </tr>
 
 

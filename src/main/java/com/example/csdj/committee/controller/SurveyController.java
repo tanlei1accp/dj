@@ -35,13 +35,14 @@ private SurveyService surveyService;
     }
     @PostMapping("/addsur")
     @ResponseBody
-    public String adds(Survey survey){
+    public int adds(Survey survey){
         System.out.println(survey);
-        if (surveyService.addSurvey(survey)){
-            return dealSuccessResutl("添加成功",survey);
+        int aa=surveyService.addSurvey(survey);
+        if (aa>0){
+            return 1;
 
         }
-        return null;
+        return 0;
     }
     @PostMapping("/getAllType")
     @ResponseBody
@@ -62,16 +63,28 @@ private SurveyService surveyService;
     public String addQuestion(int id,Model model) {
         List<Issue> issues=surveyService.findSurveyById(id);
         model.addAttribute("issues",issues);
+        model.addAttribute("id",id);
         return "committee/wjdc/addQuestion";
     }
+    /*@RequestMapping("/squestion")
+    @ResponseBody
+    public List<Issue> addQuestion(int id*//*,Model model*//*) {
+        System.out.println("123123123123:"+id);
+        List<Issue> issues=surveyService.findSurveyById(id);
+        *//*model.addAttribute("issues",issues);*//*
+        *//*model.addAttribute("id",id);*//*
+        *//*return "committee/wjdc/addQuestion";*//*
+        return issues;
+    }*/
     @PostMapping("/addissue")
     @ResponseBody
-    public String addIssue(Issue issue){
+    public int addIssue(Issue issue){
         System.out.println(issue);
-        if (surveyService.addIssue(issue)){
-            return dealSuccessResutl("添加成功",issue);
+        int aa=surveyService.addIssue(issue);
+        if (aa>0){
+            return 1;
         }
-        return null;
+        return 0;
     }
 
     @RequestMapping("/sfa")

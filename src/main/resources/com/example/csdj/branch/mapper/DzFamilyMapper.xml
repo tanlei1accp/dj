@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.csdj.branch.mapper.DzFamilyMapper">
+   <select id="selectFamilyByMemId" resultType="com.example.csdj.branch.entity.TbFamily">
+       select * from tb_family where member=#{memId}
+   </select>
+    <insert id="addFamily" parameterType="com.example.csdj.branch.entity.TbFamily">
+    insert into tb_family values (null,#{family_name},#{relation},#{family_age},#{family_phone},#{member.memId},#{physical})
+    </insert>
+ <update id="updateFamilyById" >
+
+ </update>
+</mapper>

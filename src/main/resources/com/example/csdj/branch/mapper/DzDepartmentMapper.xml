@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.csdj.branch.mapper.DzDepartmentMapper">
+    <resultMap id="DzDepartmentMapper" type="com.example.csdj.branch.entity.Department">
+
+            <id property="depaId" column="department_id"></id>
+            <result column="department_name" property="depaName"></result>
+        <result column="synopsis" property="synopsis"></result>
+    </resultMap>
+<insert id="addDepartment" parameterType="com.example.csdj.branch.entity.Department">
+
+</insert>
+    <select id="selectDepartmentAll" resultMap="DzDepartmentMapper">
+        select department_id,department_name,synopsis from  tb_department
+    </select>
+    <update id="updateDepartmentById" >
+
+    </update>
+    <delete id="deleteDepartmentById">
+        delete from tb_department where department_id=#{depaId}
+    </delete>
+</mapper>
