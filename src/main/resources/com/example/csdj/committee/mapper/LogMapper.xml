@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.csdj.committee.mapper.LogMapper">
+<resultMap id="LogResultMap" type="com.example.csdj.committee.entity.Operation">
+    <id column="logId" property="logId" javaType="int"/>
+    <result column="userName" property="userName" javaType="String"/>
+    <result column="operation" property="operation" javaType="String"/>
+    <result column="time"  property="time" javaType="Date"/>
+</resultMap>
+
+    <insert id="insertlog">
+        insert into tb_log
+		value(null,#{userName},#{operation},#{time})
+
+    </insert>
+    <select id="selectAll" resultMap="LogResultMap" resultType="java.util.List">
+        select logId,userName,operation,time from tb_log
+    </select>
+</mapper>

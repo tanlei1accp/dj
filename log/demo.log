@@ -1,0 +1,34 @@
+
+2019-11-05 09:15:34,594 INFO (StartupInfoLogger.java:50)- Starting CsdjApplication on DESKTOP-03R4DTQ with PID 6032 (E:\WEIFANG\dj\target\classes started by 骆晓云 in E:\WEIFANG\dj)
+2019-11-05 09:15:34,604 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.9.RELEASE, Spring v5.1.9.RELEASE
+2019-11-05 09:15:34,604 INFO (SpringApplication.java:648)- No active profile set, falling back to default profiles: default
+2019-11-05 09:15:41,913 INFO (StartupInfoLogger.java:59)- Started CsdjApplication in 9.438 seconds (JVM running for 14.333)
+2019-11-05 09:16:31,997 INFO (MemberServiceImpl.java:18)- 添加了一个党员
+2019-11-05 09:17:31,401 DEBUG (BaseJdbcLogger.java:143)- ==>  Preparing: select member_name as memName ,member_pwd as memPwd from tb_member where member_name=? and member_flag=2
+2019-11-05 09:17:31,451 DEBUG (BaseJdbcLogger.java:143)- ==> Parameters: 李四(String)
+2019-11-05 09:17:31,491 DEBUG (BaseJdbcLogger.java:143)- <==      Total: 1
+2019-11-05 09:20:12,694 INFO (StartupInfoLogger.java:50)- Starting CsdjApplication on DESKTOP-03R4DTQ with PID 15736 (E:\WEIFANG\dj\target\classes started by 骆晓云 in E:\WEIFANG\dj)
+2019-11-05 09:20:12,701 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.9.RELEASE, Spring v5.1.9.RELEASE
+2019-11-05 09:20:12,701 INFO (SpringApplication.java:648)- No active profile set, falling back to default profiles: default
+2019-11-05 09:20:20,274 INFO (StartupInfoLogger.java:59)- Started CsdjApplication in 8.4 seconds (JVM running for 10.715)
+2019-11-05 09:20:40,493 DEBUG (BaseJdbcLogger.java:143)- ==>  Preparing: select member_name as memName ,member_pwd as memPwd from tb_member where member_name=? and member_flag=2
+2019-11-05 09:20:40,516 DEBUG (BaseJdbcLogger.java:143)- ==> Parameters: 李四(String)
+2019-11-05 09:20:40,529 DEBUG (BaseJdbcLogger.java:143)- <==      Total: 1
+2019-11-05 09:20:40,614 DEBUG (BaseJdbcLogger.java:143)- ==>  Preparing: insert into tb_log value(null,?,?,?)
+2019-11-05 09:20:40,734 DEBUG (BaseJdbcLogger.java:143)- ==> Parameters: 30F78BDE0A238E525113ECF63C7CDBAB(String), 登录到系统(String), 2019-11-05T09:20:40.544+08:00(DateTime)
+2019-11-05 09:23:14,615 INFO (StartupInfoLogger.java:50)- Starting CsdjApplication on DESKTOP-03R4DTQ with PID 14928 (E:\WEIFANG\dj\target\classes started by 骆晓云 in E:\WEIFANG\dj)
+2019-11-05 09:23:14,619 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.9.RELEASE, Spring v5.1.9.RELEASE
+2019-11-05 09:23:14,619 INFO (SpringApplication.java:648)- No active profile set, falling back to default profiles: default
+2019-11-05 09:23:21,104 INFO (StartupInfoLogger.java:59)- Started CsdjApplication in 7.335 seconds (JVM running for 10.134)
+2019-11-05 09:23:41,874 DEBUG (BaseJdbcLogger.java:143)- ==>  Preparing: select member_name as memName ,member_pwd as memPwd from tb_member where member_name=? and member_flag=2
+2019-11-05 09:23:41,894 DEBUG (BaseJdbcLogger.java:143)- ==> Parameters: 李四(String)
+2019-11-05 09:23:41,909 DEBUG (BaseJdbcLogger.java:143)- <==      Total: 1
+2019-11-05 09:23:41,954 DEBUG (BaseJdbcLogger.java:143)- ==>  Preparing: insert into tb_log value(null,?,?,?)
+2019-11-05 09:23:41,954 DEBUG (BaseJdbcLogger.java:143)- ==> Parameters: 07DD001F52302324A966709A47ED9A09(String), 登录到系统(String), 2019-11-05 09:23:41.924(Timestamp)
+2019-11-05 09:23:42,004 DEBUG (BaseJdbcLogger.java:143)- <==    Updates: 1
+2019-11-05 09:23:42,259 DEBUG (BaseJdbcLogger.java:143)- ==>  Preparing: insert into tb_log value(null,?,?,?)
+2019-11-05 09:23:42,259 DEBUG (BaseJdbcLogger.java:143)- ==> Parameters: 07DD001F52302324A966709A47ED9A09(String), 查看日志(String), 2019-11-05 09:23:42.259(Timestamp)
+2019-11-05 09:23:42,354 DEBUG (BaseJdbcLogger.java:143)- <==    Updates: 1
+2019-11-05 09:25:04,274 DEBUG (BaseJdbcLogger.java:143)- ==>  Preparing: insert into tb_log value(null,?,?,?)
+2019-11-05 09:25:04,274 DEBUG (BaseJdbcLogger.java:143)- ==> Parameters: 07DD001F52302324A966709A47ED9A09(String), 查看list(String), 2019-11-05 09:25:04.274(Timestamp)
+2019-11-05 09:25:04,334 DEBUG (BaseJdbcLogger.java:143)- <==    Updates: 1

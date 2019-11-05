@@ -9,29 +9,34 @@ import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
 import org.aspectj.lang.reflect.MethodSignature;
+import org.joda.time.DateTime;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.web.context.request.RequestContextHolder;
+import org.springframework.web.context.request.ServletRequestAttributes;
 
+
+import javax.servlet.http.HttpSession;
 import java.lang.reflect.Method;
+
 
 
 @Aspect
 @Component
 public class WebLogAspect {
-    private LogService logService;
+    @Autowired
+    private  LogService logService;
     @Pointcut("@annotation(com.example.csdj.committee.annotation.SysLog)")
     public void logPointCut(){
 }
     @Around("logPointCut()")
     public Object around(ProceedingJoinPoint point) throws Throwable{
-        long start=System.currentTimeMillis();
         Object result=point.proceed();
-        long times=System.currentTimeMillis()-start;
-        saveLog(point,times);
+        saveLog(point);
         return result;
-
 }
 //保存日志
-private void saveLog(ProceedingJoinPoint point,Long times){
+private void saveLog(ProceedingJoinPoint point){
     MethodSignature signature=(MethodSignature) point.getSignature();
     Method method=signature.getMethod();
     Operation operation = new Operation();
@@ -41,10 +46,12 @@ private void saveLog(ProceedingJoinPoint point,Long times){
         operation.setOperation(sysLog.value());
     }
     //获取用户名
-
+    HttpSession session=((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest().getSession();
+    operation.setUserName(session.getId());
     //获取时间
-     operation.setTime(DateTime.now().toDate());
+    operation.setTime(DateTime.now().toDate());
+    logService.insertlog(operation);
+    }
 
-}
 
 }
