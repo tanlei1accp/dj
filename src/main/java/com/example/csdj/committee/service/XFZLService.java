@@ -20,4 +20,6 @@ public interface XFZLService {
     void updatePionFabu(int pioneerid);
 
     void updatePionFbRe(int pioneerid);
+
+    List<PioneerColumn> findByNdYb();
 }

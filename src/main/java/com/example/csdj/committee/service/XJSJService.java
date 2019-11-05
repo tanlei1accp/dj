@@ -21,4 +21,6 @@ public interface XJSJService {
     void update(MeritorDeed meritorDeed);
 
     void add(MeritorDeed meritorDeed);
+
+    List<MeritorDeed> findByNdYb();
 }

@@ -20,4 +20,6 @@ public interface XXJYService {
     void updateDelRe(int docuid);
 
     void updateFbRe(int docuid);
+
+    List<DocumentLearn> findByNdYb();
 }
