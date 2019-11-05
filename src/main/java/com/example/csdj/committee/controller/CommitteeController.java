@@ -9,6 +9,7 @@ public class CommitteeController {
     @SysLog("机关党委主页")
     @RequestMapping("/index")
     public String showIndex(){
+
         return "committee/index";
     }
 }

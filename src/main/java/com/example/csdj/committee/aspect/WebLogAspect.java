@@ -4,6 +4,7 @@ package com.example.csdj.committee.aspect;
 import com.example.csdj.committee.annotation.SysLog;
 import com.example.csdj.committee.entity.Operation;
 import com.example.csdj.committee.service.LogService;
+
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
@@ -46,8 +47,9 @@ private void saveLog(ProceedingJoinPoint point){
         operation.setOperation(sysLog.value());
     }
     //获取用户名
+
     HttpSession session=((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest().getSession();
-    operation.setUserName(session.getId());
+    operation.setUserName(session.getAttribute("session").toString());
     //获取时间
     operation.setTime(DateTime.now().toDate());
     logService.insertlog(operation);

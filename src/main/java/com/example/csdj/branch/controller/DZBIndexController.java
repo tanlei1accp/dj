@@ -64,10 +64,12 @@ public class DZBIndexController {
                 return "/branch/login";
             }
         if(select.equals("1")){
+            session.setAttribute("session",member);
             System.out.println("到党支部");
             model.addAttribute("model",token);
             return "/branch/index";
         }else{
+            session.setAttribute("session",member);
             System.out.println("到机关党委返回");
             return "/committee/index";
         }
