@@ -59,4 +59,9 @@ UPDATE tb_document_learning d
 SET d.document_state=0
 where d.document_id=#{docuid}
     </update>
+
+    <select id="findByNdYb" resultMap="baseDocument">
+        select * from tb_document_learning where delete_tag=0 and document_state=1 order by document_id desc limit 0,2
+    </select>
+
 </mapper>

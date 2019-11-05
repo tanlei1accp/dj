@@ -51,6 +51,10 @@
          update tb_pioneer_column set pioneer_state=0 where pioneer_id=#{pioneerid}
     </update>
 
+    <select id="findByNdYb" resultMap="basePioneer">
+        SELECT * FROM tb_pioneer_column where delete_tag=0 and pioneer_state=1 order by pioneer_id desc limit 0,2
+
+    </select>
 
 
 </mapper>
