@@ -4,14 +4,14 @@
     <resultMap id="DzDepartmentMapper" type="com.example.csdj.branch.entity.Department">
 
             <id property="depaId" column="department_id"></id>
-            <result column="depaName" property="department_name"></result>
+            <result column="department_name" property="depaName"></result>
         <result column="synopsis" property="synopsis"></result>
     </resultMap>
 <insert id="addDepartment" parameterType="com.example.csdj.branch.entity.Department">
 
 </insert>
     <select id="selectDepartmentAll" resultMap="DzDepartmentMapper">
-        select * from  tb_department
+        select department_id,department_name,synopsis from  tb_department
     </select>
     <update id="updateDepartmentById" >
 

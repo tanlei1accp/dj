@@ -5,8 +5,8 @@
 
     <id property="reiId" column="record_id"></id>
     <result column="event" property="event"></result>
-    <result column="reTime" property="record_time"></result>
-    <result column="recordDepartment" property="record_department"></result>
+    <result column="record_time" property="reTime"></result>
+    <result column="record_department" property="recordDepartment"></result>
     <association property="member" javaType="com.example.csdj.branch.entity.Member">
         <id property="memId" column="member_id"></id>
     </association>
@@ -16,7 +16,7 @@
         select * from tb_record where member=#{memId}
     </select>
    <insert id="addRecord" parameterType="com.example.csdj.branch.entity.Record">
-
+insert into tb_record values (null,#{event},#{recordDepartment},#{reTime},#{member.memId})
    </insert>
 
 </mapper>

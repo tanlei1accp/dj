@@ -30,12 +30,9 @@ public class SurveyServiceImpl implements SurveyService {
     }
 
     @Override
-    public boolean addSurvey(Survey survey) {
+    public int addSurvey(Survey survey) {
         int row= surveyMapper.addSurvey(survey);
-        if (row<=0){
-            throw new CustomException("添加失败");
-        }
-        return true;
+        return row;
     }
 
     @Override
@@ -44,12 +41,10 @@ public class SurveyServiceImpl implements SurveyService {
     }
 
     @Override
-    public boolean addIssue(Issue issue) {
+    public int addIssue(Issue issue) {
         int row=surveyMapper.addIssue(issue);
-        if(row<=0){
-            throw new CustomException("添加失败");
-        }
-        return true;
+
+        return row;
     }
 
 }

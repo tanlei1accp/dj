@@ -5,11 +5,11 @@ public class Member {
     private String memName;//党员姓名
     private String memPwd;//党员密码
     private String email;//电子邮箱
-    private int phone;//党员电话
-    private Duty duty;//职务外键
-    private int idnum;//身份证号
+    private String tel;//党员电话
+    private int duty;//职务外键
+    private String idnum;//身份证号
     private String joinTime;//入党时间
-    private Department department;//部门外键
+    private int department;//部门外键
     private String site;//籍贯
     private String img;//照片
     private String sex;//性别
@@ -19,6 +19,42 @@ public class Member {
     private int flag;//状态  0 审核中 1审核通过2审核未通过
     private Integer member_flag;
     private String nation;//民族
+    private Record record;
+    private TbFamily tbFamily;
+    private String dutyName;// 职务名称
+    private String depaName;//党支部名称
+
+    public String getDepaName() {
+        return depaName;
+    }
+
+    public void setDepaName(String depaName) {
+        this.depaName = depaName;
+    }
+
+    public String getDutyName() {
+        return dutyName;
+    }
+
+    public void setDutyName(String dutyName) {
+        this.dutyName = dutyName;
+    }
+
+    public Record getRecord() {
+        return record;
+    }
+
+    public void setRecord(Record record) {
+        this.record = record;
+    }
+
+    public TbFamily getTbFamily() {
+        return tbFamily;
+    }
+
+    public void setTbFamily(TbFamily tbFamily) {
+        this.tbFamily = tbFamily;
+    }
 
     public String getNation() {
         return nation;
@@ -68,28 +104,36 @@ public class Member {
         this.email = email;
     }
 
-    public int getPhone() {
-        return phone;
+    public String getTel() {
+        return tel;
     }
 
-    public void setPhone(int phone) {
-        this.phone = phone;
+    public void setTel(String tel) {
+        this.tel = tel;
     }
 
-    public Duty getDuty() {
-        return duty;
-    }
-
-    public void setDuty(Duty duty) {
-        this.duty = duty;
-    }
-
-    public int getIdnum() {
+    public String getIdnum() {
         return idnum;
     }
 
-    public void setIdnum(int idnum) {
+    public void setIdnum(String idnum) {
         this.idnum = idnum;
+    }
+
+    public int getDuty() {
+        return duty;
+    }
+
+    public void setDuty(int duty) {
+        this.duty = duty;
+    }
+
+    public int getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(int department) {
+        this.department = department;
     }
 
     public String getJoinTime() {
@@ -100,13 +144,7 @@ public class Member {
         this.joinTime = joinTime;
     }
 
-    public Department getDepartment() {
-        return department;
-    }
 
-    public void setDepartment(Department department) {
-        this.department = department;
-    }
 
     public String getSite() {
         return site;

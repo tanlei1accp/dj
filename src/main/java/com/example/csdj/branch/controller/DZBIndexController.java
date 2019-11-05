@@ -27,6 +27,7 @@ public class DZBIndexController {
     }
    @RequestMapping("/login")
     public String login(){
+
        System.out.println("登陆");
         return "/branch/login";
     }
