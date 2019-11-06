@@ -21,10 +21,12 @@ import javax.servlet.http.HttpSession;
 public class DZBIndexController {
     @Autowired
     DzMemberService dzMemberService;
+    @SysLog("党员端首页")
     @RequestMapping("/index")
     public String index() {
         return "/branch/index";
     }
+    @SysLog("登录")
    @RequestMapping("/login")
     public String login(){
 
@@ -74,6 +76,7 @@ public class DZBIndexController {
             return "/committee/index";
         }
     }
+    @SysLog("退出")
     @RequestMapping("/logout")
     public String logout() {
         Subject subject = SecurityUtils.getSubject();

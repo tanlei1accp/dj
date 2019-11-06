@@ -47,7 +47,6 @@ private void saveLog(ProceedingJoinPoint point){
         operation.setOperation(sysLog.value());
     }
     //获取用户名
-
     HttpSession session=((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest().getSession();
     operation.setUserName(session.getAttribute("session").toString());
     //获取时间

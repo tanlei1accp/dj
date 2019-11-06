@@ -5,6 +5,7 @@ import com.example.csdj.branch.entity.*;
 import com.example.csdj.branch.mapper.DzDepartmentMapper;
 import com.example.csdj.branch.mapper.DzRecordMapper;
 import com.example.csdj.branch.service.*;
+import com.example.csdj.committee.annotation.SysLog;
 import com.example.csdj.common.web.BaseController;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -24,22 +25,27 @@ public class PartyMemberController extends BaseController {
      * 进入到党员管理页面
      * @return
      */
+    @SysLog("进入党员管理主页")
     @RequestMapping("/partyMemberManage")
     public String partyMemberManage() {
         return "/branch/memberManagement/memberManage";
     }
+    @SysLog("进入党员管理详情页")
     @RequestMapping("/memberDetails")
     public String memberDetails() {
         return "/branch/memberManagement/memberDetails";
     }
+    @SysLog("更新党员管理")
     @RequestMapping("/memberUpdate")
     public String memberUpdate() {
         return "/branch/memberManagement/memberUpdate";
     }
+    @SysLog("审核党员管理")
     @RequestMapping("/audit")
     public String audit() {
         return "/branch/memberManagement/audit";
     }
+    @SysLog("添加党员")
     @RequestMapping("/memberAdd")
     public String memberAdd() {
         return "/branch/memberManagement/memberAdd";
@@ -54,6 +60,7 @@ public class PartyMemberController extends BaseController {
     DzMemberService dzMemberService;
     @Autowired
     DzFamilyService dzFamilyService;
+    @SysLog("查看所有职务")
     @ResponseBody
     @RequestMapping("/selectDutyAll")
     public String selectDutyAll(){
@@ -62,6 +69,7 @@ public class PartyMemberController extends BaseController {
         String json = JSON.toJSONString(list);
         return json;
     }
+    @SysLog("查看所有部门")
     @ResponseBody
     @RequestMapping("/selectDepartmentAll")
     public String selectDepartmentAll(){
